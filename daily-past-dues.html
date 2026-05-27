@@ -65,8 +65,13 @@
   .notes-input{flex:1;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:8px;color:#94A3B8;font-size:13px;padding:8px 12px;resize:vertical;outline:none;font-family:inherit;transition:border-color .2s}
   .notes-input:focus{border-color:rgba(255,255,255,.15);color:#E2E8F0}
   .notes-input::placeholder{color:#334155}
-  .resolve-btn{background:linear-gradient(135deg,#14532D,#166534);border:none;border-radius:8px;color:#86EFAC;font-size:13px;font-weight:600;padding:9px 16px;cursor:pointer;white-space:nowrap;transition:opacity .15s;flex-shrink:0;letter-spacing:.2px}
+  .btn-group{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+  .resolve-btn{background:linear-gradient(135deg,#14532D,#166534);border:none;border-radius:8px;color:#86EFAC;font-size:13px;font-weight:600;padding:9px 16px;cursor:pointer;white-space:nowrap;transition:opacity .15s;letter-spacing:.2px}
   .resolve-btn:hover{opacity:.8}
+  .unresolve-btn{display:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#64748B;font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;white-space:nowrap;transition:all .15s;letter-spacing:.2px}
+  .unresolve-btn:hover{background:rgba(255,255,255,.1);color:#94A3B8}
+  .resolved-list .resolve-btn{display:none}
+  .resolved-list .unresolve-btn{display:block}
 
   /* RESOLVED SECTION */
   .resolved-section{margin-top:6px;margin-bottom:16px}
@@ -134,10 +139,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYoMCLDZiNpvJNR0EBJVm9u" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYoMCLDZiNpvJNR0EBJVm9u" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYoMCLDZiNpvJNR0EBJVm9u" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYoMCLDZiNpvJNR0EBJVm9u" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TYoMCLDZiNpvJNR0EBJVm9u" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TYoMCLDZiNpvJNR0EBJVm9u')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TYoMCLDZiNpvJNR0EBJVm9u')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TYoMCLDZiNpvJNR0EBJVm9u')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2">
@@ -169,10 +178,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TYrEDLDZiNpvJNRiqXktTj2" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TYrEDLDZiNpvJNRiqXktTj2')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TYrEDLDZiNpvJNRiqXktTj2')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TYrEDLDZiNpvJNRiqXktTj2')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TVigLLDZiNpvJNRMUKf81W5">
@@ -204,10 +217,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVigLLDZiNpvJNRMUKf81W5" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVigLLDZiNpvJNRMUKf81W5" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVigLLDZiNpvJNRMUKf81W5" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVigLLDZiNpvJNRMUKf81W5" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TVigLLDZiNpvJNRMUKf81W5" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TVigLLDZiNpvJNRMUKf81W5')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TVigLLDZiNpvJNRMUKf81W5')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TVigLLDZiNpvJNRMUKf81W5')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf">
@@ -239,10 +256,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TWq1rLDZiNpvJNR0ZpjouJf" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TWq1rLDZiNpvJNR0ZpjouJf')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TWq1rLDZiNpvJNR0ZpjouJf')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TWq1rLDZiNpvJNR0ZpjouJf')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUp1DLDZiNpvJNRMcbas63N">
@@ -274,10 +295,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUp1DLDZiNpvJNRMcbas63N" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUp1DLDZiNpvJNRMcbas63N" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUp1DLDZiNpvJNRMcbas63N" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUp1DLDZiNpvJNRMcbas63N" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUp1DLDZiNpvJNRMcbas63N" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUp1DLDZiNpvJNRMcbas63N')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUp1DLDZiNpvJNRMcbas63N')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUp1DLDZiNpvJNRMcbas63N')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM">
@@ -309,10 +334,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUVZvLDZiNpvJNR0W0VlepM" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUVZvLDZiNpvJNR0W0VlepM')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUVZvLDZiNpvJNR0W0VlepM')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUVZvLDZiNpvJNR0W0VlepM')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TShtqLDZiNpvJNRXHah5zVT">
@@ -344,10 +373,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TShtqLDZiNpvJNRXHah5zVT" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TShtqLDZiNpvJNRXHah5zVT" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TShtqLDZiNpvJNRXHah5zVT" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TShtqLDZiNpvJNRXHah5zVT" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TShtqLDZiNpvJNRXHah5zVT" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TShtqLDZiNpvJNRXHah5zVT')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TShtqLDZiNpvJNRXHah5zVT')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TShtqLDZiNpvJNRXHah5zVT')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj">
@@ -379,10 +412,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TSK0iLDZiNpvJNRJQTUhKzj" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TSK0iLDZiNpvJNRJQTUhKzj')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TSK0iLDZiNpvJNRJQTUhKzj')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TSK0iLDZiNpvJNRJQTUhKzj')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9">
@@ -414,10 +451,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TTSl7LDZiNpvJNRfKhBrSI9" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TTSl7LDZiNpvJNRfKhBrSI9')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TTSl7LDZiNpvJNRfKhBrSI9')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TTSl7LDZiNpvJNRfKhBrSI9')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TReHvLDZiNpvJNRytjreaEe">
@@ -449,10 +490,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TReHvLDZiNpvJNRytjreaEe" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TReHvLDZiNpvJNRytjreaEe" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TReHvLDZiNpvJNRytjreaEe" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TReHvLDZiNpvJNRytjreaEe" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TReHvLDZiNpvJNRytjreaEe" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TReHvLDZiNpvJNRytjreaEe')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TReHvLDZiNpvJNRytjreaEe')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TReHvLDZiNpvJNRytjreaEe')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ">
@@ -484,10 +529,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TRFCzLDZiNpvJNRljUc8YAZ" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TRFCzLDZiNpvJNRljUc8YAZ')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TRFCzLDZiNpvJNRljUc8YAZ')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TRFCzLDZiNpvJNRljUc8YAZ')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb">
@@ -519,10 +568,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TRxeCLDZiNpvJNRqR6S6Qtb" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TRxeCLDZiNpvJNRqR6S6Qtb')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TRxeCLDZiNpvJNRqR6S6Qtb')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TRxeCLDZiNpvJNRqR6S6Qtb')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ">
@@ -554,10 +607,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TT6giLDZiNpvJNRQuI8uJpZ" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TT6giLDZiNpvJNRQuI8uJpZ')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TT6giLDZiNpvJNRQuI8uJpZ')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TT6giLDZiNpvJNRQuI8uJpZ')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e">
@@ -589,10 +646,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TS1AHLDZiNpvJNRNw7X6N0e" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TS1AHLDZiNpvJNRNw7X6N0e')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TS1AHLDZiNpvJNRNw7X6N0e')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TS1AHLDZiNpvJNRNw7X6N0e')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK">
@@ -624,10 +685,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TRxbkLDZiNpvJNRCmg9TPJK" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TRxbkLDZiNpvJNRCmg9TPJK')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TRxbkLDZiNpvJNRCmg9TPJK')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TRxbkLDZiNpvJNRCmg9TPJK')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO">
@@ -659,10 +724,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TRGYeLDZiNpvJNRmj1OcrpO" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TRGYeLDZiNpvJNRmj1OcrpO')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TRGYeLDZiNpvJNRmj1OcrpO')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TRGYeLDZiNpvJNRmj1OcrpO')">↩ Active</button>
+    </div>
   </div>
 </div>
   </div>
@@ -709,10 +778,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbCBLJDpup464QrQXzvrKr4" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbCBLJDpup464QrQXzvrKr4" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbCBLJDpup464QrQXzvrKr4" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbCBLJDpup464QrQXzvrKr4" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TbCBLJDpup464QrQXzvrKr4" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TbCBLJDpup464QrQXzvrKr4')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TbCBLJDpup464QrQXzvrKr4')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TbCBLJDpup464QrQXzvrKr4')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TajE9JDpup464QrREea03cq">
@@ -744,10 +817,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TajE9JDpup464QrREea03cq" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TajE9JDpup464QrREea03cq" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TajE9JDpup464QrREea03cq" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TajE9JDpup464QrREea03cq" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TajE9JDpup464QrREea03cq" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TajE9JDpup464QrREea03cq')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TajE9JDpup464QrREea03cq')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TajE9JDpup464QrREea03cq')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TafqdJDpup464Qr5rP41RXJ">
@@ -779,10 +856,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TafqdJDpup464Qr5rP41RXJ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TafqdJDpup464Qr5rP41RXJ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TafqdJDpup464Qr5rP41RXJ" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TafqdJDpup464Qr5rP41RXJ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TafqdJDpup464Qr5rP41RXJ" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TafqdJDpup464Qr5rP41RXJ')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TafqdJDpup464Qr5rP41RXJ')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TafqdJDpup464Qr5rP41RXJ')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TZz8yJDpup464Qr0y3aoUVj">
@@ -814,10 +895,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZz8yJDpup464Qr0y3aoUVj" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZz8yJDpup464Qr0y3aoUVj" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZz8yJDpup464Qr0y3aoUVj" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZz8yJDpup464Qr0y3aoUVj" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TZz8yJDpup464Qr0y3aoUVj" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TZz8yJDpup464Qr0y3aoUVj')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TZz8yJDpup464Qr0y3aoUVj')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TZz8yJDpup464Qr0y3aoUVj')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TYtfyJDpup464QrqLuu4c88">
@@ -849,10 +934,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYtfyJDpup464QrqLuu4c88" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYtfyJDpup464QrqLuu4c88" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYtfyJDpup464QrqLuu4c88" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYtfyJDpup464QrqLuu4c88" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TYtfyJDpup464QrqLuu4c88" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TYtfyJDpup464QrqLuu4c88')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TYtfyJDpup464QrqLuu4c88')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TYtfyJDpup464QrqLuu4c88')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TZDw7JDpup464Qrbh9UBsOx">
@@ -884,10 +973,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZDw7JDpup464Qrbh9UBsOx" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZDw7JDpup464Qrbh9UBsOx" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZDw7JDpup464Qrbh9UBsOx" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TZDw7JDpup464Qrbh9UBsOx" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TZDw7JDpup464Qrbh9UBsOx" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TZDw7JDpup464Qrbh9UBsOx')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TZDw7JDpup464Qrbh9UBsOx')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TZDw7JDpup464Qrbh9UBsOx')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TYqfMJDpup464Qrnum43EVw">
@@ -919,10 +1012,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYqfMJDpup464Qrnum43EVw" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYqfMJDpup464Qrnum43EVw" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYqfMJDpup464Qrnum43EVw" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYqfMJDpup464Qrnum43EVw" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TYqfMJDpup464Qrnum43EVw" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TYqfMJDpup464Qrnum43EVw')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TYqfMJDpup464Qrnum43EVw')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TYqfMJDpup464Qrnum43EVw')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TYTmTJDpup464QrkgJ6ca5b">
@@ -954,10 +1051,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYTmTJDpup464QrkgJ6ca5b" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYTmTJDpup464QrkgJ6ca5b" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYTmTJDpup464QrkgJ6ca5b" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TYTmTJDpup464QrkgJ6ca5b" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TYTmTJDpup464QrkgJ6ca5b" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TYTmTJDpup464QrkgJ6ca5b')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TYTmTJDpup464QrkgJ6ca5b')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TYTmTJDpup464QrkgJ6ca5b')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TY86ZJDpup464QrK6opuUlb">
@@ -989,10 +1090,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TY86ZJDpup464QrK6opuUlb" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TY86ZJDpup464QrK6opuUlb" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TY86ZJDpup464QrK6opuUlb" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TY86ZJDpup464QrK6opuUlb" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TY86ZJDpup464QrK6opuUlb" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TY86ZJDpup464QrK6opuUlb')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TY86ZJDpup464QrK6opuUlb')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TY86ZJDpup464QrK6opuUlb')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TX3LxJDpup464QrjqvZr7mS">
@@ -1024,10 +1129,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX3LxJDpup464QrjqvZr7mS" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX3LxJDpup464QrjqvZr7mS" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX3LxJDpup464QrjqvZr7mS" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX3LxJDpup464QrjqvZr7mS" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TX3LxJDpup464QrjqvZr7mS" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TX3LxJDpup464QrjqvZr7mS')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TX3LxJDpup464QrjqvZr7mS')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TX3LxJDpup464QrjqvZr7mS')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TX4A4JDpup464QrqMgSueP4">
@@ -1059,10 +1168,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX4A4JDpup464QrqMgSueP4" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX4A4JDpup464QrqMgSueP4" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX4A4JDpup464QrqMgSueP4" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX4A4JDpup464QrqMgSueP4" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TX4A4JDpup464QrqMgSueP4" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TX4A4JDpup464QrqMgSueP4')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TX4A4JDpup464QrqMgSueP4')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TX4A4JDpup464QrqMgSueP4')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TX2z2JDpup464Qr5PD6HoAh">
@@ -1094,10 +1207,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX2z2JDpup464Qr5PD6HoAh" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX2z2JDpup464Qr5PD6HoAh" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX2z2JDpup464Qr5PD6HoAh" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TX2z2JDpup464Qr5PD6HoAh" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TX2z2JDpup464Qr5PD6HoAh" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TX2z2JDpup464Qr5PD6HoAh')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TX2z2JDpup464Qr5PD6HoAh')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TX2z2JDpup464Qr5PD6HoAh')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TWjJ1JDpup464QrWDVPhZzg">
@@ -1129,10 +1246,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWjJ1JDpup464QrWDVPhZzg" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWjJ1JDpup464QrWDVPhZzg" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWjJ1JDpup464QrWDVPhZzg" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWjJ1JDpup464QrWDVPhZzg" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TWjJ1JDpup464QrWDVPhZzg" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TWjJ1JDpup464QrWDVPhZzg')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TWjJ1JDpup464QrWDVPhZzg')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TWjJ1JDpup464QrWDVPhZzg')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1">
@@ -1164,10 +1285,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TWeT7JDpup464Qrs0DSzfJ1" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TWeT7JDpup464Qrs0DSzfJ1')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TWeT7JDpup464Qrs0DSzfJ1')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TWeT7JDpup464Qrs0DSzfJ1')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TWHcGJDpup464QrNMAYzKpz">
@@ -1199,10 +1324,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWHcGJDpup464QrNMAYzKpz" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWHcGJDpup464QrNMAYzKpz" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWHcGJDpup464QrNMAYzKpz" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TWHcGJDpup464QrNMAYzKpz" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TWHcGJDpup464QrNMAYzKpz" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TWHcGJDpup464QrNMAYzKpz')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TWHcGJDpup464QrNMAYzKpz')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TWHcGJDpup464QrNMAYzKpz')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TVzMHJDpup464QrDW0wIrav">
@@ -1234,10 +1363,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVzMHJDpup464QrDW0wIrav" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVzMHJDpup464QrDW0wIrav" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVzMHJDpup464QrDW0wIrav" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVzMHJDpup464QrDW0wIrav" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TVzMHJDpup464QrDW0wIrav" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TVzMHJDpup464QrDW0wIrav')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TVzMHJDpup464QrDW0wIrav')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TVzMHJDpup464QrDW0wIrav')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TVYvJJDpup464QrJC7lIkyG">
@@ -1269,10 +1402,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVYvJJDpup464QrJC7lIkyG" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVYvJJDpup464QrJC7lIkyG" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVYvJJDpup464QrJC7lIkyG" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVYvJJDpup464QrJC7lIkyG" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TVYvJJDpup464QrJC7lIkyG" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TVYvJJDpup464QrJC7lIkyG')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TVYvJJDpup464QrJC7lIkyG')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TVYvJJDpup464QrJC7lIkyG')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TVHMzJDpup464QrBWB6tXWE">
@@ -1304,10 +1441,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVHMzJDpup464QrBWB6tXWE" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVHMzJDpup464QrBWB6tXWE" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVHMzJDpup464QrBWB6tXWE" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TVHMzJDpup464QrBWB6tXWE" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TVHMzJDpup464QrBWB6tXWE" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TVHMzJDpup464QrBWB6tXWE')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TVHMzJDpup464QrBWB6tXWE')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TVHMzJDpup464QrBWB6tXWE')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUvonJDpup464QreHFupS7G">
@@ -1339,10 +1480,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUvonJDpup464QreHFupS7G" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUvonJDpup464QreHFupS7G" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUvonJDpup464QreHFupS7G" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUvonJDpup464QreHFupS7G" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUvonJDpup464QreHFupS7G" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUvonJDpup464QreHFupS7G')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUvonJDpup464QreHFupS7G')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUvonJDpup464QreHFupS7G')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUYosJDpup464Qr29D9DmOl">
@@ -1374,10 +1519,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYosJDpup464Qr29D9DmOl" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYosJDpup464Qr29D9DmOl" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYosJDpup464Qr29D9DmOl" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYosJDpup464Qr29D9DmOl" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUYosJDpup464Qr29D9DmOl" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUYosJDpup464Qr29D9DmOl')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUYosJDpup464Qr29D9DmOl')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUYosJDpup464Qr29D9DmOl')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUYqiJDpup464QrDISYIiI1">
@@ -1409,10 +1558,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYqiJDpup464QrDISYIiI1" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYqiJDpup464QrDISYIiI1" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYqiJDpup464QrDISYIiI1" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUYqiJDpup464QrDISYIiI1" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUYqiJDpup464QrDISYIiI1" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUYqiJDpup464QrDISYIiI1')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUYqiJDpup464QrDISYIiI1')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUYqiJDpup464QrDISYIiI1')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp">
@@ -1444,10 +1597,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUSdRJDpup464Qr2kIF2Qgp" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUSdRJDpup464Qr2kIF2Qgp')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUSdRJDpup464Qr2kIF2Qgp')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUSdRJDpup464Qr2kIF2Qgp')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R">
@@ -1479,10 +1636,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TUJ8jJDpup464Qr5Eeb8E5R" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TUJ8jJDpup464Qr5Eeb8E5R')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TUJ8jJDpup464Qr5Eeb8E5R')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TUJ8jJDpup464Qr5Eeb8E5R')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TU7PgJDpup464QrxtUNQQnF">
@@ -1514,10 +1675,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TU7PgJDpup464QrxtUNQQnF" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TU7PgJDpup464QrxtUNQQnF" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TU7PgJDpup464QrxtUNQQnF" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TU7PgJDpup464QrxtUNQQnF" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TU7PgJDpup464QrxtUNQQnF" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TU7PgJDpup464QrxtUNQQnF')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TU7PgJDpup464QrxtUNQQnF')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TU7PgJDpup464QrxtUNQQnF')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TToivJDpup464QrSJdC4VPQ">
@@ -1549,10 +1714,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TToivJDpup464QrSJdC4VPQ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TToivJDpup464QrSJdC4VPQ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TToivJDpup464QrSJdC4VPQ" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TToivJDpup464QrSJdC4VPQ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TToivJDpup464QrSJdC4VPQ" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TToivJDpup464QrSJdC4VPQ')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TToivJDpup464QrSJdC4VPQ')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TToivJDpup464QrSJdC4VPQ')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TTDlEJDpup464QrceQJOsYK">
@@ -1584,10 +1753,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTDlEJDpup464QrceQJOsYK" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTDlEJDpup464QrceQJOsYK" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTDlEJDpup464QrceQJOsYK" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TTDlEJDpup464QrceQJOsYK" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TTDlEJDpup464QrceQJOsYK" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TTDlEJDpup464QrceQJOsYK')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TTDlEJDpup464QrceQJOsYK')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TTDlEJDpup464QrceQJOsYK')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TT5sxJDpup464QrwJV3sga0">
@@ -1619,10 +1792,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT5sxJDpup464QrwJV3sga0" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT5sxJDpup464QrwJV3sga0" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT5sxJDpup464QrwJV3sga0" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TT5sxJDpup464QrwJV3sga0" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TT5sxJDpup464QrwJV3sga0" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TT5sxJDpup464QrwJV3sga0')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TT5sxJDpup464QrwJV3sga0')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TT5sxJDpup464QrwJV3sga0')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TSMagJDpup464Qr2E0CZuIB">
@@ -1654,10 +1831,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSMagJDpup464Qr2E0CZuIB" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSMagJDpup464Qr2E0CZuIB" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSMagJDpup464Qr2E0CZuIB" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSMagJDpup464Qr2E0CZuIB" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TSMagJDpup464Qr2E0CZuIB" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TSMagJDpup464Qr2E0CZuIB')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TSMagJDpup464Qr2E0CZuIB')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TSMagJDpup464Qr2E0CZuIB')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TSHCsJDpup464Qr9njIQYSd">
@@ -1689,10 +1870,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSHCsJDpup464Qr9njIQYSd" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSHCsJDpup464Qr9njIQYSd" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSHCsJDpup464Qr9njIQYSd" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TSHCsJDpup464Qr9njIQYSd" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TSHCsJDpup464Qr9njIQYSd" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TSHCsJDpup464Qr9njIQYSd')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TSHCsJDpup464Qr9njIQYSd')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TSHCsJDpup464Qr9njIQYSd')">↩ Active</button>
+    </div>
   </div>
 </div>
 <div class="inv-card" data-id="in_1TS1G2JDpup464QrwBKYE4vq">
@@ -1724,10 +1909,14 @@
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1G2JDpup464QrwBKYE4vq" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1G2JDpup464QrwBKYE4vq" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1G2JDpup464QrwBKYE4vq" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TS1G2JDpup464QrwBKYE4vq" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TS1G2JDpup464QrwBKYE4vq" rows="2"></textarea>
-    <button class="resolve-btn" onclick="markResolved('in_1TS1G2JDpup464QrwBKYE4vq')">✓ Resolved</button>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1TS1G2JDpup464QrwBKYE4vq')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TS1G2JDpup464QrwBKYE4vq')">↩ Active</button>
+    </div>
   </div>
 </div>
   </div>
@@ -1744,7 +1933,7 @@
 <footer>Updated daily at 7:00 AM EST &nbsp;·&nbsp; Data sourced from Stripe &nbsp;·&nbsp; Progress saved in your browser</footer>
 
 <script>
-const PRELOADED = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "resolved": true, "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "resolved": true, "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "resolved": true, "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "resolved": true, "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "resolved": true, "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "resolved": true, "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "resolved": true, "notes": "Ghosted - reach out to onboarding and offboard"}};
+const PRELOADED = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}};
 const ACCOUNTS  = ["CHD", "SKED"];
 
 function getState(id) {
@@ -1781,6 +1970,17 @@ function markResolved(id) {
     rlist.style.display = 'block';
     document.getElementById('rarrow-' + acc).textContent = '▴';
   }
+  updateCounts(acc);
+  saveCard(id);
+}
+
+function markActive(id) {
+  const card  = document.querySelector('.inv-card[data-id="' + id + '"]');
+  if (!card) return;
+  const panel = card.closest('.account-panel');
+  const acc   = panel.id.replace('panel-', '');
+  const list  = document.getElementById('list-' + acc);
+  list.prepend(card);
   updateCounts(acc);
   saveCard(id);
 }
