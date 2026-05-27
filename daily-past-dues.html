@@ -48,7 +48,9 @@
   .phone-input::placeholder{color:#334155}
 
   .card-ids{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-  .id-pill{background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;color:#475569;font-size:11px;font-family:ui-monospace,monospace;padding:3px 8px}
+  .id-pill{background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;color:#475569;font-size:11px;font-family:ui-monospace,monospace;padding:3px 8px;text-decoration:none}
+  .id-link{transition:all .15s}
+  .id-link:hover{background:#1E293B;color:#94A3B8;border-color:rgba(255,255,255,.15)}
   .reason-pill{background:#1E1830;border:1px solid rgba(139,92,246,.2);border-radius:6px;color:#A78BFA;font-size:11px;padding:3px 8px}
   .na-pill{background:#161E2E;border:1px solid rgba(71,85,105,.3);border-radius:6px;color:#475569;font-size:11px;padding:3px 8px}
   .status-pill{background:#0F2020;border:1px solid rgba(52,211,153,.18);border-radius:6px;color:#34D399;font-size:11px;padding:3px 8px}
@@ -94,7 +96,7 @@
 
 <div class="tabs-bar">
 <button class="tab-btn active" id="tbtn-CHD" data-color="#4361EE" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">22</span></button>
-<button class="tab-btn " id="tbtn-SKED" data-color="#4A90D9" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">55</span></button>
+<button class="tab-btn " id="tbtn-SKED" data-color="#4A90D9" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">56</span></button>
 </div>
 
 <div class="account-panel active" id="panel-CHD">
@@ -120,8 +122,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PmOVzdqZTZmftE</span>
-    <span class="id-pill">inv: in_1Tb0AgLDZiNpvJNRIcki4Hiz</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PmOVzdqZTZmftE" target="_blank" title="Open customer in Stripe">cus: cus_PmOVzdqZTZmftE</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb0AgLDZiNpvJNRIcki4Hiz" target="_blank" title="Open invoice in Stripe">inv: in_1Tb0AgLDZiNpvJNRIcki4Hiz</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -155,8 +157,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SbKuXpLZ3bdKdC</span>
-    <span class="id-pill">inv: in_1TYoMCLDZiNpvJNR0EBJVm9u</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SbKuXpLZ3bdKdC" target="_blank" title="Open customer in Stripe">cus: cus_SbKuXpLZ3bdKdC</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TYoMCLDZiNpvJNR0EBJVm9u" target="_blank" title="Open invoice in Stripe">inv: in_1TYoMCLDZiNpvJNR0EBJVm9u</a>
     <span class="reason-pill">The connection to the user's Link account has been closed.</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -190,8 +192,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_P60TMfECRCBMMy</span>
-    <span class="id-pill">inv: in_1TZxcwLDZiNpvJNRuLjTkmEZ</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_P60TMfECRCBMMy" target="_blank" title="Open customer in Stripe">cus: cus_P60TMfECRCBMMy</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZxcwLDZiNpvJNRuLjTkmEZ" target="_blank" title="Open invoice in Stripe">inv: in_1TZxcwLDZiNpvJNRuLjTkmEZ</a>
     <span class="reason-pill">The payment failed: The chosen PaymentMethod cannot be processed. Please try a d</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -225,8 +227,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_Lerm3X1OJmcqjp</span>
-    <span class="id-pill">inv: in_1TZf8jLDZiNpvJNRdsfGPP4D</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Lerm3X1OJmcqjp" target="_blank" title="Open customer in Stripe">cus: cus_Lerm3X1OJmcqjp</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZf8jLDZiNpvJNRdsfGPP4D" target="_blank" title="Open invoice in Stripe">inv: in_1TZf8jLDZiNpvJNRdsfGPP4D</a>
     <span class="reason-pill">Transaction Not Allowed</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -260,8 +262,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_UWPJPRQnP2EGlH</span>
-    <span class="id-pill">inv: in_1TYrEDLDZiNpvJNRiqXktTj2</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_UWPJPRQnP2EGlH" target="_blank" title="Open customer in Stripe">cus: cus_UWPJPRQnP2EGlH</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TYrEDLDZiNpvJNRiqXktTj2" target="_blank" title="Open invoice in Stripe">inv: in_1TYrEDLDZiNpvJNRiqXktTj2</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -295,8 +297,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TRs6KSI4uBAoRS</span>
-    <span class="id-pill">inv: in_1TYEHBLDZiNpvJNRTD5ptbLY</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TRs6KSI4uBAoRS" target="_blank" title="Open customer in Stripe">cus: cus_TRs6KSI4uBAoRS</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TYEHBLDZiNpvJNRTD5ptbLY" target="_blank" title="Open invoice in Stripe">inv: in_1TYEHBLDZiNpvJNRTD5ptbLY</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -330,8 +332,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PMU2URGjjkpBo3</span>
-    <span class="id-pill">inv: in_1TXS8ELDZiNpvJNRpzpdVto6</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PMU2URGjjkpBo3" target="_blank" title="Open customer in Stripe">cus: cus_PMU2URGjjkpBo3</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TXS8ELDZiNpvJNRpzpdVto6" target="_blank" title="Open invoice in Stripe">inv: in_1TXS8ELDZiNpvJNRpzpdVto6</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -365,8 +367,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_RQyiSX5bXf3NA8</span>
-    <span class="id-pill">inv: in_1TVigLLDZiNpvJNRMUKf81W5</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RQyiSX5bXf3NA8" target="_blank" title="Open customer in Stripe">cus: cus_RQyiSX5bXf3NA8</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TVigLLDZiNpvJNRMUKf81W5" target="_blank" title="Open invoice in Stripe">inv: in_1TVigLLDZiNpvJNRMUKf81W5</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -400,8 +402,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_JTpOFvmT4E0tNU</span>
-    <span class="id-pill">inv: in_1TWq1rLDZiNpvJNR0ZpjouJf</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_JTpOFvmT4E0tNU" target="_blank" title="Open customer in Stripe">cus: cus_JTpOFvmT4E0tNU</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TWq1rLDZiNpvJNR0ZpjouJf" target="_blank" title="Open invoice in Stripe">inv: in_1TWq1rLDZiNpvJNR0ZpjouJf</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -435,8 +437,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_RGYw3Ii9hK4rVs</span>
-    <span class="id-pill">inv: in_1TUp1DLDZiNpvJNRMcbas63N</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RGYw3Ii9hK4rVs" target="_blank" title="Open customer in Stripe">cus: cus_RGYw3Ii9hK4rVs</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TUp1DLDZiNpvJNRMcbas63N" target="_blank" title="Open invoice in Stripe">inv: in_1TUp1DLDZiNpvJNRMcbas63N</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -470,8 +472,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_QSLW0bFIMnVaip</span>
-    <span class="id-pill">inv: in_1TUVZvLDZiNpvJNR0W0VlepM</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_QSLW0bFIMnVaip" target="_blank" title="Open customer in Stripe">cus: cus_QSLW0bFIMnVaip</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TUVZvLDZiNpvJNR0W0VlepM" target="_blank" title="Open invoice in Stripe">inv: in_1TUVZvLDZiNpvJNR0W0VlepM</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -505,8 +507,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_NpKOWxvmQLq4cl</span>
-    <span class="id-pill">inv: in_1TShtqLDZiNpvJNRXHah5zVT</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_NpKOWxvmQLq4cl" target="_blank" title="Open customer in Stripe">cus: cus_NpKOWxvmQLq4cl</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TShtqLDZiNpvJNRXHah5zVT" target="_blank" title="Open invoice in Stripe">inv: in_1TShtqLDZiNpvJNRXHah5zVT</a>
     <span class="reason-pill">Card Declined</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -529,7 +531,7 @@
     <div class="card-right">
       <span class="card-amount">$339.00</span>
       <span class="card-date">May 10, 2026</span>
-      <span class="card-days">16d ago</span>
+      <span class="card-days">17d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -540,8 +542,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_UJMgJFokoPzrgN</span>
-    <span class="id-pill">inv: in_1TVcRSLDZiNpvJNRs6AipvqW</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_UJMgJFokoPzrgN" target="_blank" title="Open customer in Stripe">cus: cus_UJMgJFokoPzrgN</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TVcRSLDZiNpvJNRs6AipvqW" target="_blank" title="Open invoice in Stripe">inv: in_1TVcRSLDZiNpvJNRs6AipvqW</a>
     
     <span class="status-pill">Past_Due</span>
   </div>
@@ -575,8 +577,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_U6ExKDcNAFIjd5</span>
-    <span class="id-pill">inv: in_1TVBXVLDZiNpvJNRuQ4g4sk4</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_U6ExKDcNAFIjd5" target="_blank" title="Open customer in Stripe">cus: cus_U6ExKDcNAFIjd5</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TVBXVLDZiNpvJNRuQ4g4sk4" target="_blank" title="Open invoice in Stripe">inv: in_1TVBXVLDZiNpvJNRuQ4g4sk4</a>
     
     <span class="status-pill">Past_Due</span>
   </div>
@@ -610,8 +612,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SQmQZO9SknxmjS</span>
-    <span class="id-pill">inv: in_1TSK0iLDZiNpvJNRJQTUhKzj</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SQmQZO9SknxmjS" target="_blank" title="Open customer in Stripe">cus: cus_SQmQZO9SknxmjS</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TSK0iLDZiNpvJNRJQTUhKzj" target="_blank" title="Open invoice in Stripe">inv: in_1TSK0iLDZiNpvJNRJQTUhKzj</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -645,8 +647,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LGDo6QhxZwzNKS</span>
-    <span class="id-pill">inv: in_1TTSl7LDZiNpvJNRfKhBrSI9</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LGDo6QhxZwzNKS" target="_blank" title="Open customer in Stripe">cus: cus_LGDo6QhxZwzNKS</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TTSl7LDZiNpvJNRfKhBrSI9" target="_blank" title="Open invoice in Stripe">inv: in_1TTSl7LDZiNpvJNRfKhBrSI9</a>
     <span class="reason-pill">Invalid Card Number</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -680,8 +682,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_T9VuMqwF8g3HEP</span>
-    <span class="id-pill">inv: in_1TReHvLDZiNpvJNRytjreaEe</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T9VuMqwF8g3HEP" target="_blank" title="Open customer in Stripe">cus: cus_T9VuMqwF8g3HEP</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TReHvLDZiNpvJNRytjreaEe" target="_blank" title="Open invoice in Stripe">inv: in_1TReHvLDZiNpvJNRytjreaEe</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -715,8 +717,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_QSLW0bFIMnVaip</span>
-    <span class="id-pill">inv: in_1TRFCzLDZiNpvJNRljUc8YAZ</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_QSLW0bFIMnVaip" target="_blank" title="Open customer in Stripe">cus: cus_QSLW0bFIMnVaip</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TRFCzLDZiNpvJNRljUc8YAZ" target="_blank" title="Open invoice in Stripe">inv: in_1TRFCzLDZiNpvJNRljUc8YAZ</a>
     <span class="na-pill">Never Attempted</span>
     
   </div>
@@ -750,8 +752,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_T21JOnOpC1t1tF</span>
-    <span class="id-pill">inv: in_1TRxeCLDZiNpvJNRqR6S6Qtb</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T21JOnOpC1t1tF" target="_blank" title="Open customer in Stripe">cus: cus_T21JOnOpC1t1tF</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TRxeCLDZiNpvJNRqR6S6Qtb" target="_blank" title="Open invoice in Stripe">inv: in_1TRxeCLDZiNpvJNRqR6S6Qtb</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Canceled</span>
   </div>
@@ -785,8 +787,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SQmB6Eo1r7m0Pl</span>
-    <span class="id-pill">inv: in_1TS1AHLDZiNpvJNRNw7X6N0e</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SQmB6Eo1r7m0Pl" target="_blank" title="Open customer in Stripe">cus: cus_SQmB6Eo1r7m0Pl</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TS1AHLDZiNpvJNRNw7X6N0e" target="_blank" title="Open invoice in Stripe">inv: in_1TS1AHLDZiNpvJNRNw7X6N0e</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -820,8 +822,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SZp3QnE8ksKjoV</span>
-    <span class="id-pill">inv: in_1TRxbkLDZiNpvJNRCmg9TPJK</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SZp3QnE8ksKjoV" target="_blank" title="Open customer in Stripe">cus: cus_SZp3QnE8ksKjoV</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TRxbkLDZiNpvJNRCmg9TPJK" target="_blank" title="Open invoice in Stripe">inv: in_1TRxbkLDZiNpvJNRCmg9TPJK</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -855,8 +857,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_M8tKsCYRRxjq7N</span>
-    <span class="id-pill">inv: in_1TRGYeLDZiNpvJNRmj1OcrpO</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_M8tKsCYRRxjq7N" target="_blank" title="Open customer in Stripe">cus: cus_M8tKsCYRRxjq7N</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TRGYeLDZiNpvJNRmj1OcrpO" target="_blank" title="Open invoice in Stripe">inv: in_1TRGYeLDZiNpvJNRmj1OcrpO</a>
     <span class="reason-pill">Card Declined</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -885,9 +887,44 @@
 </div><div class="account-panel " id="panel-SKED">
   <div class="panel-header" style="background:linear-gradient(135deg,#1E5FA8,#4A90D9)">
     <h2>SKED</h2>
-    <span class="panel-count-badge" id="pbadge-SKED">55 need attention · 0 resolved</span>
+    <span class="panel-count-badge" id="pbadge-SKED">56 need attention · 0 resolved</span>
   </div>
   <div class="inv-list" id="list-SKED">
+<div class="inv-card" data-id="in_1TbQD2JDpup464QrVV5unkD6">
+  <div class="card-top">
+    <div class="card-name">Freedom Family Chiropractic</div>
+    <div class="card-right">
+      <span class="card-amount">$408.91</span>
+      <span class="card-date">May 26, 2026</span>
+      <span class="card-days">1d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">info@freedomfamilychiropracticfl.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1TbQD2JDpup464QrVV5unkD6" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_QUbvJ5X1CbzEqO" target="_blank" title="Open customer in Stripe">cus: cus_QUbvJ5X1CbzEqO</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbQD2JDpup464QrVV5unkD6" target="_blank" title="Open invoice in Stripe">inv: in_1TbQD2JDpup464QrVV5unkD6</a>
+    
+    <span class="status-pill">Active</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="macro" /><span>Past Due Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="paid" /><span>Paid</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbQD2JDpup464QrVV5unkD6" data-cb="payment-plan" /><span>Payment Plan</span></label>
+  </div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TbQD2JDpup464QrVV5unkD6" rows="2"></textarea>
+    <button class="resolve-btn" onclick="markResolved('in_1TbQD2JDpup464QrVV5unkD6')">✓ Resolved</button>
+  </div>
+</div>
 <div class="inv-card" data-id="in_1TbPd6JDpup464QrjfpuHj5h">
   <div class="card-top">
     <div class="card-name">603 Chiropractic</div>
@@ -905,8 +942,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LvhJ9k57ZbKAft</span>
-    <span class="id-pill">inv: in_1TbPd6JDpup464QrjfpuHj5h</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LvhJ9k57ZbKAft" target="_blank" title="Open customer in Stripe">cus: cus_LvhJ9k57ZbKAft</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbPd6JDpup464QrjfpuHj5h" target="_blank" title="Open invoice in Stripe">inv: in_1TbPd6JDpup464QrjfpuHj5h</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -940,8 +977,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_RrDiSrbg2ENIhH</span>
-    <span class="id-pill">inv: in_1TbNKDJDpup464QrRkIaV07a</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RrDiSrbg2ENIhH" target="_blank" title="Open customer in Stripe">cus: cus_RrDiSrbg2ENIhH</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbNKDJDpup464QrRkIaV07a" target="_blank" title="Open invoice in Stripe">inv: in_1TbNKDJDpup464QrRkIaV07a</a>
     <span class="reason-pill">Blocked by Bank</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -975,8 +1012,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PQgv78Uxv8a5Qp</span>
-    <span class="id-pill">inv: in_1TbNHfJDpup464QrXC70xTok</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PQgv78Uxv8a5Qp" target="_blank" title="Open customer in Stripe">cus: cus_PQgv78Uxv8a5Qp</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbNHfJDpup464QrXC70xTok" target="_blank" title="Open invoice in Stripe">inv: in_1TbNHfJDpup464QrXC70xTok</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1010,8 +1047,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TkURgi6BYhpTZ9</span>
-    <span class="id-pill">inv: in_1TbMB5JDpup464QrP465OhCp</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TkURgi6BYhpTZ9" target="_blank" title="Open customer in Stripe">cus: cus_TkURgi6BYhpTZ9</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbMB5JDpup464QrP465OhCp" target="_blank" title="Open invoice in Stripe">inv: in_1TbMB5JDpup464QrP465OhCp</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1045,8 +1082,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_QA1I8Tlg3rLnlo</span>
-    <span class="id-pill">inv: in_1TbKwFJDpup464QrWmdOsOEn</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_QA1I8Tlg3rLnlo" target="_blank" title="Open customer in Stripe">cus: cus_QA1I8Tlg3rLnlo</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbKwFJDpup464QrWmdOsOEn" target="_blank" title="Open invoice in Stripe">inv: in_1TbKwFJDpup464QrWmdOsOEn</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1080,8 +1117,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SytAfGywQYPsl0</span>
-    <span class="id-pill">inv: in_1TbCBLJDpup464QrQXzvrKr4</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SytAfGywQYPsl0" target="_blank" title="Open customer in Stripe">cus: cus_SytAfGywQYPsl0</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbCBLJDpup464QrQXzvrKr4" target="_blank" title="Open invoice in Stripe">inv: in_1TbCBLJDpup464QrQXzvrKr4</a>
     
     <span class="status-pill">Past_Due</span>
   </div>
@@ -1115,8 +1152,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_RocwGBdk8ZFmAU</span>
-    <span class="id-pill">inv: in_1Tb64vJDpup464Qr7a05rorM</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RocwGBdk8ZFmAU" target="_blank" title="Open customer in Stripe">cus: cus_RocwGBdk8ZFmAU</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb64vJDpup464Qr7a05rorM" target="_blank" title="Open invoice in Stripe">inv: in_1Tb64vJDpup464Qr7a05rorM</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1150,8 +1187,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_S0cTqyOev6INGz</span>
-    <span class="id-pill">inv: in_1Tb4zUJDpup464Qrd3eFICNo</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_S0cTqyOev6INGz" target="_blank" title="Open customer in Stripe">cus: cus_S0cTqyOev6INGz</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb4zUJDpup464Qrd3eFICNo" target="_blank" title="Open invoice in Stripe">inv: in_1Tb4zUJDpup464Qrd3eFICNo</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1185,8 +1222,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_AXerk2pLanxOJv</span>
-    <span class="id-pill">inv: in_1Tb4ORJDpup464QrOv0PqXg0</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_AXerk2pLanxOJv" target="_blank" title="Open customer in Stripe">cus: cus_AXerk2pLanxOJv</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb4ORJDpup464QrOv0PqXg0" target="_blank" title="Open invoice in Stripe">inv: in_1Tb4ORJDpup464QrOv0PqXg0</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1209,7 +1246,7 @@
     <div class="card-right">
       <span class="card-amount">$408.91</span>
       <span class="card-date">May 25, 2026</span>
-      <span class="card-days">1d ago</span>
+      <span class="card-days">2d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -1220,8 +1257,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_ElV869MzemYsnq</span>
-    <span class="id-pill">inv: in_1Tb3qpJDpup464Qr8zeJ3q0O</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_ElV869MzemYsnq" target="_blank" title="Open customer in Stripe">cus: cus_ElV869MzemYsnq</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb3qpJDpup464Qr8zeJ3q0O" target="_blank" title="Open invoice in Stripe">inv: in_1Tb3qpJDpup464Qr8zeJ3q0O</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1255,8 +1292,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PtWx7njjKIkLAD</span>
-    <span class="id-pill">inv: in_1Tb3N5JDpup464Qr46jxoLDv</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PtWx7njjKIkLAD" target="_blank" title="Open customer in Stripe">cus: cus_PtWx7njjKIkLAD</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb3N5JDpup464Qr46jxoLDv" target="_blank" title="Open invoice in Stripe">inv: in_1Tb3N5JDpup464Qr46jxoLDv</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1290,8 +1327,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_CkMjJrtV69rzZ2</span>
-    <span class="id-pill">inv: in_1Tb2u1JDpup464QrvToVQMTO</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_CkMjJrtV69rzZ2" target="_blank" title="Open customer in Stripe">cus: cus_CkMjJrtV69rzZ2</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb2u1JDpup464QrvToVQMTO" target="_blank" title="Open invoice in Stripe">inv: in_1Tb2u1JDpup464QrvToVQMTO</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1325,8 +1362,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LetQx83p3xr2KD</span>
-    <span class="id-pill">inv: in_1Tb1CCJDpup464QrCDJMfwLz</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LetQx83p3xr2KD" target="_blank" title="Open customer in Stripe">cus: cus_LetQx83p3xr2KD</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tb1CCJDpup464QrCDJMfwLz" target="_blank" title="Open invoice in Stripe">inv: in_1Tb1CCJDpup464QrCDJMfwLz</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1360,8 +1397,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_QiZR5Vnqp6Fr0f</span>
-    <span class="id-pill">inv: in_1TajpEJDpup464QrUUIrLliq</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_QiZR5Vnqp6Fr0f" target="_blank" title="Open customer in Stripe">cus: cus_QiZR5Vnqp6Fr0f</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TajpEJDpup464QrUUIrLliq" target="_blank" title="Open invoice in Stripe">inv: in_1TajpEJDpup464QrUUIrLliq</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1395,8 +1432,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_AiWZAXza49VzAM</span>
-    <span class="id-pill">inv: in_1Tai3vJDpup464Qrem2Zifle</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_AiWZAXza49VzAM" target="_blank" title="Open customer in Stripe">cus: cus_AiWZAXza49VzAM</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tai3vJDpup464Qrem2Zifle" target="_blank" title="Open invoice in Stripe">inv: in_1Tai3vJDpup464Qrem2Zifle</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1430,8 +1467,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_B5L5hmtsBe5KBJ</span>
-    <span class="id-pill">inv: in_1TafsxJDpup464QrwaO9t90p</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_B5L5hmtsBe5KBJ" target="_blank" title="Open customer in Stripe">cus: cus_B5L5hmtsBe5KBJ</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TafsxJDpup464QrwaO9t90p" target="_blank" title="Open invoice in Stripe">inv: in_1TafsxJDpup464QrwaO9t90p</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1465,8 +1502,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_GhN52zZjZ6MDnK</span>
-    <span class="id-pill">inv: in_1TafHlJDpup464QrWVjiJMWJ</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_GhN52zZjZ6MDnK" target="_blank" title="Open customer in Stripe">cus: cus_GhN52zZjZ6MDnK</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TafHlJDpup464QrWVjiJMWJ" target="_blank" title="Open invoice in Stripe">inv: in_1TafHlJDpup464QrWVjiJMWJ</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1500,8 +1537,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_KmCG0uFGcefkCT</span>
-    <span class="id-pill">inv: in_1TacV6JDpup464QrwmpRK5TE</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_KmCG0uFGcefkCT" target="_blank" title="Open customer in Stripe">cus: cus_KmCG0uFGcefkCT</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TacV6JDpup464QrwmpRK5TE" target="_blank" title="Open invoice in Stripe">inv: in_1TacV6JDpup464QrwmpRK5TE</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1535,8 +1572,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TqAt0sMzjbXgmW</span>
-    <span class="id-pill">inv: in_1TaMgGJDpup464QrQ6llg8Aa</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TqAt0sMzjbXgmW" target="_blank" title="Open customer in Stripe">cus: cus_TqAt0sMzjbXgmW</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaMgGJDpup464QrQ6llg8Aa" target="_blank" title="Open invoice in Stripe">inv: in_1TaMgGJDpup464QrQ6llg8Aa</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1570,8 +1607,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PzVysp2LBDIvxx</span>
-    <span class="id-pill">inv: in_1TaMKrJDpup464Qre6KliTSb</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PzVysp2LBDIvxx" target="_blank" title="Open customer in Stripe">cus: cus_PzVysp2LBDIvxx</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaMKrJDpup464Qre6KliTSb" target="_blank" title="Open invoice in Stripe">inv: in_1TaMKrJDpup464Qre6KliTSb</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1605,8 +1642,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PzW7UNANG8rlx3</span>
-    <span class="id-pill">inv: in_1TaMJpJDpup464QrfQW9R7z5</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PzW7UNANG8rlx3" target="_blank" title="Open customer in Stripe">cus: cus_PzW7UNANG8rlx3</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaMJpJDpup464QrfQW9R7z5" target="_blank" title="Open invoice in Stripe">inv: in_1TaMJpJDpup464QrfQW9R7z5</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1640,8 +1677,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PzW5jgYQZhQs16</span>
-    <span class="id-pill">inv: in_1TaMGbJDpup464QrECbfm3Pq</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PzW5jgYQZhQs16" target="_blank" title="Open customer in Stripe">cus: cus_PzW5jgYQZhQs16</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaMGbJDpup464QrECbfm3Pq" target="_blank" title="Open invoice in Stripe">inv: in_1TaMGbJDpup464QrECbfm3Pq</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1675,8 +1712,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PzW3W0X7j3Vvxn</span>
-    <span class="id-pill">inv: in_1TaMFsJDpup464QrvAgrhZJe</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PzW3W0X7j3Vvxn" target="_blank" title="Open customer in Stripe">cus: cus_PzW3W0X7j3Vvxn</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaMFsJDpup464QrvAgrhZJe" target="_blank" title="Open invoice in Stripe">inv: in_1TaMFsJDpup464QrvAgrhZJe</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1699,7 +1736,7 @@
     <div class="card-right">
       <span class="card-amount">$397.00</span>
       <span class="card-date">May 23, 2026</span>
-      <span class="card-days">3d ago</span>
+      <span class="card-days">4d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -1710,8 +1747,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SWsnfpGG831x0o</span>
-    <span class="id-pill">inv: in_1TaL1NJDpup464Qr1qFmnGJc</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SWsnfpGG831x0o" target="_blank" title="Open customer in Stripe">cus: cus_SWsnfpGG831x0o</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaL1NJDpup464Qr1qFmnGJc" target="_blank" title="Open invoice in Stripe">inv: in_1TaL1NJDpup464Qr1qFmnGJc</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1734,7 +1771,7 @@
     <div class="card-right">
       <span class="card-amount">$436.00</span>
       <span class="card-date">May 23, 2026</span>
-      <span class="card-days">3d ago</span>
+      <span class="card-days">4d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -1745,8 +1782,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_Ai8Pk0C59uYaAe</span>
-    <span class="id-pill">inv: in_1TaKgWJDpup464QrEkUSc6xG</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Ai8Pk0C59uYaAe" target="_blank" title="Open customer in Stripe">cus: cus_Ai8Pk0C59uYaAe</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaKgWJDpup464QrEkUSc6xG" target="_blank" title="Open invoice in Stripe">inv: in_1TaKgWJDpup464QrEkUSc6xG</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1780,8 +1817,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LiHTQPaWyYmDFp</span>
-    <span class="id-pill">inv: in_1TaK9YJDpup464QrfRDYXCmO</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LiHTQPaWyYmDFp" target="_blank" title="Open customer in Stripe">cus: cus_LiHTQPaWyYmDFp</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaK9YJDpup464QrfRDYXCmO" target="_blank" title="Open invoice in Stripe">inv: in_1TaK9YJDpup464QrfRDYXCmO</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1815,8 +1852,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_J8JN4Qz4nH4Uih</span>
-    <span class="id-pill">inv: in_1TaFMvJDpup464QrBgN8UttS</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_J8JN4Qz4nH4Uih" target="_blank" title="Open customer in Stripe">cus: cus_J8JN4Qz4nH4Uih</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TaFMvJDpup464QrBgN8UttS" target="_blank" title="Open invoice in Stripe">inv: in_1TaFMvJDpup464QrBgN8UttS</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1850,8 +1887,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_AVPKEZMkvREMvw</span>
-    <span class="id-pill">inv: in_1Ta303JDpup464QrQ7AmUjpN</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_AVPKEZMkvREMvw" target="_blank" title="Open customer in Stripe">cus: cus_AVPKEZMkvREMvw</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Ta303JDpup464QrQ7AmUjpN" target="_blank" title="Open invoice in Stripe">inv: in_1Ta303JDpup464QrQ7AmUjpN</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1885,8 +1922,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TaNyDaDhxzVXIm</span>
-    <span class="id-pill">inv: in_1TZyjVJDpup464QrBHBIpYmP</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TaNyDaDhxzVXIm" target="_blank" title="Open customer in Stripe">cus: cus_TaNyDaDhxzVXIm</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZyjVJDpup464QrBHBIpYmP" target="_blank" title="Open invoice in Stripe">inv: in_1TZyjVJDpup464QrBHBIpYmP</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1920,8 +1957,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_Td1FB1oJAdCT6d</span>
-    <span class="id-pill">inv: in_1TZyhrJDpup464QrvpLALBTJ</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Td1FB1oJAdCT6d" target="_blank" title="Open customer in Stripe">cus: cus_Td1FB1oJAdCT6d</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZyhrJDpup464QrvpLALBTJ" target="_blank" title="Open invoice in Stripe">inv: in_1TZyhrJDpup464QrvpLALBTJ</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1944,7 +1981,7 @@
     <div class="card-right">
       <span class="card-amount">$249.00</span>
       <span class="card-date">May 22, 2026</span>
-      <span class="card-days">4d ago</span>
+      <span class="card-days">5d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -1955,8 +1992,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TdAc8bD9kpFrFc</span>
-    <span class="id-pill">inv: in_1TZyGoJDpup464Qrb14kPznW</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TdAc8bD9kpFrFc" target="_blank" title="Open customer in Stripe">cus: cus_TdAc8bD9kpFrFc</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZyGoJDpup464Qrb14kPznW" target="_blank" title="Open invoice in Stripe">inv: in_1TZyGoJDpup464Qrb14kPznW</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -1990,8 +2027,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_Td4w1qS2rZHf1Z</span>
-    <span class="id-pill">inv: in_1TZxzlJDpup464QrKQfxVdzg</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Td4w1qS2rZHf1Z" target="_blank" title="Open customer in Stripe">cus: cus_Td4w1qS2rZHf1Z</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZxzlJDpup464QrKQfxVdzg" target="_blank" title="Open invoice in Stripe">inv: in_1TZxzlJDpup464QrKQfxVdzg</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2025,8 +2062,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LX5JC1pBmFlFV2</span>
-    <span class="id-pill">inv: in_1TZwa5JDpup464QrcoJAHSVw</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LX5JC1pBmFlFV2" target="_blank" title="Open customer in Stripe">cus: cus_LX5JC1pBmFlFV2</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZwa5JDpup464QrcoJAHSVw" target="_blank" title="Open invoice in Stripe">inv: in_1TZwa5JDpup464QrcoJAHSVw</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2060,8 +2097,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_JvMdLu10T7y83A</span>
-    <span class="id-pill">inv: in_1TZvMuJDpup464QrC0sxXlG4</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_JvMdLu10T7y83A" target="_blank" title="Open customer in Stripe">cus: cus_JvMdLu10T7y83A</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZvMuJDpup464QrC0sxXlG4" target="_blank" title="Open invoice in Stripe">inv: in_1TZvMuJDpup464QrC0sxXlG4</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2095,8 +2132,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TXSZVwRPYa1aP1</span>
-    <span class="id-pill">inv: in_1TZubYJDpup464QrSVtlUzJP</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TXSZVwRPYa1aP1" target="_blank" title="Open customer in Stripe">cus: cus_TXSZVwRPYa1aP1</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZubYJDpup464QrSVtlUzJP" target="_blank" title="Open invoice in Stripe">inv: in_1TZubYJDpup464QrSVtlUzJP</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2130,8 +2167,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_FSAMZmUuKwtJEU</span>
-    <span class="id-pill">inv: in_1TZrl1JDpup464QrQqeYfGZT</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_FSAMZmUuKwtJEU" target="_blank" title="Open customer in Stripe">cus: cus_FSAMZmUuKwtJEU</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZrl1JDpup464QrQqeYfGZT" target="_blank" title="Open invoice in Stripe">inv: in_1TZrl1JDpup464QrQqeYfGZT</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2165,8 +2202,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_CiwSiRrwOisigo</span>
-    <span class="id-pill">inv: in_1TZfTGJDpup464Qro6KEZeBy</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_CiwSiRrwOisigo" target="_blank" title="Open customer in Stripe">cus: cus_CiwSiRrwOisigo</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZfTGJDpup464Qro6KEZeBy" target="_blank" title="Open invoice in Stripe">inv: in_1TZfTGJDpup464Qro6KEZeBy</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2200,8 +2237,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_LppqAR1FjIggZR</span>
-    <span class="id-pill">inv: in_1TZaSvJDpup464Qr7A9QeAST</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LppqAR1FjIggZR" target="_blank" title="Open customer in Stripe">cus: cus_LppqAR1FjIggZR</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZaSvJDpup464Qr7A9QeAST" target="_blank" title="Open invoice in Stripe">inv: in_1TZaSvJDpup464Qr7A9QeAST</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2235,8 +2272,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_KmC35cezRlGtT8</span>
-    <span class="id-pill">inv: in_1TZaMTJDpup464QrsejXuI7X</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_KmC35cezRlGtT8" target="_blank" title="Open customer in Stripe">cus: cus_KmC35cezRlGtT8</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZaMTJDpup464QrsejXuI7X" target="_blank" title="Open invoice in Stripe">inv: in_1TZaMTJDpup464QrsejXuI7X</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2270,8 +2307,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SilogHlsz7fQUB</span>
-    <span class="id-pill">inv: in_1TZaEcJDpup464Qr0NNOzd9D</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SilogHlsz7fQUB" target="_blank" title="Open customer in Stripe">cus: cus_SilogHlsz7fQUB</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZaEcJDpup464Qr0NNOzd9D" target="_blank" title="Open invoice in Stripe">inv: in_1TZaEcJDpup464Qr0NNOzd9D</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2305,8 +2342,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_I1iyLW5RpaNZbk</span>
-    <span class="id-pill">inv: in_1TZYUHJDpup464QrG5cQnx1w</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_I1iyLW5RpaNZbk" target="_blank" title="Open customer in Stripe">cus: cus_I1iyLW5RpaNZbk</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZYUHJDpup464QrG5cQnx1w" target="_blank" title="Open invoice in Stripe">inv: in_1TZYUHJDpup464QrG5cQnx1w</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2340,8 +2377,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_EZRSgSS33ZHB9q</span>
-    <span class="id-pill">inv: in_1TZXdWJDpup464QrF1HNHlbm</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_EZRSgSS33ZHB9q" target="_blank" title="Open customer in Stripe">cus: cus_EZRSgSS33ZHB9q</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZXdWJDpup464QrF1HNHlbm" target="_blank" title="Open invoice in Stripe">inv: in_1TZXdWJDpup464QrF1HNHlbm</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2375,8 +2412,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_HJJ3Q0WoafYBRa</span>
-    <span class="id-pill">inv: in_1TZVH3JDpup464QrVDvh1x6x</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_HJJ3Q0WoafYBRa" target="_blank" title="Open customer in Stripe">cus: cus_HJJ3Q0WoafYBRa</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZVH3JDpup464QrVDvh1x6x" target="_blank" title="Open invoice in Stripe">inv: in_1TZVH3JDpup464QrVDvh1x6x</a>
     
     <span class="status-pill">Active</span>
   </div>
@@ -2410,8 +2447,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TDx7xx3teuywU8</span>
-    <span class="id-pill">inv: in_1TZDw7JDpup464Qrbh9UBsOx</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TDx7xx3teuywU8" target="_blank" title="Open customer in Stripe">cus: cus_TDx7xx3teuywU8</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TZDw7JDpup464Qrbh9UBsOx" target="_blank" title="Open invoice in Stripe">inv: in_1TZDw7JDpup464Qrbh9UBsOx</a>
     <span class="reason-pill">Blocked by Bank</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -2445,8 +2482,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_TSaLwGE1qdW33j</span>
-    <span class="id-pill">inv: in_1TY8B9JDpup464QrAE4qVDxE</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_TSaLwGE1qdW33j" target="_blank" title="Open customer in Stripe">cus: cus_TSaLwGE1qdW33j</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TY8B9JDpup464QrAE4qVDxE" target="_blank" title="Open invoice in Stripe">inv: in_1TY8B9JDpup464QrAE4qVDxE</a>
     
     <span class="status-pill">Past_Due</span>
   </div>
@@ -2480,8 +2517,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_G3IQmCXegIDREw</span>
-    <span class="id-pill">inv: in_1TY86ZJDpup464QrK6opuUlb</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_G3IQmCXegIDREw" target="_blank" title="Open customer in Stripe">cus: cus_G3IQmCXegIDREw</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TY86ZJDpup464QrK6opuUlb" target="_blank" title="Open invoice in Stripe">inv: in_1TY86ZJDpup464QrK6opuUlb</a>
     <span class="reason-pill">Transaction Not Allowed</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -2515,8 +2552,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PGsZMylWPmvRW6</span>
-    <span class="id-pill">inv: in_1TX4A4JDpup464QrqMgSueP4</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PGsZMylWPmvRW6" target="_blank" title="Open customer in Stripe">cus: cus_PGsZMylWPmvRW6</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TX4A4JDpup464QrqMgSueP4" target="_blank" title="Open invoice in Stripe">inv: in_1TX4A4JDpup464QrqMgSueP4</a>
     <span class="reason-pill">Transaction Not Allowed</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -2550,8 +2587,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_PugP7msI4IQTWj</span>
-    <span class="id-pill">inv: in_1TX2z2JDpup464Qr5PD6HoAh</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_PugP7msI4IQTWj" target="_blank" title="Open customer in Stripe">cus: cus_PugP7msI4IQTWj</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TX2z2JDpup464Qr5PD6HoAh" target="_blank" title="Open invoice in Stripe">inv: in_1TX2z2JDpup464Qr5PD6HoAh</a>
     <span class="reason-pill">Blocked by Bank</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -2585,8 +2622,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_MP0e9WZBbki5JA</span>
-    <span class="id-pill">inv: in_1TWjJ1JDpup464QrWDVPhZzg</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_MP0e9WZBbki5JA" target="_blank" title="Open customer in Stripe">cus: cus_MP0e9WZBbki5JA</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TWjJ1JDpup464QrWDVPhZzg" target="_blank" title="Open invoice in Stripe">inv: in_1TWjJ1JDpup464QrWDVPhZzg</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Past_Due</span>
   </div>
@@ -2620,8 +2657,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_RW2PLBlbcKuv9U</span>
-    <span class="id-pill">inv: in_1TVYvJJDpup464QrJC7lIkyG</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RW2PLBlbcKuv9U" target="_blank" title="Open customer in Stripe">cus: cus_RW2PLBlbcKuv9U</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TVYvJJDpup464QrJC7lIkyG" target="_blank" title="Open invoice in Stripe">inv: in_1TVYvJJDpup464QrJC7lIkyG</a>
     <span class="reason-pill">Invalid Card Number</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -2655,8 +2692,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_JVaWPJzHcf9hWa</span>
-    <span class="id-pill">inv: in_1TVHMzJDpup464QrBWB6tXWE</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_JVaWPJzHcf9hWa" target="_blank" title="Open customer in Stripe">cus: cus_JVaWPJzHcf9hWa</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TVHMzJDpup464QrBWB6tXWE" target="_blank" title="Open invoice in Stripe">inv: in_1TVHMzJDpup464QrBWB6tXWE</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -2690,8 +2727,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_JGAHQDrgIB6Nk7</span>
-    <span class="id-pill">inv: in_1TUvonJDpup464QreHFupS7G</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_JGAHQDrgIB6Nk7" target="_blank" title="Open customer in Stripe">cus: cus_JGAHQDrgIB6Nk7</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TUvonJDpup464QreHFupS7G" target="_blank" title="Open invoice in Stripe">inv: in_1TUvonJDpup464QreHFupS7G</a>
     <span class="reason-pill">Insufficient Funds</span>
     <span class="status-pill">Unpaid</span>
   </div>
@@ -2725,8 +2762,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_SmgBg8FS594qfb</span>
-    <span class="id-pill">inv: in_1TUYqiJDpup464QrDISYIiI1</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_SmgBg8FS594qfb" target="_blank" title="Open customer in Stripe">cus: cus_SmgBg8FS594qfb</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TUYqiJDpup464QrDISYIiI1" target="_blank" title="Open invoice in Stripe">inv: in_1TUYqiJDpup464QrDISYIiI1</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Active</span>
   </div>
@@ -2760,8 +2797,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_NRoZx9RWA5Yzkl</span>
-    <span class="id-pill">inv: in_1TUJ8jJDpup464Qr5Eeb8E5R</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_NRoZx9RWA5Yzkl" target="_blank" title="Open customer in Stripe">cus: cus_NRoZx9RWA5Yzkl</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TUJ8jJDpup464Qr5Eeb8E5R" target="_blank" title="Open invoice in Stripe">inv: in_1TUJ8jJDpup464Qr5Eeb8E5R</a>
     <span class="na-pill">Never Attempted</span>
     <span class="status-pill">Active</span>
   </div>
@@ -2795,8 +2832,8 @@
     </div>
   </div>
   <div class="card-ids">
-    <span class="id-pill">cus: cus_T8HbC1zmiAcw3k</span>
-    <span class="id-pill">inv: in_1TU7PgJDpup464QrxtUNQQnF</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T8HbC1zmiAcw3k" target="_blank" title="Open customer in Stripe">cus: cus_T8HbC1zmiAcw3k</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TU7PgJDpup464QrxtUNQQnF" target="_blank" title="Open invoice in Stripe">inv: in_1TU7PgJDpup464QrxtUNQQnF</a>
     <span class="reason-pill">Invalid Card Number</span>
     <span class="status-pill">Unpaid</span>
   </div>
