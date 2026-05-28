@@ -120,7 +120,7 @@
           <th>Network</th>
           <th>Loc</th>
           <th>Customer ID</th>
-          <th>Sheet Paid</th>
+          <th>Payment</th>
           <th>Tags</th>
           <th>Outcome</th>
           <th>Notes</th>
@@ -191,10 +191,19 @@ const OFFICES = [
   {name:"Southern Spine Chiropractic",network:"",loc:"",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:""}
 ];
 
+// Stripe live data — updated every Friday at 12pm by onboarding_check.py
+// FORMAT: { "cus_xxx": { "stripePaid": true/false/null, "paymentType": "auto"/"manual"/null, "lastChecked": "YYYY-MM-DD" } }
+/* STRIPE_DATA_START */
+const STRIPE_DATA = {};
+/* STRIPE_DATA_END */
+
 // Pre-seed outcomes from sheet data
 function defaultOutcome(o) {
+  const sd = STRIPE_DATA[o.cid] || {};
+  if (sd.stripePaid === true) return 'paid';
+  if (sd.stripePaid === false) return 'pending';
   if (o.paid === 'TRUE') return 'paid';
-  if (o.paid === 'N/A') return 'paid'; // N/A = no OB fee, treated as resolved
+  if (o.paid === 'N/A') return 'paid';
   if (o.other && o.other.toLowerCase().includes('ghost')) return 'ghost';
   if (o.other && o.other.toLowerCase().includes('at-risk')) return 'at-risk';
   if (o.other && o.other.toLowerCase().includes('potential')) return 'at-risk';
@@ -219,6 +228,36 @@ function paidBadge(paid) {
   return '<span class="badge badge-false">Unpaid</span>';
 }
 
+function paymentCell(o) {
+  const sd = STRIPE_DATA[o.cid] || {};
+  // Payment type badge (auto/manual)
+  let typeBadge = '';
+  if (sd.paymentType === 'auto') {
+    typeBadge = '<span class="badge" style="background:#E7E4FF;color:#6010CC;">Auto</span>';
+  } else if (sd.paymentType === 'manual') {
+    typeBadge = '<span class="badge" style="background:#FDF3E4;color:#B87A25;">Manual</span>';
+  } else if (o.cid) {
+    typeBadge = '<span class="badge badge-false">—</span>';
+  } else {
+    typeBadge = '<span style="color:#DFE5EB;font-size:12px;">—</span>';
+  }
+  // Paid status: prefer Stripe live data, fall back to sheet
+  let paidBadgeHtml = '';
+  if (sd.stripePaid === true) {
+    paidBadgeHtml = '<span class="badge badge-paid" title="Verified by Stripe">✓ Paid</span>';
+  } else if (sd.stripePaid === false) {
+    paidBadgeHtml = '<span class="badge badge-false" title="Not paid per Stripe">Unpaid</span>';
+  } else if (o.paid === 'TRUE') {
+    paidBadgeHtml = '<span class="badge badge-paid">Paid</span>';
+  } else if (o.paid === 'N/A') {
+    paidBadgeHtml = '<span class="badge badge-na">N/A</span>';
+  } else {
+    paidBadgeHtml = '<span class="badge badge-false">Unpaid</span>';
+  }
+  const checked = sd.lastChecked ? `<div style="font-size:10px;color:#ABA3D6;margin-top:4px;">Stripe: ${sd.lastChecked}</div>` : '';
+  return `<div style="display:flex;flex-direction:column;gap:4px;">${typeBadge}${paidBadgeHtml}${checked}</div>`;
+}
+
 function render() {
   const state = loadState();
   const tbody = document.getElementById('office-tbody');
@@ -233,7 +272,7 @@ function render() {
 
     // Tags
     let tags = '';
-    if (o.offboarded) tags += `<span class="tag-pill tag-offboarded">Offboarded${o.offboarded !== 'YES' ? ': '+o.offboarded : ''}</span>`;
+    if (o.offboarded) tags += `<span class="tag-pill tag-offboarded">Offboarded</span>`;
     if (o.newgrad)    tags += `<span class="tag-pill tag-newgrad">New Grad</span>`;
 
     const tr = document.createElement('tr');
@@ -245,8 +284,8 @@ function render() {
       <td style="font-weight:500; color:#202324;">${o.name}</td>
       <td style="color:#425466;">${o.network}</td>
       <td style="color:#425466;">${o.loc}</td>
-      <td style="font-size:12px; color:#ABA3D6; font-family:monospace;">${o.cid || '—'}</td>
-      <td>${paidBadge(o.paid)}</td>
+      <td style="font-size:12px; font-family:monospace;">${o.cid ? `<a href="https://dashboard.stripe.com/customers/${o.cid}" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${o.cid}</a>` : '<span style="color:#DFE5EB">—</span>'}</td>
+      <td>${paymentCell(o)}</td>
       <td>${tags || '<span style="color:#DFE5EB">—</span>'}</td>
       <td>
         <select class="outcome-select ${outcome}" data-key="${key}" onchange="updateOutcome(this)">
