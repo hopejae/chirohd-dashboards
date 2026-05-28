@@ -444,14 +444,15 @@ const STRIPE_DATA = {
 
 // Pre-seed outcomes from sheet data
 function defaultOutcome(o) {
+  // Ghost/at-risk signals always win — Stripe paid status can't override a known ghost
+  if (o.other && o.other.toLowerCase().includes('ghost')) return 'ghost';
+  if (o.other && o.other.toLowerCase().includes('at-risk')) return 'at-risk';
+  if (o.other && o.other.toLowerCase().includes('potential')) return 'at-risk';
   const sd = STRIPE_DATA[o.cid] || {};
   if (sd.stripePaid === true) return 'paid';
   if (sd.stripePaid === false) return 'pending';
   if (o.paid === 'TRUE') return 'paid';
   if (o.paid === 'N/A') return 'paid';
-  if (o.other && o.other.toLowerCase().includes('ghost')) return 'ghost';
-  if (o.other && o.other.toLowerCase().includes('at-risk')) return 'at-risk';
-  if (o.other && o.other.toLowerCase().includes('potential')) return 'at-risk';
   return 'pending';
 }
 
