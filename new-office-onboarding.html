@@ -143,40 +143,40 @@ document.getElementById('logo-img').src = 'data:image/png;base64,' + LOGO_B64;
 document.getElementById('wheel-img').src = 'data:image/png;base64,' + WHEEL_B64;
 
 const OFFICES = [
-  {name:"McCracken County Chiropractic",network:"353",loc:"1",cid:"cus_N6lwJswnqMXIPm",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Mission Chiropractic & Health",network:"391",loc:"1",cid:"cus_NP7Ci1xCDighux",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Dakota Clinic of Chiropractic",network:"1072",loc:"1",cid:"cus_SGek3S2T96QGyG",paid:"TRUE",offboarded:"YES",newgrad:"",other:"",paymentType:""},
-  {name:"Keystone Family Chiropractic",network:"1207",loc:"1",cid:"cus_SwcETuTP1HRn9K",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Ledesma Chiropractic",network:"1323",loc:"1",cid:"cus_TUobLyydkaHEVM",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Wilson Family Chiropractic",network:"1296",loc:"1",cid:"cus_TNcIA5thmIbTt4",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Middletown Family Chiropractic",network:"981",loc:"1",cid:"cus_RsJtC5SEpfEuwM",paid:"TRUE",offboarded:"YES",newgrad:"",other:"",paymentType:""},
-  {name:"Titan Chiropractic",network:"1107",loc:"1",cid:"cus_ST7wWktETKW3Iz",paid:"FALSE",offboarded:"",newgrad:"YES",other:"",paymentType:""},
-  {name:"Abundance Chiropractic",network:"436",loc:"4",cid:"cus_TjqC2RlFyUubOV",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Chiropractic Associates",network:"552",loc:"8",cid:"cus_TnpP7eLp062t7j",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Restoration Health",network:"1205",loc:"4",cid:"cus_SxVDksFBidwuV2",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Wellness One",network:"1099",loc:"1",cid:"cus_SQmLvNpKVwjvX4",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Ability Chiropractic",network:"600",loc:"21",cid:"cus_TFMHRRRMmLmKKc",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Rassel Diagneault Family Chiropractic",network:"1318",loc:"3",cid:"cus_TWc75JeCjl6FxB",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Proficient Chiropractic",network:"1366",loc:"3",cid:"cus_TjrGqKDYMOCj4G",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Roots Chiropractic",network:"1422",loc:"1",cid:"cus_U2xmEagAo61dr4",paid:"N/A",offboarded:"",newgrad:"",other:"No OB fee per Gabe",paymentType:""},
-  {name:"Frequency Chiropractic",network:"1425",loc:"1",cid:"cus_U3f9EOwwxO4OEp",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Pain Solutions of Arizona Mesa",network:"1233",loc:"3",cid:"cus_T5K8zz24NJhBWF",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Connected Health",network:"5",loc:"48",cid:"cus_U0y2M7k3M3gzYP",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"YOGO Spine Co.",network:"1421",loc:"1",cid:"cus_U2xDEt3Lpsyaw2",paid:"TRUE",offboarded:"",newgrad:"YES",other:"",paymentType:""},
+  {name:"McCracken County Chiropractic",network:"353",loc:"1",cid:"cus_N6lwJswnqMXIPm",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Mission Chiropractic & Health",network:"391",loc:"1",cid:"cus_NP7Ci1xCDighux",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Dakota Clinic of Chiropractic",network:"1072",loc:"1",cid:"cus_SGek3S2T96QGyG",paid:"TRUE",offboarded:"YES",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Keystone Family Chiropractic",network:"1207",loc:"1",cid:"cus_SwcETuTP1HRn9K",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Ledesma Chiropractic",network:"1323",loc:"1",cid:"cus_TUobLyydkaHEVM",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Wilson Family Chiropractic",network:"1296",loc:"1",cid:"cus_TNcIA5thmIbTt4",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Middletown Family Chiropractic",network:"981",loc:"1",cid:"cus_RsJtC5SEpfEuwM",paid:"TRUE",offboarded:"YES",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Titan Chiropractic",network:"1107",loc:"1",cid:"cus_ST7wWktETKW3Iz",paid:"FALSE",offboarded:"",newgrad:"YES",other:"",paymentType:"manual"},
+  {name:"Abundance Chiropractic",network:"436",loc:"4",cid:"cus_TjqC2RlFyUubOV",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Chiropractic Associates",network:"552",loc:"8",cid:"cus_TnpP7eLp062t7j",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Restoration Health",network:"1205",loc:"4",cid:"cus_SxVDksFBidwuV2",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Wellness One",network:"1099",loc:"1",cid:"cus_SQmLvNpKVwjvX4",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Ability Chiropractic",network:"600",loc:"21",cid:"cus_TFMHRRRMmLmKKc",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Rassel Diagneault Family Chiropractic",network:"1318",loc:"3",cid:"cus_TWc75JeCjl6FxB",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Proficient Chiropractic",network:"1366",loc:"3",cid:"cus_TjrGqKDYMOCj4G",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Roots Chiropractic",network:"1422",loc:"1",cid:"cus_U2xmEagAo61dr4",paid:"N/A",offboarded:"",newgrad:"",other:"No OB fee per Gabe",paymentType:"auto"},
+  {name:"Frequency Chiropractic",network:"1425",loc:"1",cid:"cus_U3f9EOwwxO4OEp",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Pain Solutions of Arizona Mesa",network:"1233",loc:"3",cid:"cus_T5K8zz24NJhBWF",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Connected Health",network:"5",loc:"48",cid:"cus_U0y2M7k3M3gzYP",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"YOGO Spine Co.",network:"1421",loc:"1",cid:"cus_U2xDEt3Lpsyaw2",paid:"TRUE",offboarded:"",newgrad:"YES",other:"",paymentType:"auto"},
   {name:"Live Freeform Dallas",network:"576",loc:"7",cid:"cus_TsQCEyIAUZgfK4",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Health From Within Family Chiropractic",network:"1342",loc:"6",cid:"cus_ThCHFgVlcnJlNU",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Apex Chiropractic",network:"1386",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/26/26",paymentType:"auto"},
+  {name:"Apex Chiropractic",network:"1386",loc:"1",cid:"cus_UFXAaUWt1L8kNS",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/26/26",paymentType:"auto"},
   {name:"BackCountry Chiropractic",network:"1393",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 03/29/26",paymentType:"auto"},
   {name:"Motion+ Chiropractic",network:"1417",loc:"1",cid:"cus_U27i0pEy0nMrJi",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Functional Spine Chiropractic",network:"1044",loc:"4",cid:"cus_U7L4QgF7jMB8Dm",paid:"FALSE",offboarded:"",newgrad:"",other:"Potential at-risk",paymentType:"manual"},
-  {name:"Accurso Chiropractic Center",network:"1401",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/12/26",paymentType:"auto"},
+  {name:"Accurso Chiropractic Center",network:"1401",loc:"1",cid:"cus_TxawshTTu8KryH",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/12/26",paymentType:"auto"},
   {name:"Tracy Chiropractic",network:"912",loc:"1",cid:"cus_RTF5aS80TTxNmk",paid:"FALSE",offboarded:"In Progress",newgrad:"",other:"Ghosted",paymentType:"manual"},
   {name:"Ireland Family Chiropractic",network:"1352",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 01/21/26",paymentType:"auto"},
-  {name:"Resilient Chiropractic",network:"1389",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/27/26",paymentType:"auto"},
+  {name:"Resilient Chiropractic",network:"1389",loc:"1",cid:"cus_R8c1bHoNvf6IB4",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/27/26",paymentType:"auto"},
   {name:"Vive Family Chiropractic",network:"1412",loc:"1",cid:"cus_U0HtQqFTYvaZ9T",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Trinity Family Chiropractic",network:"1438",loc:"1",cid:"cus_U8YG9tctbVHdHM",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Orange Wellness",network:"1363",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 01/30/26",paymentType:"auto"},
-  {name:"Salkin Family Chiropractic",network:"1360",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 01/14/26",paymentType:"auto"},
+  {name:"Salkin Family Chiropractic",network:"1360",loc:"1",cid:"cus_ThUPwH63k2gX1v",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 01/14/26",paymentType:"auto"},
   {name:"MUV Chiropractic",network:"1333",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 12/26/25",paymentType:"auto"},
   {name:"Healthy Balance",network:"1416",loc:"1",cid:"cus_U274lF3IMCSIsd",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Bee Well Chiropractic",network:"1418",loc:"1",cid:"cus_U2DLzye1lRMpag",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
@@ -185,69 +185,69 @@ const OFFICES = [
   {name:"Lavender Family Chiropractic",network:"724",loc:"7",cid:"cus_U0eh6XQ2lLaG5e",paid:"FALSE",offboarded:"",newgrad:"",other:"Contacted",paymentType:"manual"},
   {name:"House of TOR Chiropractic",network:"919",loc:"7",cid:"cus_U8uXVNkMK9cQ6i",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Town Center Family Chiropractic",network:"1262",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 12/16/25",paymentType:"auto"},
-  {name:"Elite Chiropractic",network:"1391",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/28/26",paymentType:"auto"},
-  {name:"Bouc Family Chiropractic",network:"1395",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/6/26",paymentType:"auto"},
+  {name:"Elite Chiropractic",network:"1391",loc:"1",cid:"cus_UOFqa2rYZdPGBt",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/28/26",paymentType:"auto"},
+  {name:"Bouc Family Chiropractic",network:"1395",loc:"1",cid:"cus_TviZ7QswZsRuX8",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/6/26",paymentType:"auto"},
   {name:"Sitka Health Hub",network:"1428",loc:"1",cid:"cus_U4CZlxgyeaUz4Z",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Conquer Health Chiropractic",network:"1429",loc:"1",cid:"cus_U4KXLMSlC0Ztss",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Whole Family Wellness",network:"1365",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/15/26",paymentType:"auto"},
+  {name:"Whole Family Wellness",network:"1365",loc:"1",cid:"cus_ThxIBC1rjIy5hu",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/15/26",paymentType:"auto"},
   {name:"Innate Wellness Chiropractic",network:"1387",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/27/26",paymentType:"auto"},
-  {name:"Possibilities Chiropractic",network:"1392",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 3/31/26",paymentType:"auto"},
-  {name:"Evolve Chiropractic",network:"1398",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 3/11/26",paymentType:"auto"},
+  {name:"Possibilities Chiropractic",network:"1392",loc:"1",cid:"cus_Tt8GGTp1UvaEIM",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 3/31/26",paymentType:"auto"},
+  {name:"Evolve Chiropractic",network:"1398",loc:"1",cid:"cus_SeKuVZrDcrJrnZ",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 3/11/26",paymentType:"auto"},
   {name:"Epic Life Chiropractic",network:"1402",loc:"1",cid:"cus_TyMGfup7Sbl8Au",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Atlas Chiropractic Clinic",network:"1477",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Atlas Chiropractic Clinic",network:"1477",loc:"1",cid:"cus_UGKdwCaU9sL6U9",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Adjust+Align",network:"1359",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 12/29/25",paymentType:"auto"},
-  {name:"Radiant Results",network:"1372",loc:"4",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Radiant Results",network:"1372",loc:"5",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Radiant Results",network:"1372",loc:"4",cid:"cus_U0GkcfVMOXPdCb",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Radiant Results",network:"1372",loc:"5",cid:"cus_U0GkcfVMOXPdCb",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Flagship Healthcare",network:"1380",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 2/10/26",paymentType:"auto"},
-  {name:"Abundant Family Chiropractic",network:"1397",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/09/26",paymentType:"auto"},
-  {name:"Empower Chiropractic",network:"1419",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Southern Spine Chiropractic",network:"1437",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Sea Grace Chiropractic",network:"1434",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Wilderness Family Chiropractic",network:"1430",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Radiant Life Chiropractic",network:"1439",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Ever Wellness",network:"1379",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Highest Health Chiropractic",network:"1405",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Precision Spine and Wellness",network:"1432",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Abundant Family Chiropractic",network:"1397",loc:"1",cid:"cus_TwWY7I8y4Sjw70",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 02/09/26",paymentType:"auto"},
+  {name:"Empower Chiropractic",network:"1419",loc:"1",cid:"cus_U2TMfwBA8InlUh",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Southern Spine Chiropractic",network:"1437",loc:"1",cid:"cus_U8XbEQK8nf6mOC",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Sea Grace Chiropractic",network:"1434",loc:"1",cid:"cus_U7f536ZBxPeEjw",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Wilderness Family Chiropractic",network:"1430",loc:"1",cid:"cus_U5B8zwHtmNxHYu",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Radiant Life Chiropractic",network:"1439",loc:"1",cid:"cus_U8sA81efxDuwmb",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Ever Wellness",network:"1379",loc:"1",cid:"cus_TpRLmzMii7wkXC",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Highest Health Chiropractic",network:"1405",loc:"1",cid:"cus_TzXgyfsTGFyXgW",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Precision Spine and Wellness",network:"1432",loc:"1",cid:"cus_U7JTgQtuCPvAjp",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Optimal Wellness for Life Chiropractic",network:"1440",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Haven Chiropractic",network:"1457",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"PWC Chiropractic",network:"1399",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 4/11/26",paymentType:"auto"},
-  {name:"Rocket City Chiropractic",network:"1304",loc:"3",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Align Chiropractic",network:"1308",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/16/26",paymentType:"auto"},
+  {name:"Haven Chiropractic",network:"1457",loc:"1",cid:"cus_UD0AcoqrXewvnm",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"PWC Chiropractic",network:"1399",loc:"1",cid:"cus_TxFmUuBPfa5fWN",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 4/11/26",paymentType:"auto"},
+  {name:"Rocket City Chiropractic",network:"1304",loc:"3",cid:"cus_TvLzUZIOpP1zIb",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Align Chiropractic",network:"1308",loc:"1",cid:"cus_UKYLPjjkMydD7N",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/16/26",paymentType:"auto"},
   {name:"Blau Family Chiropractic",network:"1332",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 12/26/25",paymentType:"auto"},
-  {name:"Rebel Chiropractic",network:"1341",loc:"1",cid:"",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/15/26",paymentType:"auto"},
-  {name:"Gentle Roots Chiropractic",network:"1484",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Health First Chiropractic and Wellness",network:"1115",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Northwest Kansas Chiropractic",network:"1420",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Vital Life Chiropractic",network:"1446",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Optimal Health Chiropractic",network:"1474",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Discover Specific Chiropractic",network:"1476",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Chuang Affiliated Chiropractic Corp",network:"1482",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Unity Chiropractic",network:"22",loc:"5",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Cornerstone Family Chiropractic",network:"1426",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Wellness Grove Chiropractic",network:"1478",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Canyon Family Chiropractic",network:"1494",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Awakened Chiropractic",network:"1505",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Rebel Chiropractic",network:"1341",loc:"1",cid:"cus_R4yj3m6XzrmJNl",paid:"TRUE",offboarded:"",newgrad:"",other:"Auto Stripe 1/15/26",paymentType:"auto"},
+  {name:"Gentle Roots Chiropractic",network:"1484",loc:"1",cid:"cus_UIDf8a4OSw3S7r",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Health First Chiropractic and Wellness",network:"1115",loc:"1",cid:"cus_UDMgUx4xEGrNcf",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Northwest Kansas Chiropractic",network:"1420",loc:"1",cid:"cus_U2ZFq1jMdUfkYA",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Vital Life Chiropractic",network:"1446",loc:"1",cid:"cus_UFyrZNqBbAnSwS",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Optimal Health Chiropractic",network:"1474",loc:"1",cid:"cus_UFhBZy5B2O4Ufo",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Discover Specific Chiropractic",network:"1476",loc:"1",cid:"cus_UFdCGXs49YqtSY",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Chuang Affiliated Chiropractic Corp",network:"1482",loc:"1",cid:"cus_UHtFhWVnDiITMm",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Unity Chiropractic",network:"22",loc:"5",cid:"cus_UNtlBMXjiYFhib",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Cornerstone Family Chiropractic",network:"1426",loc:"1",cid:"cus_U3h77dkTQpZYxL",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Wellness Grove Chiropractic",network:"1478",loc:"1",cid:"cus_UGlsyloeC5FJyD",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Canyon Family Chiropractic",network:"1494",loc:"1",cid:"cus_UN4ophZJBPbsXF",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Awakened Chiropractic",network:"1505",loc:"1",cid:"cus_UOZyjRg6JjicSJ",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Strive Spinal Health",network:"1413",loc:"1",cid:"cus_U0MIGOZHvqR722",paid:"TRUE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Curis Ft Worth Boat Club",network:"168",loc:"61",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Pathways Chiropractic",network:"1453",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Hiers Chiropractic",network:"1458",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Elevate Life Chiropractic",network:"1489",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Solaris Chiropractic",network:"1499",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:""},
-  {name:"Starwood Chiropractic",network:"1521",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Innate Chiropractic",network:"1436",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Align Chiropractic",network:"1490",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Curis Ft Worth Boat Club",network:"168",loc:"61",cid:"cus_UJMiIiiaTQaC3k",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Pathways Chiropractic",network:"1453",loc:"1",cid:"cus_UCYzK0icU5FlqI",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Hiers Chiropractic",network:"1458",loc:"1",cid:"cus_UCzrLW1lhUEApY",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Elevate Life Chiropractic",network:"1489",loc:"1",cid:"cus_UKYDcu5qjZmNm5",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Solaris Chiropractic",network:"1499",loc:"1",cid:"cus_UNWvUOkP1Mqg5k",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Starwood Chiropractic",network:"1521",loc:"1",cid:"cus_URB32iO6FIaPyY",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Innate Chiropractic",network:"1436",loc:"1",cid:"cus_UWbNfrcEjpAgZh",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Align Chiropractic",network:"1490",loc:"1",cid:"cus_UKYLPjjkMydD7N",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Live FreeForm Trophy Club",network:"576",loc:"9",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Mercier Health",network:"1512",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Bobb Chiropractic Center",network:"1481",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Restore Chiropractic",network:"1098",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Cafe of Life Chiropractic Wellness Center",network:"1461",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Davidson Family Wellness",network:"1470",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Victory Spinal Care",network:"1491",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Orenda Chiropractic",network:"1516",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"FreeForm West 7th",network:"576",loc:"11",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Southside Family Chiropractic",network:"1464",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Synergy Integrated Health",network:"1498",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
-  {name:"Comprehensive Chiropractic",network:"1463",loc:"1",cid:"",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Mercier Health",network:"1512",loc:"1",cid:"cus_UQR3t92gFAwDbl",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Bobb Chiropractic Center",network:"1481",loc:"1",cid:"cus_UHstWjPjGOHgCr",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Restore Chiropractic",network:"1098",loc:"1",cid:"cus_SQmICGTaqeIt5i",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Cafe of Life Chiropractic Wellness Center",network:"1461",loc:"1",cid:"cus_UDQhDgHR7XNsPe",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Davidson Family Wellness",network:"1470",loc:"1",cid:"cus_UFc6oKpqmSxpZ4",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Victory Spinal Care",network:"1491",loc:"1",cid:"cus_UKodjCL8OesTc0",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Orenda Chiropractic",network:"1516",loc:"1",cid:"cus_UQoYpgQgheK1hR",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"FreeForm West 7th",network:"576",loc:"11",cid:"cus_USe5foMQgKpsbP",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Southside Family Chiropractic",network:"1464",loc:"1",cid:"cus_UFFHhw1zM32f3f",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Synergy Integrated Health",network:"1498",loc:"1",cid:"cus_UNSxf3xJZFtERo",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Comprehensive Chiropractic",network:"1463",loc:"1",cid:"cus_UE4aV3hNj2hKf0",paid:"FALSE",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -364,6 +364,11 @@ const STRIPE_DATA = {
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
+  "cus_UFXAaUWt1L8kNS": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
   "cus_U27i0pEy0nMrJi": {
     "paymentType": "auto",
     "stripePaid": true,
@@ -374,7 +379,17 @@ const STRIPE_DATA = {
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
+  "cus_TxawshTTu8KryH": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
   "cus_RTF5aS80TTxNmk": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_R8c1bHoNvf6IB4": {
     "paymentType": "auto",
     "stripePaid": true,
     "lastChecked": "2026-05-28"
@@ -386,6 +401,11 @@ const STRIPE_DATA = {
   },
   "cus_U8YG9tctbVHdHM": {
     "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_ThUPwH63k2gX1v": {
+    "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
@@ -419,6 +439,16 @@ const STRIPE_DATA = {
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
+  "cus_UOFqa2rYZdPGBt": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TviZ7QswZsRuX8": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
   "cus_U4CZlxgyeaUz4Z": {
     "paymentType": "auto",
     "stripePaid": true,
@@ -429,13 +459,258 @@ const STRIPE_DATA = {
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
+  "cus_ThxIBC1rjIy5hu": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_Tt8GGTp1UvaEIM": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_SeKuVZrDcrJrnZ": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
   "cus_TyMGfup7Sbl8Au": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UGKdwCaU9sL6U9": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U0GkcfVMOXPdCb": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TwWY7I8y4Sjw70": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U2TMfwBA8InlUh": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U8XbEQK8nf6mOC": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U7f536ZBxPeEjw": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U5B8zwHtmNxHYu": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U8sA81efxDuwmb": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TpRLmzMii7wkXC": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TzXgyfsTGFyXgW": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U7JTgQtuCPvAjp": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UD0AcoqrXewvnm": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TxFmUuBPfa5fWN": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_TvLzUZIOpP1zIb": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UKYLPjjkMydD7N": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_R4yj3m6XzrmJNl": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UIDf8a4OSw3S7r": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UDMgUx4xEGrNcf": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U2ZFq1jMdUfkYA": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UFyrZNqBbAnSwS": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UFhBZy5B2O4Ufo": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UFdCGXs49YqtSY": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UHtFhWVnDiITMm": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UNtlBMXjiYFhib": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_U3h77dkTQpZYxL": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UGlsyloeC5FJyD": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UN4ophZJBPbsXF": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UOZyjRg6JjicSJ": {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   },
   "cus_U0MIGOZHvqR722": {
     "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UJMiIiiaTQaC3k": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UCYzK0icU5FlqI": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UCzrLW1lhUEApY": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UKYDcu5qjZmNm5": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UNWvUOkP1Mqg5k": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_URB32iO6FIaPyY": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UWbNfrcEjpAgZh": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UQR3t92gFAwDbl": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UHstWjPjGOHgCr": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_SQmICGTaqeIt5i": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UDQhDgHR7XNsPe": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UFc6oKpqmSxpZ4": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UKodjCL8OesTc0": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UQoYpgQgheK1hR": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_USe5foMQgKpsbP": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UFFHhw1zM32f3f": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UNSxf3xJZFtERo": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-05-28"
+  },
+  "cus_UE4aV3hNj2hKf0": {
+    "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-05-28"
   }
