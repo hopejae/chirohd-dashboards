@@ -755,8 +755,8 @@ function cidCell(cid, key) {
   // Editable input for missing cus_id
   return '<input type="text" placeholder="paste cus_id…" data-key="' + key + '" '
     + 'style="font-family:monospace; font-size:11px; border:1.5px solid #DFE5EB; border-radius:6px; padding:4px 8px; width:180px; outline:none; color:#202324;" '
-    + 'onblur="saveCid(this)" onkeydown="if(event.key===\'Enter\')this.blur()" '
-    + 'onfocus="this.style.borderColor=\'#8215FF\'" onblur="this.style.borderColor=\'#DFE5EB\'; saveCid(this)">';
+    + 'onkeydown="if(event.key===\'Enter\'){event.preventDefault();saveCid(this);}" '
+    + 'onblur="saveCid(this)">';
 }
 
 function saveCid(input) {
