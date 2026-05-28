@@ -749,9 +749,14 @@ function cidLink(cid) {
   return '<a href="https://dashboard.stripe.com/customers/' + cid + '" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500; font-family:monospace; font-size:12px;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">' + cid + '</a>';
 }
 
-function cidCellHtml(activeCid, key) {
+function cidCellHtml(activeCid, key, certain) {
   if (activeCid) {
-    return cidLink(activeCid)
+    const uncertain = certain === false;
+    const flag = uncertain
+      ? ' <span title="Match confidence: uncertain — found by name, not network ID. Please verify." '
+        + 'style="color:#F1AB4C; font-size:13px; cursor:help; margin-left:4px;">⚠</span>'
+      : '';
+    return cidLink(activeCid) + flag
       + ' <span onclick="editCid(this,\'' + key + '\',\'' + activeCid + '\')" '
       + 'title="Edit" style="cursor:pointer; color:#ABA3D6; font-size:11px; margin-left:4px; user-select:none;">✎</span>';
   }
@@ -769,7 +774,10 @@ function cidCell(cid, key) {
   const state = loadState();
   const savedCid = state[key] ? state[key].cid : '';
   const activeCid = savedCid || cid;
-  return cidCellHtml(activeCid, key);
+  const sd = STRIPE_DATA[activeCid] || {};
+  // cidCertain is false only when matched by name (script flags it); undefined/true = certain
+  const certain = sd.cidCertain === false ? false : true;
+  return cidCellHtml(activeCid, key, certain);
 }
 
 function editCid(btn, key, currentCid) {
@@ -782,10 +790,12 @@ function editCid(btn, key, currentCid) {
 function renderCidCell(td, key) {
   const state = loadState();
   const savedCid = state[key] ? state[key].cid : '';
-  // find original cid from OFFICES
   const office = OFFICES.find(o => officeKey(o) === key);
   const activeCid = savedCid || (office ? office.cid : '');
-  td.innerHTML = cidCellHtml(activeCid, key);
+  // manually saved cids are always certain; script-matched ones inherit STRIPE_DATA flag
+  const sd = STRIPE_DATA[activeCid] || {};
+  const certain = savedCid ? true : sd.cidCertain !== false;
+  td.innerHTML = cidCellHtml(activeCid, key, certain);
 }
 
 function saveCid(input) {
