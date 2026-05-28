@@ -882,7 +882,7 @@
           <td class="td-email">drbrea@torchiro.com</td>
           <td class="td-amt">$272.44</td>
           <td class="td-date">03/05/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">83d</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">84d</span></td>
           <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
           <td class="td-reason">Card Declined</td>
           <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
@@ -891,7 +891,7 @@
           <td class="td-email">drbrea@torchiro.com</td>
           <td class="td-amt">$344.56</td>
           <td class="td-date">04/05/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">52d</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">53d</span></td>
           <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
           <td class="td-reason">Unknown</td>
           <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
@@ -3887,7 +3887,7 @@
           <td class="td-email">drbrea@torchiro.com</td>
           <td class="td-amt">$309.00</td>
           <td class="td-date">12/05/2025</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">173d</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">174d</span></td>
           <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
           <td class="td-reason">Card Declined</td>
           <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
@@ -8613,6 +8613,20 @@
 <div style="padding:20px 32px 0;display:flex;align-items:center;justify-content:space-between">
   <div style="color:#64748B;font-size:13px">Month-over-month and quarter-over-quarter. Updates every Wednesday.</div>
   <button onclick="exportHistoryCSV()" style="background:linear-gradient(135deg,#1E3A5F,#2D5A8E);border:none;border-radius:8px;color:#60A5FA;font-size:13px;font-weight:600;padding:9px 18px;cursor:pointer">&#11015; Export CSV</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px 32px 0">
+  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#F87171;margin-bottom:6px">New Failures</div>
+    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Invoices whose billing period ended in that month — freshly failed payments that first appeared in that cycle.</div>
+  </div>
+  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#FB923C;margin-bottom:6px">Outstanding</div>
+    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Point-in-time snapshot of everything still unpaid and 30+ days past due as of the last Wednesday report run in that month.</div>
+  </div>
+  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#34D399;margin-bottom:6px">Collected</div>
+    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Running total of invoices recovered during that month, accumulated from each Wednesday&apos;s week-over-week reconciliation.</div>
+  </div>
 </div>
 <hr class="divider">
 <div class="tabs-bar"><button class="tab-btn active" id="htbtn-CHD" data-color="#4361EE" onclick="switchHistTab('CHD')">CHD</button>
