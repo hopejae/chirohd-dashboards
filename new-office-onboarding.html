@@ -222,6 +222,11 @@ function officeKey(o) {
   return (o.cid || o.name).replace(/\s+/g,'_');
 }
 
+function cidCell(cid) {
+  if (!cid) return '<span style="color:#DFE5EB">—</span>';
+  return '<a href="https://dashboard.stripe.com/customers/' + cid + '" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">' + cid + '</a>';
+}
+
 function paidBadge(paid) {
   if (paid === 'TRUE') return '<span class="badge badge-paid">Paid</span>';
   if (paid === 'N/A') return '<span class="badge badge-na">N/A</span>';
@@ -284,7 +289,7 @@ function render() {
       <td style="font-weight:500; color:#202324;">${o.name}</td>
       <td style="color:#425466;">${o.network}</td>
       <td style="color:#425466;">${o.loc}</td>
-      <td style="font-size:12px; font-family:monospace;">${o.cid ? `<a href="https://dashboard.stripe.com/customers/${o.cid}" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${o.cid}</a>` : '<span style="color:#DFE5EB">—</span>'}</td>
+      <td style="font-size:12px; font-family:monospace;">${cidCell(o.cid)}</td>
       <td>${paymentCell(o)}</td>
       <td>${tags || '<span style="color:#DFE5EB">—</span>'}</td>
       <td>
