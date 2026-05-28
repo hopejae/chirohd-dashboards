@@ -743,9 +743,33 @@ function officeKey(o) {
   return (o.cid || o.name).replace(/\s+/g,'_');
 }
 
-function cidCell(cid) {
-  if (!cid) return '<span style="color:#DFE5EB">—</span>';
-  return '<a href="https://dashboard.stripe.com/customers/' + cid + '" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">' + cid + '</a>';
+function cidLink(cid) {
+  return '<a href="https://dashboard.stripe.com/customers/' + cid + '" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500; font-family:monospace; font-size:12px;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">' + cid + '</a>';
+}
+
+function cidCell(cid, key) {
+  const state = loadState();
+  const savedCid = state[key] ? state[key].cid : '';
+  const activeCid = savedCid || cid;
+  if (activeCid) return cidLink(activeCid);
+  // Editable input for missing cus_id
+  return '<input type="text" placeholder="paste cus_id…" data-key="' + key + '" '
+    + 'style="font-family:monospace; font-size:11px; border:1.5px solid #DFE5EB; border-radius:6px; padding:4px 8px; width:180px; outline:none; color:#202324;" '
+    + 'onblur="saveCid(this)" onkeydown="if(event.key===\'Enter\')this.blur()" '
+    + 'onfocus="this.style.borderColor=\'#8215FF\'" onblur="this.style.borderColor=\'#DFE5EB\'; saveCid(this)">';
+}
+
+function saveCid(input) {
+  const val = input.value.trim();
+  if (!val) return;
+  const key = input.dataset.key;
+  const state = loadState();
+  if (!state[key]) state[key] = {};
+  state[key].cid = val;
+  saveState(state);
+  // Replace the input with a clickable link
+  const td = input.parentElement;
+  td.innerHTML = cidLink(val);
 }
 
 function paidBadge(paid) {
@@ -810,7 +834,7 @@ function render() {
       <td style="font-weight:500; color:#202324;">${o.name}</td>
       <td style="color:#425466;">${o.network}</td>
       <td style="color:#425466;">${o.loc}</td>
-      <td style="font-size:12px; font-family:monospace;">${cidCell(o.cid)}</td>
+      <td style="font-size:12px; font-family:monospace;">${cidCell(o.cid, key)}</td>
       <td>${paymentCell(o)}</td>
       <td>${tags || '<span style="color:#DFE5EB">—</span>'}</td>
       <td>
