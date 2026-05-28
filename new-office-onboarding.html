@@ -38,6 +38,7 @@
     .outcome-select.at-risk { background-color: #FDF3E4; color: #B87A25; }
     .outcome-select.ghost   { background-color: #F0F3F6; color: #425466; }
     .outcome-select.pending { background-color: #DEF1FE; color: #1478C0; }
+    .outcome-select.trial   { background-color: #F3E8FF; color: #7C3AED; }
     .outcome-select.unset   { background-color: #F0F3F6; color: #425466; }
 
     .notes-input { font-family: 'Inter', sans-serif; font-size: 13px; border: 1.5px solid #DFE5EB; border-radius: 6px; padding: 5px 10px; color: #202324; outline: none; width: 100%; min-width: 160px; resize: none; background: white; transition: border-color 0.15s; }
@@ -107,6 +108,7 @@
     <button class="filter-btn" data-filter="at-risk">At Risk</button>
     <button class="filter-btn" data-filter="ghost">Ghost</button>
     <button class="filter-btn" data-filter="pending">Pending</button>
+    <button class="filter-btn" data-filter="trial">Trial</button>
     <button class="filter-btn" data-filter="unset">No Status</button>
     <input type="text" class="search-input" id="search-input" placeholder="Search office name…">
   </div>
@@ -872,6 +874,7 @@ function render() {
           <option value="at-risk" ${outcome==='at-risk' ?'selected':''}>At Risk</option>
           <option value="ghost"   ${outcome==='ghost'   ?'selected':''}>Ghost</option>
           <option value="pending" ${outcome==='pending' ?'selected':''}>Pending</option>
+          <option value="trial"   ${outcome==='trial'   ?'selected':''}>Trial</option>
           <option value="unset"   ${outcome==='unset'   ?'selected':''}>—</option>
         </select>
       </td>
