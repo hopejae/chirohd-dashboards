@@ -747,29 +747,58 @@ function cidLink(cid) {
   return '<a href="https://dashboard.stripe.com/customers/' + cid + '" target="_blank" style="color:#8215FF; text-decoration:none; font-weight:500; font-family:monospace; font-size:12px;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">' + cid + '</a>';
 }
 
+function cidCellHtml(activeCid, key) {
+  if (activeCid) {
+    return cidLink(activeCid)
+      + ' <span onclick="editCid(this,\'' + key + '\',\'' + activeCid + '\')" '
+      + 'title="Edit" style="cursor:pointer; color:#ABA3D6; font-size:11px; margin-left:4px; user-select:none;">✎</span>';
+  }
+  return cidInput(key, '');
+}
+
+function cidInput(key, val) {
+  return '<input type="text" placeholder="paste cus_id…" value="' + val + '" data-key="' + key + '" '
+    + 'style="font-family:monospace; font-size:11px; border:1.5px solid #8215FF; border-radius:6px; padding:4px 8px; width:180px; outline:none; color:#202324;" '
+    + 'onkeydown="if(event.key===\'Enter\'){event.preventDefault();saveCid(this);} if(event.key===\'Escape\'){renderCidCell(this.closest(\'td\'),this.dataset.key);}" '
+    + 'onblur="saveCid(this)">';
+}
+
 function cidCell(cid, key) {
   const state = loadState();
   const savedCid = state[key] ? state[key].cid : '';
   const activeCid = savedCid || cid;
-  if (activeCid) return cidLink(activeCid);
-  // Editable input for missing cus_id
-  return '<input type="text" placeholder="paste cus_id…" data-key="' + key + '" '
-    + 'style="font-family:monospace; font-size:11px; border:1.5px solid #DFE5EB; border-radius:6px; padding:4px 8px; width:180px; outline:none; color:#202324;" '
-    + 'onkeydown="if(event.key===\'Enter\'){event.preventDefault();saveCid(this);}" '
-    + 'onblur="saveCid(this)">';
+  return cidCellHtml(activeCid, key);
+}
+
+function editCid(btn, key, currentCid) {
+  const td = btn.closest('td');
+  td.innerHTML = cidInput(key, currentCid);
+  td.querySelector('input').focus();
+  td.querySelector('input').select();
+}
+
+function renderCidCell(td, key) {
+  const state = loadState();
+  const savedCid = state[key] ? state[key].cid : '';
+  // find original cid from OFFICES
+  const office = OFFICES.find(o => officeKey(o) === key);
+  const activeCid = savedCid || (office ? office.cid : '');
+  td.innerHTML = cidCellHtml(activeCid, key);
 }
 
 function saveCid(input) {
   const val = input.value.trim();
-  if (!val) return;
   const key = input.dataset.key;
-  const state = loadState();
-  if (!state[key]) state[key] = {};
-  state[key].cid = val;
-  saveState(state);
-  // Replace the input with a clickable link
   const td = input.parentElement;
-  td.innerHTML = cidLink(val);
+  if (val) {
+    const state = loadState();
+    if (!state[key]) state[key] = {};
+    state[key].cid = val;
+    saveState(state);
+    td.innerHTML = cidCellHtml(val, key);
+  } else {
+    renderCidCell(td, key);
+  }
 }
 
 function paidBadge(paid) {
