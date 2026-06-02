@@ -268,6 +268,7 @@ const OFFICES = [
   {name:"Neuro Performance",network:"1518",loc:"1",cid:"cus_UQpnDxuaaWgCXm",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Cornerstone Family Chiropractic",network:"1497",loc:"1",cid:"cus_UNQy6u1751rgw9",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Alive & Swell Chiropractic",network:"1488",loc:"1",cid:"cus_UJLQLo4mU2MApI",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Shaffer Family Chiropractic",network:"1415",loc:"1",cid:"cus_U0gcm3HVz1eHzJ",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -986,6 +987,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": false,
     "lastChecked": "2026-06-01",
+    "cidCertain": true
+  },
+  "cus_U0gcm3HVz1eHzJ": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-02",
     "cidCertain": true
   }
 };
