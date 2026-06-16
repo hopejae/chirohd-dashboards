@@ -279,6 +279,14 @@ const OFFICES = [
   {name:"The Retreat Chiropractic and Wellness",network:"1523",loc:"1",cid:"cus_UTQH3ExaG5qu6H",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Swearingen Family Chiropractic",network:"1533",loc:"1",cid:"cus_UXxqna7a93dnQI",paid:"",offboarded:"",newgrad:"TRUE",other:"",paymentType:"manual"},
   {name:"Elevate Chiro Nepa",network:"1542",loc:"1",cid:"cus_UaaI1vH2NLCeQs",paid:"",offboarded:"",newgrad:"TRUE",other:"",paymentType:"manual"},
+  {name:"Live Freeform Frisco-Argyle",network:"576",loc:"10",cid:"cus_UJMgJFokoPzrgN",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Spine Labs",network:"794",loc:"4",cid:"cus_UAlxyTv0J4u80C",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Oasis Chiropractic and Wellness",network:"1350",loc:"1",cid:"cus_TdQvqzob4GTj3w",paid:"",offboarded:"",newgrad:"",other:"Auto Stripe 12/19/25",paymentType:"manual"},
+  {name:"Genesis Chiropractic and Wellness",network:"1431",loc:"1",cid:"cus_U6E5k8frUuHFiV",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Soul Source Chiropractic",network:"1509",loc:"1",cid:"cus_UQ8M7zKkgu9U5f",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"The Well",network:"1540",loc:"1",cid:"cus_UaZHLzCBg1Kpfg",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Wells Spine and Sport",network:"1501",loc:"1",cid:"cus_UNr2fSDdjYqY7E",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Pascal Health Institute",network:"1358",loc:"1",cid:"cus_ThC7eUyG6Q826L",paid:"",offboarded:"",newgrad:"",other:"Auto Stripe 1/28/26",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1063,6 +1071,54 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": false,
     "lastChecked": "2026-06-08",
+    "cidCertain": true
+  },
+  "cus_UJMgJFokoPzrgN": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_UAlxyTv0J4u80C": {
+    "paymentType": "auto",
+    "stripePaid": false,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_TdQvqzob4GTj3w": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_U6E5k8frUuHFiV": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_UQ8M7zKkgu9U5f": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_UaZHLzCBg1Kpfg": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_UNr2fSDdjYqY7E": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
+    "cidCertain": true
+  },
+  "cus_ThC7eUyG6Q826L": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-16",
     "cidCertain": true
   }
 };
