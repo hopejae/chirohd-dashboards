@@ -288,6 +288,9 @@ const OFFICES = [
   {name:"Wells Spine and Sport",network:"1501",loc:"1",cid:"cus_UNr2fSDdjYqY7E",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
   {name:"Pascal Health Institute",network:"1358",loc:"1",cid:"cus_ThC7eUyG6Q826L",paid:"",offboarded:"",newgrad:"",other:"Auto Stripe 1/28/26 — GLD moved to 7/20",paymentType:"manual"},
   {name:"Foundations Spine & Well-necessities",network:"1535",loc:"1",cid:"cus_UY1Xt72NCrk653",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Ability Chiropractic - Canal Winchester",network:"600",loc:"22",cid:"cus_UYddYS1I2Cm4R5",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Leading Edge Chiropractic",network:"1465",loc:"1",cid:"cus_UFIZoy8rdSZfOJ",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Clearly Chiropractic",network:"1550",loc:"1",cid:"cus_Ubm1wejnaC788S",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1126,6 +1129,24 @@ const STRIPE_DATA = {
     "paymentType": "auto",
     "stripePaid": true,
     "lastChecked": "2026-06-18",
+    "cidCertain": true
+  },
+  "cus_UYddYS1I2Cm4R5": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-06-22",
+    "cidCertain": true
+  },
+  "cus_UFIZoy8rdSZfOJ": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-22",
+    "cidCertain": true
+  },
+  "cus_Ubm1wejnaC788S": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-06-22",
     "cidCertain": true
   }
 };
