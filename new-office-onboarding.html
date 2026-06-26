@@ -291,6 +291,7 @@ const OFFICES = [
   {name:"Ability Chiropractic - Canal Winchester",network:"600",loc:"22",cid:"cus_UYddYS1I2Cm4R5",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
   {name:"Leading Edge Chiropractic",network:"1465",loc:"1",cid:"cus_UFIZoy8rdSZfOJ",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Clearly Chiropractic",network:"1550",loc:"1",cid:"cus_Ubm1wejnaC788S",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Trailhead Spine and Wellness",network:"1517",loc:"1",cid:"cus_UQp8GUtYK4nPGN",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1147,6 +1148,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-06-22",
+    "cidCertain": true
+  },
+  "cus_UQp8GUtYK4nPGN": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-06-23",
     "cidCertain": true
   }
 };
