@@ -138,7 +138,7 @@
 
 <div class="tabs-bar">
 <button class="tab-btn active" id="tbtn-CHD" data-color="#4361EE" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">21</span></button>
-<button class="tab-btn " id="tbtn-SKED" data-color="#4A90D9" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">14</span></button>
+<button class="tab-btn " id="tbtn-SKED" data-color="#4A90D9" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">11</span></button>
 <button class="tab-btn" id="tbtn-Paused" data-color="#6366F1" onclick="switchTab('Paused')">⏸ Paused <span class="tab-count" id="tcount-Paused">4</span></button>
 <button class="tab-btn" id="tbtn-AtRisk" data-color="#EF4444" onclick="switchTab('AtRisk')">⚠ At-Risk <span class="tab-count" id="tcount-AtRisk">12</span></button>
 <button class="tab-btn" id="tbtn-History" data-color="#6366F1" onclick="switchTab('History')">History <span class="tab-count" id="tcount-History">0</span></button>
@@ -147,7 +147,7 @@
 <div class="account-panel active" id="panel-CHD">
   <div class="panel-header" style="background:linear-gradient(135deg,#2D2DC4,#4361EE)">
     <h2>CHD</h2>
-    <span class="panel-count-badge" id="pbadge-CHD">21 need attention · 6 resolved</span>
+    <span class="panel-count-badge" id="pbadge-CHD">21 need attention · 0 resolved</span>
   </div>
   <div class="inv-list" id="list-CHD">
 <div class="inv-card" data-id="in_1Tn538LDZiNpvJNRwp5Arh6N">
@@ -916,7 +916,7 @@
     <div class="card-right">
       <span class="card-amount">$916.00</span>
       <span class="card-date">Jun 9, 2026</span>
-      <span class="card-days">19d ago</span>
+      <span class="card-days">20d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -994,256 +994,17 @@
   <div class="resolved-section">
     <button class="resolved-toggle" onclick="toggleResolved('CHD')">
       <span>✓ Resolved</span>
-      <span class="resolved-count" id="rcount-CHD">6</span>
-      <span class="toggle-arrow" id="rarrow-CHD">▴</span>
+      <span class="resolved-count" id="rcount-CHD">0</span>
+      <span class="toggle-arrow" id="rarrow-CHD">▾</span>
     </button>
-    <div class="resolved-list" id="rlist-CHD" style="display:block">
-<div class="inv-card" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Level Up Health Chiropractic LLC</div>
-    <div class="card-right">
-      <span class="card-amount">$598.00</span>
-      <span class="card-date">Jun 24, 2026</span>
-      <span class="card-days">5d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">Ianeshbaugh18@gmail.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_MVIbozpOyqZ4mL" target="_blank" title="Open customer in Stripe">cus: cus_MVIbozpOyqZ4mL</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TlfB7LDZiNpvJNRbhEpVoTr" target="_blank" title="Open invoice in Stripe">inv: in_1TlfB7LDZiNpvJNRbhEpVoTr</a>
-    <span class="reason-pill">The connection to the user's Link account has been closed.</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_288</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2742</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">2742</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TlfB7LDZiNpvJNRbhEpVoTr" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TlfB7LDZiNpvJNRbhEpVoTr')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TlfB7LDZiNpvJNRbhEpVoTr')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Tanner Hays</div>
-    <div class="card-right">
-      <span class="card-amount">$299.00</span>
-      <span class="card-date">Jun 22, 2026</span>
-      <span class="card-days">6d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">drtanner@therefinerychiropractic.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T6kBTmbBnb23hA" target="_blank" title="Open customer in Stripe">cus: cus_T6kBTmbBnb23hA</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tl8OHLDZiNpvJNRAhUGdRHL" target="_blank" title="Open invoice in Stripe">inv: in_1Tl8OHLDZiNpvJNRAhUGdRHL</a>
-    <span class="reason-pill">Velocity Limit Exceeded</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1239</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tl8OHLDZiNpvJNRAhUGdRHL" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tl8OHLDZiNpvJNRAhUGdRHL')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1Tl8OHLDZiNpvJNRAhUGdRHL')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Reform Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$309.00</span>
-      <span class="card-date">Jun 22, 2026</span>
-      <span class="card-days">7d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">Danika88@bell.net</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TjJTULDZiNpvJNRbekfiVli" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Rhv3KNWiTo66W2" target="_blank" title="Open customer in Stripe">cus: cus_Rhv3KNWiTo66W2</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TjJTULDZiNpvJNRbekfiVli" target="_blank" title="Open invoice in Stripe">inv: in_1TjJTULDZiNpvJNRbekfiVli</a>
-    <span class="na-pill">Never Attempted</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TjJTULDZiNpvJNRbekfiVli" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_951</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TjJTULDZiNpvJNRbekfiVli" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TjJTULDZiNpvJNRbekfiVli')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TjJTULDZiNpvJNRbekfiVli')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Soma Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$314.55</span>
-      <span class="card-date">Jun 20, 2026</span>
-      <span class="card-days">8d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">drcidmariecorrea@gmail.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_P1VEcczRTlA0Dm" target="_blank" title="Open customer in Stripe">cus: cus_P1VEcczRTlA0Dm</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TkVmJLDZiNpvJNRctpPSKDJ" target="_blank" title="Open invoice in Stripe">inv: in_1TkVmJLDZiNpvJNRctpPSKDJ</a>
-    <span class="reason-pill">Insufficient Funds</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_578</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TkVmJLDZiNpvJNRctpPSKDJ" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TkVmJLDZiNpvJNRctpPSKDJ')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TkVmJLDZiNpvJNRctpPSKDJ')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Third Coast Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$359.00</span>
-      <span class="card-date">Jun 7, 2026</span>
-      <span class="card-days">21d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">drbrad@thirdcoastchiropractic.org</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_JoLzBT2vSj7ir9" target="_blank" title="Open customer in Stripe">cus: cus_JoLzBT2vSj7ir9</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TfpHwLDZiNpvJNRGqJqfwyo" target="_blank" title="Open invoice in Stripe">inv: in_1TfpHwLDZiNpvJNRGqJqfwyo</a>
-    <span class="reason-pill">Insufficient Funds</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_40</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TfpHwLDZiNpvJNRGqJqfwyo" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TfpHwLDZiNpvJNRGqJqfwyo')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TfpHwLDZiNpvJNRGqJqfwyo')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Ignite Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$597.00</span>
-      <span class="card-date">May 26, 2026</span>
-      <span class="card-days">33d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">justin@ignitechirotx.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_U3IrHuxRp8Zear" target="_blank" title="Open customer in Stripe">cus: cus_U3IrHuxRp8Zear</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbUmkLDZiNpvJNR3ew2fB3R" target="_blank" title="Open invoice in Stripe">inv: in_1TbUmkLDZiNpvJNR3ew2fB3R</a>
-    
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">SKED ID</span><span class="meta-val">2626</span></span><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">3</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_706</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2636</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TbUmkLDZiNpvJNR3ew2fB3R" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TbUmkLDZiNpvJNR3ew2fB3R')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TbUmkLDZiNpvJNR3ew2fB3R')">↩ Active</button>
-    </div>
-  </div>
-</div>
+    <div class="resolved-list" id="rlist-CHD" style="display:none">
+
     </div>
   </div>
 </div><div class="account-panel " id="panel-SKED">
   <div class="panel-header" style="background:linear-gradient(135deg,#1E5FA8,#4A90D9)">
     <h2>SKED</h2>
-    <span class="panel-count-badge" id="pbadge-SKED">14 need attention · 1 resolved</span>
+    <span class="panel-count-badge" id="pbadge-SKED">11 need attention · 3 resolved</span>
   </div>
   <div class="inv-list" id="list-SKED">
 <div class="inv-card" data-id="in_1Tmc6MJDpup464QrVJf06H7t">
@@ -1292,7 +1053,7 @@
     <div class="card-right">
       <span class="card-amount">$408.91</span>
       <span class="card-date">Jun 25, 2026</span>
-      <span class="card-days">3d ago</span>
+      <span class="card-days">4d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -1646,86 +1407,6 @@
     </div>
   </div>
 </div>
-<div class="inv-card" data-id="in_1Tg46zJDpup464Qr3q7jlSek">
-  <div class="card-top">
-    <div class="card-name">Irondequoit Chiropractic, PLLC</div>
-    <div class="card-right">
-      <span class="card-amount">$408.91</span>
-      <span class="card-date">Jun 8, 2026</span>
-      <span class="card-days">20d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">kmcgrath@ironchiro.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1Tg46zJDpup464Qr3q7jlSek" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Mc8zahXmxxwwc7" target="_blank" title="Open customer in Stripe">cus: cus_Mc8zahXmxxwwc7</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tg46zJDpup464Qr3q7jlSek" target="_blank" title="Open invoice in Stripe">inv: in_1Tg46zJDpup464Qr3q7jlSek</a>
-    <span class="reason-pill">Card Flagged – Contact Bank</span>
-    <span class="status-pill">Canceled</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">coupon</span><span class="meta-val">Master's Circle</span></span><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroTouch</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">17617871786</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_id</span><span class="meta-val">624</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Irondequoit Chiropractic, PLLC</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">1464</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span><span class="meta-item"><span class="meta-key">referrer</span><span class="meta-val">Seminar</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tg46zJDpup464Qr3q7jlSek" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tg46zJDpup464Qr3q7jlSek')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1Tg46zJDpup464Qr3q7jlSek')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1Tfk41JDpup464QrvNp66FZ7">
-  <div class="card-top">
-    <div class="card-name">—</div>
-    <div class="card-right">
-      <span class="card-amount">$562.38</span>
-      <span class="card-date">Jun 7, 2026</span>
-      <span class="card-days">21d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">maximizedlifechiro@gmail.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1Tfk41JDpup464QrvNp66FZ7" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_D2j7hTj384p4LQ" target="_blank" title="Open customer in Stripe">cus: cus_D2j7hTj384p4LQ</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tfk41JDpup464QrvNp66FZ7" target="_blank" title="Open invoice in Stripe">inv: in_1Tfk41JDpup464QrvNp66FZ7</a>
-    
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">Platinum</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41448576104</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Maximized Life Chiropractic</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">322</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tfk41JDpup464QrvNp66FZ7" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tfk41JDpup464QrvNp66FZ7')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1Tfk41JDpup464QrvNp66FZ7')">↩ Active</button>
-    </div>
-  </div>
-</div>
 <div class="inv-card" data-id="in_1TfMCCJDpup464QrvF0mpH2N">
   <div class="card-top">
     <div class="card-name">100% Chiropractic- Pueblo</div>
@@ -1766,7 +1447,95 @@
     </div>
   </div>
 </div>
-<div class="inv-card" data-id="in_1Tf4eoJDpup464QruOetX1qY">
+  </div>
+  <div class="resolved-section">
+    <button class="resolved-toggle" onclick="toggleResolved('SKED')">
+      <span>✓ Resolved</span>
+      <span class="resolved-count" id="rcount-SKED">3</span>
+      <span class="toggle-arrow" id="rarrow-SKED">▴</span>
+    </button>
+    <div class="resolved-list" id="rlist-SKED" style="display:block">
+<div class="inv-card" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">Irondequoit Chiropractic, PLLC</div>
+    <div class="card-right">
+      <span class="card-amount">$408.91</span>
+      <span class="card-date">Jun 8, 2026</span>
+      <span class="card-days">20d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">kmcgrath@ironchiro.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1Tg46zJDpup464Qr3q7jlSek" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Mc8zahXmxxwwc7" target="_blank" title="Open customer in Stripe">cus: cus_Mc8zahXmxxwwc7</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tg46zJDpup464Qr3q7jlSek" target="_blank" title="Open invoice in Stripe">inv: in_1Tg46zJDpup464Qr3q7jlSek</a>
+    <span class="reason-pill">Card Flagged – Contact Bank</span>
+    <span class="status-pill">Canceled</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="macro" /><span>Past Due Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="paid" /><span>Paid</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tg46zJDpup464Qr3q7jlSek" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">coupon</span><span class="meta-val">Master's Circle</span></span><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroTouch</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">17617871786</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_id</span><span class="meta-val">624</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Irondequoit Chiropractic, PLLC</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">1464</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span><span class="meta-item"><span class="meta-key">referrer</span><span class="meta-val">Seminar</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tg46zJDpup464Qr3q7jlSek" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1Tg46zJDpup464Qr3q7jlSek')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1Tg46zJDpup464Qr3q7jlSek')">↩ Active</button>
+    </div>
+  </div>
+</div>
+<div class="inv-card" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">—</div>
+    <div class="card-right">
+      <span class="card-amount">$562.38</span>
+      <span class="card-date">Jun 7, 2026</span>
+      <span class="card-days">21d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">maximizedlifechiro@gmail.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1Tfk41JDpup464QrvNp66FZ7" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_D2j7hTj384p4LQ" target="_blank" title="Open customer in Stripe">cus: cus_D2j7hTj384p4LQ</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tfk41JDpup464QrvNp66FZ7" target="_blank" title="Open invoice in Stripe">inv: in_1Tfk41JDpup464QrvNp66FZ7</a>
+    
+    <span class="status-pill">Past_Due</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="macro" /><span>Past Due Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="paid" /><span>Paid</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="payment-plan" /><span>Payment Plan</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tfk41JDpup464QrvNp66FZ7" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">Platinum</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41448576104</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Maximized Life Chiropractic</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">322</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tfk41JDpup464QrvNp66FZ7" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn" onclick="markResolved('in_1Tfk41JDpup464QrvNp66FZ7')">✓ Resolved</button>
+      <button class="unresolve-btn" onclick="markActive('in_1Tfk41JDpup464QrvNp66FZ7')">↩ Active</button>
+    </div>
+  </div>
+</div>
+<div class="inv-card" data-id="in_1Tf4eoJDpup464QruOetX1qY" data-auto-resolved="true">
   <div class="card-top">
     <div class="card-name">Infinity Wellness Center</div>
     <div class="card-right">
@@ -1803,54 +1572,6 @@
     <div class="btn-group">
       <button class="resolve-btn" onclick="markResolved('in_1Tf4eoJDpup464QruOetX1qY')">✓ Resolved</button>
       <button class="unresolve-btn" onclick="markActive('in_1Tf4eoJDpup464QruOetX1qY')">↩ Active</button>
-    </div>
-  </div>
-</div>
-  </div>
-  <div class="resolved-section">
-    <button class="resolved-toggle" onclick="toggleResolved('SKED')">
-      <span>✓ Resolved</span>
-      <span class="resolved-count" id="rcount-SKED">1</span>
-      <span class="toggle-arrow" id="rarrow-SKED">▴</span>
-    </button>
-    <div class="resolved-list" id="rlist-SKED" style="display:block">
-<div class="inv-card" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-auto-resolved="true">
-  <div class="card-top">
-    <div class="card-name">Pivotal Pain Solutions</div>
-    <div class="card-right">
-      <span class="card-amount">$408.91</span>
-      <span class="card-date">May 26, 2026</span>
-      <span class="card-days">33d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">info@pivotalpainsolutions.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TbNKDJDpup464QrRkIaV07a" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RrDiSrbg2ENIhH" target="_blank" title="Open customer in Stripe">cus: cus_RrDiSrbg2ENIhH</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TbNKDJDpup464QrRkIaV07a" target="_blank" title="Open invoice in Stripe">inv: in_1TbNKDJDpup464QrRkIaV07a</a>
-    <span class="reason-pill">Blocked by Bank</span>
-    <span class="status-pill">Unpaid</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TbNKDJDpup464QrRkIaV07a" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2201</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Pivotal Pain Solutions</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TbNKDJDpup464QrRkIaV07a" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TbNKDJDpup464QrRkIaV07a')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TbNKDJDpup464QrRkIaV07a')">↩ Active</button>
     </div>
   </div>
 </div>
@@ -2244,9 +1965,9 @@ function exportAtRisk(){
 <footer>Updated daily at 7:00 AM EST &nbsp;·&nbsp; Data sourced from Stripe &nbsp;·&nbsp; Progress saved in your browser</footer>
 
 <script>
-const PRELOADED    = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TlfB7LDZiNpvJNRbhEpVoTr": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1Tl8OHLDZiNpvJNRAhUGdRHL": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1TjJTULDZiNpvJNRbekfiVli": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1TkVmJLDZiNpvJNRctpPSKDJ": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1TfpHwLDZiNpvJNRGqJqfwyo": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1TbNKDJDpup464QrRkIaV07a": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}};
+const PRELOADED    = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1Tg46zJDpup464Qr3q7jlSek": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1Tfk41JDpup464QrvNp66FZ7": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}, "in_1Tf4eoJDpup464QruOetX1qY": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jun 29, 2026"}};
 const ACCOUNTS     = ["CHD", "SKED"];
-const INVOICE_DATA = {"in_1Tn538LDZiNpvJNRwp5Arh6N": {"account": "CHD", "name": "Sandstone Chiropractic - Harmony", "email": "amanriquez@sandstonemc.com", "customer_id": "cus_RVweJ7x3eRnBxg", "amount": 309.0, "date_str": "Jun 27, 2026", "days": 1, "failure_reason": "Blocked by Bank", "sub_status": "Past_Due"}, "in_1TmytILDZiNpvJNR7eWNItQW": {"account": "CHD", "name": "Green Life Chiropractic", "email": "drjkgreen@gmail.com", "customer_id": "cus_MzhPkm5foXOw6D", "amount": 339.23, "date_str": "Jun 27, 2026", "days": 1, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TmjhsLDZiNpvJNRCF8bZbXQ": {"account": "CHD", "name": "Back to Wellness Chiropractic", "email": "backtowellnesschiropractic@gmail.com", "customer_id": "cus_MQTJQ6fyJWfHAw", "amount": 373.9, "date_str": "Jun 27, 2026", "days": 2, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TmEvQLDZiNpvJNRMxoLIj9i": {"account": "CHD", "name": "Intero Chiropractic - Fremont", "email": "sophia@interochiropractic.com", "customer_id": "cus_PmOVzdqZTZmftE", "amount": 390.39, "date_str": "Jun 25, 2026", "days": 3, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TlVwwLDZiNpvJNRbmILTdSM": {"account": "CHD", "name": "Skyline Chiropractic", "email": "drrai@goskychi.com", "customer_id": "cus_JVGRPWigu82aLM", "amount": 359.0, "date_str": "Jun 23, 2026", "days": 5, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TlCPLLDZiNpvJNRjV4LzHZ7": {"account": "CHD", "name": "The Haven Chiropractic", "email": "Kyledenos@gmail.com", "customer_id": "cus_P60TMfECRCBMMy", "amount": 300.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TlBBALDZiNpvJNRanNhKj6z": {"account": "CHD", "name": "Better Health Chiropractic", "email": "joealbarelli@gmail.com", "customer_id": "cus_UY1O6Lll72vQ84", "amount": 468.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "Blocked by Bank", "sub_status": "Past_Due"}, "in_1TlAUtLDZiNpvJNRFseiwLkY": {"account": "CHD", "name": "Unity Chiropractic Fairview", "email": "DrDevan@youfoundbigfoot.com", "customer_id": "cus_UNtlBMXjiYFhib", "amount": 558.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TktJCLDZiNpvJNRFqBWc44K": {"account": "CHD", "name": "Strive chiropractic and injury", "email": "Sergio_g12@yahoo.com", "customer_id": "cus_Qx5BZaDZbBAf3J", "amount": 309.0, "date_str": "Jun 21, 2026", "days": 7, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TjJKHLDZiNpvJNRQd4MVxxx": {"account": "CHD", "name": "The Connection Chiropractic", "email": "drjacobcrumpler@gmail.com", "customer_id": "cus_RdiVvvEyie3cvs", "amount": 309.0, "date_str": "Jun 22, 2026", "days": 7, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1Tk60XLDZiNpvJNRZ28UFmxI": {"account": "CHD", "name": "Kings Park Chiropractic", "email": "kingsparkchiro@gmail.com", "customer_id": "cus_UWPJPRQnP2EGlH", "amount": 198.5, "date_str": "Jun 20, 2026", "days": 9, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TjjeuLDZiNpvJNRzx57ctEe": {"account": "CHD", "name": "Genesis Back and Neck - Sherman", "email": "sherman@genesisback.com", "customer_id": "cus_UIeQN0Q6p0q2zF", "amount": 45.0, "date_str": "Jun 19, 2026", "days": 10, "failure_reason": "Never Attempted", "sub_status": ""}, "in_1TjjZbLDZiNpvJNR37DwEph8": {"account": "CHD", "name": "Genesis Back and Neck - Grapevine", "email": "roxana@genesisback.com", "customer_id": "cus_UIduYFwA7kMxuu", "amount": 45.0, "date_str": "Jun 19, 2026", "days": 10, "failure_reason": "Never Attempted", "sub_status": ""}, "in_1TiguLLDZiNpvJNR9zkFLpqi": {"account": "CHD", "name": "Ouillette Chiropractic", "email": "michiganoc@gmail.com", "customer_id": "cus_PMU2URGjjkpBo3", "amount": 360.0, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Tigj4LDZiNpvJNRffqW0oWM": {"account": "CHD", "name": "Momentum Healthcare", "email": "drjvhall@gmail.com", "customer_id": "cus_S8PvjPB0VOrsdR", "amount": 394.89, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TigVZLDZiNpvJNRgL5U1iyA": {"account": "CHD", "name": "Nervana Holistic Health", "email": "dcaldwell.nwd@gmail.com", "customer_id": "cus_L6quyUOMdRtrRU", "amount": 375.06, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TieujLDZiNpvJNROSdw0LUk": {"account": "CHD", "name": "The Ridge Chiropractic", "email": "theridgechiropractic@gmail.com", "customer_id": "cus_SwyoaP5FjrFamB", "amount": 349.0, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "The payment failed.", "sub_status": "Past_Due"}, "in_1TdwgQLDZiNpvJNRJ3F41woo": {"account": "CHD", "name": "Our Light Chiropractic", "email": "ourlightchiropractic@gmail.com", "customer_id": "cus_NpKOWxvmQLq4cl", "amount": 310.0, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1ThF7XLDZiNpvJNR0LtXkngE": {"account": "CHD", "name": "Back to Health of Anthem", "email": "kaylene@myanthemhealth.com", "customer_id": "cus_SZouBHiyWS866Z", "amount": 359.0, "date_str": "Jun 11, 2026", "days": 17, "failure_reason": "The connection to the user's Link account has been closed.", "sub_status": "Past_Due"}, "in_1TgQI9LDZiNpvJNR24GIZ78e": {"account": "CHD", "name": "University Chiropractic", "email": "patriciakiser365@gmail.com", "customer_id": "cus_U6ExKDcNAFIjd5", "amount": 916.0, "date_str": "Jun 9, 2026", "days": 19, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TfAwbLDZiNpvJNR1i39Nbtn": {"account": "CHD", "name": "Gordon Health Solutions", "email": "dryalegordon@gmail.com", "customer_id": "cus_PYqeWiLsqR7dUR", "amount": 311.91, "date_str": "Jun 6, 2026", "days": 23, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TeLSJLDZiNpvJNRLQq8tXdj": {"account": "CHD", "name": "Utley Chiropractic", "email": "utleychiro@gmail.com", "customer_id": "cus_TuILYxYqwqMAPy", "amount": 397.0, "date_str": "Jun 3, 2026", "days": 25, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TlfB7LDZiNpvJNRbhEpVoTr": {"account": "CHD", "name": "Level Up Health Chiropractic LLC", "email": "Ianeshbaugh18@gmail.com", "customer_id": "cus_MVIbozpOyqZ4mL", "amount": 598.0, "date_str": "Jun 24, 2026", "days": 5, "failure_reason": "The connection to the user's Link account has been closed.", "sub_status": "Past_Due"}, "in_1Tl8OHLDZiNpvJNRAhUGdRHL": {"account": "CHD", "name": "Tanner Hays", "email": "drtanner@therefinerychiropractic.com", "customer_id": "cus_T6kBTmbBnb23hA", "amount": 299.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "Velocity Limit Exceeded", "sub_status": "Past_Due"}, "in_1TjJTULDZiNpvJNRbekfiVli": {"account": "CHD", "name": "Reform Chiropractic", "email": "Danika88@bell.net", "customer_id": "cus_Rhv3KNWiTo66W2", "amount": 309.0, "date_str": "Jun 22, 2026", "days": 7, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TkVmJLDZiNpvJNRctpPSKDJ": {"account": "CHD", "name": "Soma Chiropractic", "email": "drcidmariecorrea@gmail.com", "customer_id": "cus_P1VEcczRTlA0Dm", "amount": 314.55, "date_str": "Jun 20, 2026", "days": 8, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TfpHwLDZiNpvJNRGqJqfwyo": {"account": "CHD", "name": "Third Coast Chiropractic", "email": "drbrad@thirdcoastchiropractic.org", "customer_id": "cus_JoLzBT2vSj7ir9", "amount": 359.0, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"account": "CHD", "name": "Ignite Chiropractic", "email": "justin@ignitechirotx.com", "customer_id": "cus_U3IrHuxRp8Zear", "amount": 597.0, "date_str": "May 26, 2026", "days": 33, "failure_reason": "", "sub_status": "Past_Due"}, "in_1Tmc6MJDpup464QrVJf06H7t": {"account": "SKED", "name": "Pivotal Pain Solutions", "email": "info@pivotalpainsolutions.com", "customer_id": "cus_RrDiSrbg2ENIhH", "amount": 408.91, "date_str": "Jun 26, 2026", "days": 2, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tl8AMJDpup464QrstcXz97n": {"account": "SKED", "name": "Beaverton Family Chiropractic, PC", "email": "mwfritz@beavertonfamilychiropractic.com", "customer_id": "cus_JVaWPJzHcf9hWa", "amount": 408.91, "date_str": "Jun 25, 2026", "days": 3, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1Tjj8kJDpup464Qrh5y01ck6": {"account": "SKED", "name": "", "email": "doctorhyatt@yahoo.com", "customer_id": "cus_DoHFkESrjed7Rm", "amount": 408.91, "date_str": "Jun 18, 2026", "days": 10, "failure_reason": "Transaction Not Allowed", "sub_status": "Past_Due"}, "in_1TjMsFJDpup464QricntbEnT": {"account": "SKED", "name": "Upward Shift Chiropractic- Naples Health Institute", "email": "Info@upwardshiftchiropractic.com", "customer_id": "cus_G3IQmCXegIDREw", "amount": 408.91, "date_str": "Jun 17, 2026", "days": 11, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tj3FMJDpup464Qr7beNT334": {"account": "SKED", "name": "Bloomwell Family Chiropractic", "email": "carly@bloomwellfamilychiropractic.com", "customer_id": "cus_MDgWV05pWRVkqO", "amount": 397.0, "date_str": "Jun 16, 2026", "days": 12, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TiIvhJDpup464QrbbcdYsUh": {"account": "SKED", "name": "The Haven Chiropractic", "email": "kyledenos@gmail.com", "customer_id": "cus_PGsZMylWPmvRW6", "amount": 408.91, "date_str": "Jun 14, 2026", "days": 14, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1ThW3vJDpup464QrodkoRsvG": {"account": "SKED", "name": "", "email": "dralex@valeochiropractic.com", "customer_id": "cus_DP8oX75oHwwPol", "amount": 309.0, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "", "sub_status": "Past_Due"}, "in_1ThVzgJDpup464QrsQha0CCF": {"account": "SKED", "name": "", "email": "meredith@handsonhealthchiropractic.com", "customer_id": "cus_CJLlU8iIXH3CPW", "amount": 414.31, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1ThE8LJDpup464QrKE1MlW1D": {"account": "SKED", "name": "Alessi Functional Health", "email": "info@alessifxhealth.com", "customer_id": "cus_TNH0Yf5Zp5nrhW", "amount": 546.0, "date_str": "Jun 11, 2026", "days": 17, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1TgAaNJDpup464QrYYthXFxp": {"account": "SKED", "name": "Wow Family Chiropractic", "email": "wowfamilychiropractic@gmail.com", "customer_id": "cus_JGAHQDrgIB6Nk7", "amount": 408.91, "date_str": "Jun 8, 2026", "days": 20, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tg46zJDpup464Qr3q7jlSek": {"account": "SKED", "name": "Irondequoit Chiropractic, PLLC", "email": "kmcgrath@ironchiro.com", "customer_id": "cus_Mc8zahXmxxwwc7", "amount": 408.91, "date_str": "Jun 8, 2026", "days": 20, "failure_reason": "Card Flagged \u2013 Contact Bank", "sub_status": "Canceled"}, "in_1Tfk41JDpup464QrvNp66FZ7": {"account": "SKED", "name": "", "email": "maximizedlifechiro@gmail.com", "customer_id": "cus_D2j7hTj384p4LQ", "amount": 562.38, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TfMCCJDpup464QrvF0mpH2N": {"account": "SKED", "name": "100% Chiropractic- Pueblo", "email": "drlori@100percentdoc.com", "customer_id": "cus_T8HbC1zmiAcw3k", "amount": 249.0, "date_str": "Jun 6, 2026", "days": 22, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tf4eoJDpup464QruOetX1qY": {"account": "SKED", "name": "Infinity Wellness Center", "email": "drmattahc@gmail.com", "customer_id": "cus_QyX0e20RD7Kgch", "amount": 557.91, "date_str": "Jun 5, 2026", "days": 23, "failure_reason": "Stolen Card", "sub_status": "Past_Due"}, "in_1TfnbDJDpup464QrVdXxQrld": {"account": "SKED", "name": "Verve Chiropractic", "email": "drdanielle@vervefamilychiropractic.com", "customer_id": "cus_Qcou5Y6PD2Fmhx", "amount": 410.58, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TfncWJDpup464QrMm2QWU7t": {"account": "SKED", "name": "Verve Chiropractic Costa Mesa", "email": "kyle@vervefamilychiropractic.com", "customer_id": "cus_SmgBg8FS594qfb", "amount": 410.58, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TfXvEJDpup464Qrrg8oQGEo": {"account": "SKED", "name": "Verve Chiropractic OC", "email": "drdanielle@vervechiropracticoc.com", "customer_id": "cus_NRoZx9RWA5Yzkl", "amount": 603.58, "date_str": "Jun 7, 2026", "days": 22, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TbNKDJDpup464QrRkIaV07a": {"account": "SKED", "name": "Pivotal Pain Solutions", "email": "info@pivotalpainsolutions.com", "customer_id": "cus_RrDiSrbg2ENIhH", "amount": 408.91, "date_str": "May 26, 2026", "days": 33, "failure_reason": "Blocked by Bank", "sub_status": "Unpaid"}};
+const INVOICE_DATA = {"in_1Tn538LDZiNpvJNRwp5Arh6N": {"account": "CHD", "name": "Sandstone Chiropractic - Harmony", "email": "amanriquez@sandstonemc.com", "customer_id": "cus_RVweJ7x3eRnBxg", "amount": 309.0, "date_str": "Jun 27, 2026", "days": 1, "failure_reason": "Blocked by Bank", "sub_status": "Past_Due"}, "in_1TmytILDZiNpvJNR7eWNItQW": {"account": "CHD", "name": "Green Life Chiropractic", "email": "drjkgreen@gmail.com", "customer_id": "cus_MzhPkm5foXOw6D", "amount": 339.23, "date_str": "Jun 27, 2026", "days": 1, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TmjhsLDZiNpvJNRCF8bZbXQ": {"account": "CHD", "name": "Back to Wellness Chiropractic", "email": "backtowellnesschiropractic@gmail.com", "customer_id": "cus_MQTJQ6fyJWfHAw", "amount": 373.9, "date_str": "Jun 27, 2026", "days": 2, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TmEvQLDZiNpvJNRMxoLIj9i": {"account": "CHD", "name": "Intero Chiropractic - Fremont", "email": "sophia@interochiropractic.com", "customer_id": "cus_PmOVzdqZTZmftE", "amount": 390.39, "date_str": "Jun 25, 2026", "days": 3, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TlVwwLDZiNpvJNRbmILTdSM": {"account": "CHD", "name": "Skyline Chiropractic", "email": "drrai@goskychi.com", "customer_id": "cus_JVGRPWigu82aLM", "amount": 359.0, "date_str": "Jun 23, 2026", "days": 5, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TlCPLLDZiNpvJNRjV4LzHZ7": {"account": "CHD", "name": "The Haven Chiropractic", "email": "Kyledenos@gmail.com", "customer_id": "cus_P60TMfECRCBMMy", "amount": 300.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TlBBALDZiNpvJNRanNhKj6z": {"account": "CHD", "name": "Better Health Chiropractic", "email": "joealbarelli@gmail.com", "customer_id": "cus_UY1O6Lll72vQ84", "amount": 468.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "Blocked by Bank", "sub_status": "Past_Due"}, "in_1TlAUtLDZiNpvJNRFseiwLkY": {"account": "CHD", "name": "Unity Chiropractic Fairview", "email": "DrDevan@youfoundbigfoot.com", "customer_id": "cus_UNtlBMXjiYFhib", "amount": 558.0, "date_str": "Jun 22, 2026", "days": 6, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TktJCLDZiNpvJNRFqBWc44K": {"account": "CHD", "name": "Strive chiropractic and injury", "email": "Sergio_g12@yahoo.com", "customer_id": "cus_Qx5BZaDZbBAf3J", "amount": 309.0, "date_str": "Jun 21, 2026", "days": 7, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TjJKHLDZiNpvJNRQd4MVxxx": {"account": "CHD", "name": "The Connection Chiropractic", "email": "drjacobcrumpler@gmail.com", "customer_id": "cus_RdiVvvEyie3cvs", "amount": 309.0, "date_str": "Jun 22, 2026", "days": 7, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1Tk60XLDZiNpvJNRZ28UFmxI": {"account": "CHD", "name": "Kings Park Chiropractic", "email": "kingsparkchiro@gmail.com", "customer_id": "cus_UWPJPRQnP2EGlH", "amount": 198.5, "date_str": "Jun 20, 2026", "days": 9, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TjjeuLDZiNpvJNRzx57ctEe": {"account": "CHD", "name": "Genesis Back and Neck - Sherman", "email": "sherman@genesisback.com", "customer_id": "cus_UIeQN0Q6p0q2zF", "amount": 45.0, "date_str": "Jun 19, 2026", "days": 10, "failure_reason": "Never Attempted", "sub_status": ""}, "in_1TjjZbLDZiNpvJNR37DwEph8": {"account": "CHD", "name": "Genesis Back and Neck - Grapevine", "email": "roxana@genesisback.com", "customer_id": "cus_UIduYFwA7kMxuu", "amount": 45.0, "date_str": "Jun 19, 2026", "days": 10, "failure_reason": "Never Attempted", "sub_status": ""}, "in_1TiguLLDZiNpvJNR9zkFLpqi": {"account": "CHD", "name": "Ouillette Chiropractic", "email": "michiganoc@gmail.com", "customer_id": "cus_PMU2URGjjkpBo3", "amount": 360.0, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Tigj4LDZiNpvJNRffqW0oWM": {"account": "CHD", "name": "Momentum Healthcare", "email": "drjvhall@gmail.com", "customer_id": "cus_S8PvjPB0VOrsdR", "amount": 394.89, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TigVZLDZiNpvJNRgL5U1iyA": {"account": "CHD", "name": "Nervana Holistic Health", "email": "dcaldwell.nwd@gmail.com", "customer_id": "cus_L6quyUOMdRtrRU", "amount": 375.06, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TieujLDZiNpvJNROSdw0LUk": {"account": "CHD", "name": "The Ridge Chiropractic", "email": "theridgechiropractic@gmail.com", "customer_id": "cus_SwyoaP5FjrFamB", "amount": 349.0, "date_str": "Jun 15, 2026", "days": 13, "failure_reason": "The payment failed.", "sub_status": "Past_Due"}, "in_1TdwgQLDZiNpvJNRJ3F41woo": {"account": "CHD", "name": "Our Light Chiropractic", "email": "ourlightchiropractic@gmail.com", "customer_id": "cus_NpKOWxvmQLq4cl", "amount": 310.0, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1ThF7XLDZiNpvJNR0LtXkngE": {"account": "CHD", "name": "Back to Health of Anthem", "email": "kaylene@myanthemhealth.com", "customer_id": "cus_SZouBHiyWS866Z", "amount": 359.0, "date_str": "Jun 11, 2026", "days": 17, "failure_reason": "The connection to the user's Link account has been closed.", "sub_status": "Past_Due"}, "in_1TgQI9LDZiNpvJNR24GIZ78e": {"account": "CHD", "name": "University Chiropractic", "email": "patriciakiser365@gmail.com", "customer_id": "cus_U6ExKDcNAFIjd5", "amount": 916.0, "date_str": "Jun 9, 2026", "days": 20, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TfAwbLDZiNpvJNR1i39Nbtn": {"account": "CHD", "name": "Gordon Health Solutions", "email": "dryalegordon@gmail.com", "customer_id": "cus_PYqeWiLsqR7dUR", "amount": 311.91, "date_str": "Jun 6, 2026", "days": 23, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TeLSJLDZiNpvJNRLQq8tXdj": {"account": "CHD", "name": "Utley Chiropractic", "email": "utleychiro@gmail.com", "customer_id": "cus_TuILYxYqwqMAPy", "amount": 397.0, "date_str": "Jun 3, 2026", "days": 25, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1Tmc6MJDpup464QrVJf06H7t": {"account": "SKED", "name": "Pivotal Pain Solutions", "email": "info@pivotalpainsolutions.com", "customer_id": "cus_RrDiSrbg2ENIhH", "amount": 408.91, "date_str": "Jun 26, 2026", "days": 2, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tl8AMJDpup464QrstcXz97n": {"account": "SKED", "name": "Beaverton Family Chiropractic, PC", "email": "mwfritz@beavertonfamilychiropractic.com", "customer_id": "cus_JVaWPJzHcf9hWa", "amount": 408.91, "date_str": "Jun 25, 2026", "days": 4, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1Tjj8kJDpup464Qrh5y01ck6": {"account": "SKED", "name": "", "email": "doctorhyatt@yahoo.com", "customer_id": "cus_DoHFkESrjed7Rm", "amount": 408.91, "date_str": "Jun 18, 2026", "days": 10, "failure_reason": "Transaction Not Allowed", "sub_status": "Past_Due"}, "in_1TjMsFJDpup464QricntbEnT": {"account": "SKED", "name": "Upward Shift Chiropractic- Naples Health Institute", "email": "Info@upwardshiftchiropractic.com", "customer_id": "cus_G3IQmCXegIDREw", "amount": 408.91, "date_str": "Jun 17, 2026", "days": 11, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tj3FMJDpup464Qr7beNT334": {"account": "SKED", "name": "Bloomwell Family Chiropractic", "email": "carly@bloomwellfamilychiropractic.com", "customer_id": "cus_MDgWV05pWRVkqO", "amount": 397.0, "date_str": "Jun 16, 2026", "days": 12, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TiIvhJDpup464QrbbcdYsUh": {"account": "SKED", "name": "The Haven Chiropractic", "email": "kyledenos@gmail.com", "customer_id": "cus_PGsZMylWPmvRW6", "amount": 408.91, "date_str": "Jun 14, 2026", "days": 14, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1ThW3vJDpup464QrodkoRsvG": {"account": "SKED", "name": "", "email": "dralex@valeochiropractic.com", "customer_id": "cus_DP8oX75oHwwPol", "amount": 309.0, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "", "sub_status": "Past_Due"}, "in_1ThVzgJDpup464QrsQha0CCF": {"account": "SKED", "name": "", "email": "meredith@handsonhealthchiropractic.com", "customer_id": "cus_CJLlU8iIXH3CPW", "amount": 414.31, "date_str": "Jun 12, 2026", "days": 16, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1ThE8LJDpup464QrKE1MlW1D": {"account": "SKED", "name": "Alessi Functional Health", "email": "info@alessifxhealth.com", "customer_id": "cus_TNH0Yf5Zp5nrhW", "amount": 546.0, "date_str": "Jun 11, 2026", "days": 17, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1TgAaNJDpup464QrYYthXFxp": {"account": "SKED", "name": "Wow Family Chiropractic", "email": "wowfamilychiropractic@gmail.com", "customer_id": "cus_JGAHQDrgIB6Nk7", "amount": 408.91, "date_str": "Jun 8, 2026", "days": 20, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1TfMCCJDpup464QrvF0mpH2N": {"account": "SKED", "name": "100% Chiropractic- Pueblo", "email": "drlori@100percentdoc.com", "customer_id": "cus_T8HbC1zmiAcw3k", "amount": 249.0, "date_str": "Jun 6, 2026", "days": 22, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1TfnbDJDpup464QrVdXxQrld": {"account": "SKED", "name": "Verve Chiropractic", "email": "drdanielle@vervefamilychiropractic.com", "customer_id": "cus_Qcou5Y6PD2Fmhx", "amount": 410.58, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TfncWJDpup464QrMm2QWU7t": {"account": "SKED", "name": "Verve Chiropractic Costa Mesa", "email": "kyle@vervefamilychiropractic.com", "customer_id": "cus_SmgBg8FS594qfb", "amount": 410.58, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1TfXvEJDpup464Qrrg8oQGEo": {"account": "SKED", "name": "Verve Chiropractic OC", "email": "drdanielle@vervechiropracticoc.com", "customer_id": "cus_NRoZx9RWA5Yzkl", "amount": 603.58, "date_str": "Jun 7, 2026", "days": 22, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1Tg46zJDpup464Qr3q7jlSek": {"account": "SKED", "name": "Irondequoit Chiropractic, PLLC", "email": "kmcgrath@ironchiro.com", "customer_id": "cus_Mc8zahXmxxwwc7", "amount": 408.91, "date_str": "Jun 8, 2026", "days": 20, "failure_reason": "Card Flagged \u2013 Contact Bank", "sub_status": "Canceled"}, "in_1Tfk41JDpup464QrvNp66FZ7": {"account": "SKED", "name": "", "email": "maximizedlifechiro@gmail.com", "customer_id": "cus_D2j7hTj384p4LQ", "amount": 562.38, "date_str": "Jun 7, 2026", "days": 21, "failure_reason": "", "sub_status": "Past_Due"}, "in_1Tf4eoJDpup464QruOetX1qY": {"account": "SKED", "name": "Infinity Wellness Center", "email": "drmattahc@gmail.com", "customer_id": "cus_QyX0e20RD7Kgch", "amount": 557.91, "date_str": "Jun 5, 2026", "days": 23, "failure_reason": "Stolen Card", "sub_status": "Past_Due"}};
 
 // ── State helpers ──────────────────────────────────────────────────────────
 function getState(id) {
