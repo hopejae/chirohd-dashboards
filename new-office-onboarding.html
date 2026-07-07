@@ -306,6 +306,7 @@ const OFFICES = [
   {name:"Village Family Chiropractic",network:"1520",loc:"1",cid:"cus_UQsMO7v17WsMlv",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Prarie Chiropractic and Sports Medicine",network:"1576",loc:"1",cid:"cus_Uiwrt9V27Vvkcw",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Impact Chiropractic",network:"1513",loc:"1",cid:"cus_UQnMyLTpe2gg83",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Uplift Spine And Injury",network:"1546",loc:"1",cid:"cus_Ubfaul8o9cfV4c",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1222,6 +1223,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-07-06",
+    "cidCertain": true
+  },
+  "cus_Ubfaul8o9cfV4c": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-07-07",
     "cidCertain": true
   }
 };
