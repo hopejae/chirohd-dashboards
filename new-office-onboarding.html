@@ -307,6 +307,13 @@ const OFFICES = [
   {name:"Prarie Chiropractic and Sports Medicine",network:"1576",loc:"1",cid:"cus_Uiwrt9V27Vvkcw",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Impact Chiropractic",network:"1513",loc:"1",cid:"cus_UQnMyLTpe2gg83",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Uplift Spine And Injury",network:"1546",loc:"1",cid:"cus_Ubfaul8o9cfV4c",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Cornerstone Family Chiropractic",network:"1168",loc:"3",cid:"cus_UgdiP0v9p65Dc0",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Genesis Back and Neck",network:"1438",loc:"1",cid:"cus_U8YG9tctbVHdHM",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Genesis Back and Neck",network:"1438",loc:"3",cid:"cus_U8YG9tctbVHdHM",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Genesis Back and Neck",network:"1438",loc:"4",cid:"cus_U8YG9tctbVHdHM",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"One Family Chiropractic",network:"1539",loc:"1",cid:"cus_UaVO0RbHJrVrrP",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Pure Life Chiropractic",network:"1545",loc:"1",cid:"cus_UbOiLtvNXQBwtw",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Refined Health Center",network:"1601",loc:"1",cid:"",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1229,6 +1236,24 @@ const STRIPE_DATA = {
     "paymentType": "auto",
     "stripePaid": true,
     "lastChecked": "2026-07-07",
+    "cidCertain": true
+  },
+  "cus_UgdiP0v9p65Dc0": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-07-13",
+    "cidCertain": false
+  },
+  "cus_UaVO0RbHJrVrrP": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-13",
+    "cidCertain": true
+  },
+  "cus_UbOiLtvNXQBwtw": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-13",
     "cidCertain": true
   }
 };
