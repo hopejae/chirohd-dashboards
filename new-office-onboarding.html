@@ -314,6 +314,7 @@ const OFFICES = [
   {name:"One Family Chiropractic",network:"1539",loc:"1",cid:"cus_UaVO0RbHJrVrrP",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Pure Life Chiropractic",network:"1545",loc:"1",cid:"cus_UbOiLtvNXQBwtw",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Refined Health Center",network:"1601",loc:"1",cid:"",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"OneSpine Chiropractic",network:"1549",loc:"1",cid:"cus_UbNfO7NjI980y4",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1254,6 +1255,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-07-13",
+    "cidCertain": true
+  },
+  "cus_UbNfO7NjI980y4": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-07-16",
     "cidCertain": true
   }
 };
