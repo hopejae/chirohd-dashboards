@@ -6,20 +6,20 @@
 <title>Failed Payments Dashboard</title>
 <style>
       *{box-sizing:border-box;margin:0;padding:0}
-      body{background:#0B0F1A;color:#E2E8F0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+      body{background:#F0F9FF;color:#0F3A52;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
       a{color:inherit}
 
       /* HEADER */
-      header{background:linear-gradient(135deg,#0F1729 0%,#1A2340 100%);border-bottom:1px solid rgba(255,255,255,.08);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
-      .hdr-title{font-size:22px;font-weight:700;letter-spacing:-.3px;background:linear-gradient(90deg,#fff,#94A3B8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-      .hdr-meta{font-size:12px;color:#64748B;margin-top:4px}
-      .hdr-meta strong{color:#94A3B8}
+      header{background:linear-gradient(135deg,#0EA5E9 0%,#38BDF8 100%);border-bottom:1px solid rgba(0,0,0,.06);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+      .hdr-title{font-size:22px;font-weight:700;letter-spacing:-.3px;color:#fff}
+      .hdr-meta{font-size:12px;color:rgba(255,255,255,.75);margin-top:4px}
+      .hdr-meta strong{color:#fff}
 
       /* YEAR NAV */
-      .year-nav{display:flex;gap:6px;padding:20px 32px 0;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:0}
-      .year-btn{background:transparent;border:none;border-bottom:3px solid transparent;color:#475569;font-size:13px;font-weight:700;padding:8px 18px 12px;cursor:pointer;transition:all .2s;letter-spacing:.4px;text-transform:uppercase}
-      .year-btn:hover{color:#94A3B8}
-      .year-btn.active{color:#E2E8F0;border-bottom-color:#4361EE}
+      .year-nav{display:flex;gap:6px;padding:20px 32px 0;border-bottom:1px solid #BAE6FD;margin-bottom:0}
+      .year-btn{background:transparent;border:none;border-bottom:3px solid transparent;color:#64748B;font-size:13px;font-weight:700;padding:8px 18px 12px;cursor:pointer;transition:all .2s;letter-spacing:.4px;text-transform:uppercase}
+      .year-btn:hover{color:#0369A1}
+      .year-btn.active{color:#0369A1;border-bottom-color:#0EA5E9}
 
       /* YEAR SECTIONS */
       .year-section{display:none}
@@ -28,23 +28,23 @@
       /* COMBINED SUMMARY */
       .combined{padding:24px 32px 0}
       .summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-      .sc{background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px 24px}
+      .sc{background:#fff;border:1px solid #BAE6FD;border-radius:12px;padding:20px 24px}
       .sc-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:#64748B;margin-bottom:8px}
-      .sc-val{font-size:28px;font-weight:800;letter-spacing:-1px;color:#F1F5F9}
-      .sc-sub{font-size:12px;color:#475569;margin-top:4px}
-      .sc.green .sc-val{color:#34D399}
-      .sc.blue  .sc-val{color:#60A5FA}
-      .sc.yellow .sc-val{color:#FBBF24}
-      .sc.orange .sc-val{color:#FB923C}
-      .sc.red   .sc-val{color:#F87171}
+      .sc-val{font-size:28px;font-weight:800;letter-spacing:-1px;color:#0F3A52}
+      .sc-sub{font-size:12px;color:#64748B;margin-top:4px}
+      .sc.green .sc-val{color:#059669}
+      .sc.blue  .sc-val{color:#0369A1}
+      .sc.yellow .sc-val{color:#D97706}
+      .sc.orange .sc-val{color:#EA580C}
+      .sc.red   .sc-val{color:#DC2626}
 
       /* DIVIDER */
-      .divider{margin:24px 32px;border:none;border-top:1px solid rgba(255,255,255,.06)}
+      .divider{margin:24px 32px;border:none;border-top:1px solid #BAE6FD}
 
       /* ACCOUNT TABS */
       .tabs-bar{display:flex;gap:8px;padding:0 32px;margin-bottom:20px}
-      .tab-btn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#94A3B8;font-size:14px;font-weight:600;padding:10px 28px;border-radius:8px;cursor:pointer;transition:all .2s;letter-spacing:.3px}
-      .tab-btn:hover{background:rgba(255,255,255,.08);color:#E2E8F0}
+      .tab-btn{background:#EFF6FF;border:1px solid #BFDBFE;color:#475569;font-size:14px;font-weight:600;padding:10px 28px;border-radius:8px;cursor:pointer;transition:all .2s;letter-spacing:.3px}
+      .tab-btn:hover{background:#DBEAFE;color:#1E40AF}
       .tab-btn.active{color:#fff;border-color:transparent}
 
       /* PANELS */
@@ -52,58 +52,58 @@
       .account-panel.active{display:block}
       .panel-header{border-radius:12px;padding:20px 28px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between}
       .panel-header h2{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.3px}
-      .panel-sub{font-size:13px;color:rgba(255,255,255,.7);background:rgba(0,0,0,.2);padding:4px 12px;border-radius:20px}
+      .panel-sub{font-size:13px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.12);padding:4px 12px;border-radius:20px}
 
       /* KPI CARDS */
       .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
-      .kpi-card{background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px 24px}
+      .kpi-card{background:#fff;border:1px solid #BAE6FD;border-radius:12px;padding:20px 24px}
       .kpi-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:#64748B;margin-bottom:8px}
-      .kpi-value{font-size:26px;font-weight:800;letter-spacing:-1px;color:#F1F5F9}
-      .kpi-sub{font-size:12px;color:#475569;margin-top:4px}
-      .kpi-card.green .kpi-value{color:#34D399}
-      .kpi-card.blue  .kpi-value{color:#60A5FA}
-      .kpi-card.yellow .kpi-value{color:#FBBF24}
-      .kpi-card.orange .kpi-value{color:#FB923C}
-      .kpi-card.red   .kpi-value{color:#F87171}
+      .kpi-value{font-size:26px;font-weight:800;letter-spacing:-1px;color:#0F3A52}
+      .kpi-sub{font-size:12px;color:#64748B;margin-top:4px}
+      .kpi-card.green .kpi-value{color:#059669}
+      .kpi-card.blue  .kpi-value{color:#0369A1}
+      .kpi-card.yellow .kpi-value{color:#D97706}
+      .kpi-card.orange .kpi-value{color:#EA580C}
+      .kpi-card.red   .kpi-value{color:#DC2626}
 
       /* SECTION CARDS */
-      .section-card{background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:24px;margin-bottom:20px}
+      .section-card{background:#fff;border:1px solid #BAE6FD;border-radius:12px;padding:24px;margin-bottom:20px}
       .section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#64748B;margin-bottom:16px}
 
       /* AGING BAR */
-      .aging-bar{height:10px;border-radius:6px;overflow:hidden;display:flex;margin-bottom:12px;background:#1E293B}
+      .aging-bar{height:10px;border-radius:6px;overflow:hidden;display:flex;margin-bottom:12px;background:#E0F2FE}
       .ag-seg{height:100%;transition:width .4s}
       .aging-legend{display:flex;gap:16px;flex-wrap:wrap}
-      .ag-leg{display:flex;align-items:center;gap:6px;font-size:12px;color:#94A3B8}
+      .ag-leg{display:flex;align-items:center;gap:6px;font-size:12px;color:#64748B}
       .ag-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
       /* TABLE */
       .table-wrap{overflow-x:auto;border-radius:8px}
       .inv-table{width:100%;border-collapse:collapse;font-size:13px}
-      .inv-table thead tr{background:#0F172A}
-      .inv-table th{padding:10px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#475569;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.06)}
-      .inv-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle}
-      .inv-table tbody tr:hover{filter:brightness(1.15)}
+      .inv-table thead tr{background:#EFF6FF}
+      .inv-table th{padding:10px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#0369A1;white-space:nowrap;border-bottom:1px solid #BAE6FD}
+      .inv-table td{padding:10px 14px;border-bottom:1px solid #E0F2FE;vertical-align:middle}
+      .inv-table tbody tr:hover{background:#F0F9FF}
       .inv-table tbody tr:last-child td{border-bottom:none}
-      .td-name{font-weight:600;color:#E2E8F0;white-space:nowrap}
+      .td-name{font-weight:600;color:#0F3A52;white-space:nowrap}
       .td-email{color:#64748B;font-size:12px}
-      .td-amt{font-weight:700;color:#F1F5F9;white-space:nowrap;text-align:right}
-      .td-date{color:#94A3B8;white-space:nowrap}
+      .td-amt{font-weight:700;color:#0F3A52;white-space:nowrap;text-align:right}
+      .td-date{color:#64748B;white-space:nowrap}
       .td-days{text-align:center}
-      .td-reason{color:#94A3B8;font-size:12px;max-width:180px}
+      .td-reason{color:#64748B;font-size:12px;max-width:180px}
       .day-pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:.3px}
       .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
-      .no-data{color:#475569;font-size:13px;text-align:center;padding:24px}
+      .no-data{color:#64748B;font-size:13px;text-align:center;padding:24px}
 
       /* FOOTER */
-      footer{text-align:center;padding:24px;color:#334155;font-size:12px;border-top:1px solid rgba(255,255,255,.05);margin-top:20px}
+      footer{text-align:center;padding:24px;color:#64748B;font-size:12px;border-top:1px solid #BAE6FD;margin-top:20px}
     </style>
 </head>
 <body>
 <header>
   <div>
     <div class="hdr-title">Failed Payments Dashboard</div>
-    <div class="hdr-meta">Last updated: <strong>07/13/2026</strong> &nbsp;|&nbsp; Next run: <strong>July 15, 2026 at 9:00 AM EST</strong></div>
+    <div class="hdr-meta">Last updated: <strong>07/17/2026</strong> &nbsp;|&nbsp; Next run: <strong>July 22, 2026 at 9:00 AM EST</strong></div>
   </div>
 </header>
 
@@ -123,23 +123,23 @@
   <div class="summary-grid">
     <div class="sc">
       <div class="sc-lbl">Total Outstanding</div>
-      <div class="sc-val">$13,672.90</div>
-      <div class="sc-sub">55 invoices across all accounts</div>
+      <div class="sc-val">$9,971.79</div>
+      <div class="sc-sub">30 invoices across all accounts</div>
     </div>
     <div class="sc green">
       <div class="sc-lbl">Collected This Week</div>
-      <div class="sc-val">$41,656.15</div>
-      <div class="sc-sub">92 invoices resolved</div>
+      <div class="sc-val">$41,928.59</div>
+      <div class="sc-sub">93 invoices resolved</div>
     </div>
     <div class="sc blue">
       <div class="sc-lbl">Recovery Rate</div>
-      <div class="sc-val">66.2%</div>
+      <div class="sc-val">80.9%</div>
       <div class="sc-sub">by invoice count, all accounts</div>
     </div>
     <div class="sc red">
       <div class="sc-lbl">Flagged 30+ Days</div>
-      <div class="sc-val">55</div>
-      <div class="sc-sub">60d: 12 &nbsp;·&nbsp; 90d+: 32</div>
+      <div class="sc-val">30</div>
+      <div class="sc-sub">60d: 7 &nbsp;·&nbsp; 90d+: 13</div>
     </div>
   </div>
 </div>
@@ -152,13 +152,13 @@
 <div class="account-panel active" id="panel-chd-ytd">
   <div class="panel-header" style="background:linear-gradient(135deg,#2D2DC4,#4CC9F0)">
     <h2>CHD</h2>
-    <span class="panel-sub">10 invoices outstanding</span>
+    <span class="panel-sub">12 invoices outstanding</span>
   </div>
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-label">Total Outstanding</div>
-      <div class="kpi-value">$3,408.11</div>
-      <div class="kpi-sub">10 invoices</div>
+      <div class="kpi-value">$4,102.00</div>
+      <div class="kpi-sub">12 invoices</div>
     </div>
     <div class="kpi-card green">
       <div class="kpi-label">Collected This Week</div>
@@ -167,18 +167,18 @@
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">Recovery Rate</div>
-      <div class="kpi-value">81.8%</div>
-      <div class="kpi-sub">87.8% by amount</div>
+      <div class="kpi-value">79.4%</div>
+      <div class="kpi-sub">85.7% by amount</div>
     </div>
     <div class="kpi-card red">
       <div class="kpi-label">Flagged 30+ Days</div>
-      <div class="kpi-value">10</div>
-      <div class="kpi-sub">60d: 1 &nbsp;·&nbsp; 90d+: 4</div>
+      <div class="kpi-value">12</div>
+      <div class="kpi-sub">60d: 2 &nbsp;·&nbsp; 90d+: 4</div>
     </div>
   </div>
   <div class="section-card">
     <div class="section-title">Aging Breakdown</div>
-    <div class="aging-bar"><div class="ag-seg" style="width:50.0%;background:#F59E0B" title="5 invoices 30–59d"></div><div class="ag-seg" style="width:10.0%;background:#F97316" title="1 invoices 60–89d"></div><div class="ag-seg" style="width:40.0%;background:#EF4444" title="4 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>5 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>1 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>4 90+d</span></div>
+    <div class="aging-bar"><div class="ag-seg" style="width:50.0%;background:#F59E0B" title="6 invoices 30–59d"></div><div class="ag-seg" style="width:16.7%;background:#F97316" title="2 invoices 60–89d"></div><div class="ag-seg" style="width:33.3%;background:#EF4444" title="4 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>6 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>2 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>4 90+d</span></div>
   </div>
   <div class="section-card">
     <div class="section-title">Flagged Invoices — 30+ Days Past Due</div>
@@ -188,141 +188,175 @@
         <th>Days Past Due</th><th>Sub Status</th><th>Failure Reason</th><th>Status</th>
         <th>Invoice</th><th>Notes</th>
       </tr></thead>
-      <tbody><tr style="background:#161B2E">
+      <tbody><tr style="background:#F0F9FF">
           <td class="td-name">The Haven Chiropractic</td>
           <td class="td-email">Kyledenos@gmail.com</td>
           <td class="td-amt">$300.00</td>
           <td class="td-date">02/22/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">140d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">144d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T3hEkLDZiNpvJNRfp8auBbm" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T3hEkLDZiNpvJNRfp8auBbm</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1T3hEkLDZiNpvJNRfp8auBbm" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1T3hEkLDZiNpvJNRfp8auBbm</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T3hEkLDZiNpvJNRfp8auBbm" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">The Haven Chiropractic</td>
           <td class="td-email">Kyledenos@gmail.com</td>
           <td class="td-amt">$300.00</td>
           <td class="td-date">03/22/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">112d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">116d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TDqYrLDZiNpvJNRO5VaBN7x" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TDqYrLDZiNpvJNRO5VaBN7x</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TDqYrLDZiNpvJNRO5VaBN7x" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TDqYrLDZiNpvJNRO5VaBN7x</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TDqYrLDZiNpvJNRO5VaBN7x" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">The Haven Chiropractic</td>
           <td class="td-email">Kyledenos@gmail.com</td>
           <td class="td-amt">$300.00</td>
           <td class="td-date">04/22/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">81d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">85d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">The payment failed: The chosen PaymentMethod cannot be processed. Please try a d</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TP5M8LDZiNpvJNRigcMqUEK" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TP5M8LDZiNpvJNRigcMqUEK</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TP5M8LDZiNpvJNRigcMqUEK" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TP5M8LDZiNpvJNRigcMqUEK</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TP5M8LDZiNpvJNRigcMqUEK" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">The Haven Chiropractic</td>
           <td class="td-email">Kyledenos@gmail.com</td>
           <td class="td-amt">$300.00</td>
           <td class="td-date">05/22/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">51d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">55d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">The payment failed: The chosen PaymentMethod cannot be processed. Please try a d</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TZxcwLDZiNpvJNRuLjTkmEZ" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TZxcwLDZiNpvJNRuLjTkmEZ</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TZxcwLDZiNpvJNRuLjTkmEZ" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TZxcwLDZiNpvJNRuLjTkmEZ</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TZxcwLDZiNpvJNRuLjTkmEZ" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Vitality Family Chiropractic</td>
           <td class="td-email">drkatherynecastro@lifetimeofvitality.com</td>
           <td class="td-amt">$299.00</td>
           <td class="td-date">05/16/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">57d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">61d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Never Attempted</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TMr8XLDZiNpvJNRdeqJsHnD" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TMr8XLDZiNpvJNRdeqJsHnD</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TMr8XLDZiNpvJNRdeqJsHnD" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TMr8XLDZiNpvJNRdeqJsHnD</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TMr8XLDZiNpvJNRdeqJsHnD" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#fff">
+          <td class="td-name">Vitality Family Chiropractic</td>
+          <td class="td-email">drkatherynecastro@lifetimeofvitality.com</td>
+          <td class="td-amt">$299.00</td>
+          <td class="td-date">06/15/2026</td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">31d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
+          <td class="td-reason">Never Attempted</td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TXjRsLDZiNpvJNRcZBMkHG1" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TXjRsLDZiNpvJNRcZBMkHG1</a></td>
+          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TXjRsLDZiNpvJNRcZBMkHG1" placeholder="Notes…" rows="2"
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            transition:border-color .2s"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
+            oninput="saveFPNote(this)"></textarea></td>
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">University Chiropractic</td>
           <td class="td-email">patriciakiser365@gmail.com</td>
           <td class="td-amt">$916.00</td>
           <td class="td-date">06/09/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">34d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">38d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TgQI9LDZiNpvJNR24GIZ78e" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TgQI9LDZiNpvJNR24GIZ78e</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TgQI9LDZiNpvJNR24GIZ78e" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TgQI9LDZiNpvJNR24GIZ78e</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TgQI9LDZiNpvJNR24GIZ78e" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Back to Health of Anthem</td>
           <td class="td-email">kaylene@myanthemhealth.com</td>
           <td class="td-amt">$359.00</td>
           <td class="td-date">06/11/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">31d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">35d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">The connection to the user's Link account has been closed.</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1ThF7XLDZiNpvJNR0LtXkngE" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1ThF7XLDZiNpvJNR0LtXkngE</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1ThF7XLDZiNpvJNR0LtXkngE" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1ThF7XLDZiNpvJNR0LtXkngE</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1ThF7XLDZiNpvJNR0LtXkngE" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">Our Light Chiropractic</td>
           <td class="td-email">ourlightchiropractic@gmail.com</td>
           <td class="td-amt">$310.00</td>
           <td class="td-date">06/12/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">30d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">34d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TdwgQLDZiNpvJNRJ3F41woo" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TdwgQLDZiNpvJNRJ3F41woo</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TdwgQLDZiNpvJNRJ3F41woo" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TdwgQLDZiNpvJNRJ3F41woo</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TdwgQLDZiNpvJNRJ3F41woo" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
+            oninput="saveFPNote(this)"></textarea></td>
+        </tr><tr style="background:#fff">
+          <td class="td-name">Momentum Healthcare</td>
+          <td class="td-email">drjvhall@gmail.com</td>
+          <td class="td-amt">$394.89</td>
+          <td class="td-date">06/15/2026</td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">31d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
+          <td class="td-reason">The connection to the user's Link account has been closed.</td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1Tigj4LDZiNpvJNRffqW0oWM" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1Tigj4LDZiNpvJNRffqW0oWM</a></td>
+          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1Tigj4LDZiNpvJNRffqW0oWM" placeholder="Notes…" rows="2"
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            transition:border-color .2s"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
         </tr></tbody>
     </table></div>
@@ -331,33 +365,33 @@
 <div class="account-panel" id="panel-sked-ytd">
   <div class="panel-header" style="background:linear-gradient(135deg,#1E5FA8,#63B3ED)">
     <h2>SKED</h2>
-    <span class="panel-sub">23 invoices outstanding</span>
+    <span class="panel-sub">13 invoices outstanding</span>
   </div>
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-label">Total Outstanding</div>
-      <div class="kpi-value">$8,914.79</div>
-      <div class="kpi-sub">23 invoices</div>
+      <div class="kpi-value">$5,519.79</div>
+      <div class="kpi-sub">13 invoices</div>
     </div>
     <div class="kpi-card green">
       <div class="kpi-label">Collected This Week</div>
-      <div class="kpi-value">$30,035.49</div>
-      <div class="kpi-sub">55 invoices resolved</div>
+      <div class="kpi-value">$30,307.93</div>
+      <div class="kpi-sub">56 invoices resolved</div>
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">Recovery Rate</div>
-      <div class="kpi-value">74.3%</div>
-      <div class="kpi-sub">80.5% by amount</div>
+      <div class="kpi-value">84.8%</div>
+      <div class="kpi-sub">87.7% by amount</div>
     </div>
     <div class="kpi-card red">
       <div class="kpi-label">Flagged 30+ Days</div>
-      <div class="kpi-value">23</div>
-      <div class="kpi-sub">60d: 7 &nbsp;·&nbsp; 90d+: 11</div>
+      <div class="kpi-value">13</div>
+      <div class="kpi-sub">60d: 3 &nbsp;·&nbsp; 90d+: 7</div>
     </div>
   </div>
   <div class="section-card">
     <div class="section-title">Aging Breakdown</div>
-    <div class="aging-bar"><div class="ag-seg" style="width:21.7%;background:#F59E0B" title="5 invoices 30–59d"></div><div class="ag-seg" style="width:30.4%;background:#F97316" title="7 invoices 60–89d"></div><div class="ag-seg" style="width:47.8%;background:#EF4444" title="11 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>5 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>7 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>11 90+d</span></div>
+    <div class="aging-bar"><div class="ag-seg" style="width:23.1%;background:#F59E0B" title="3 invoices 30–59d"></div><div class="ag-seg" style="width:23.1%;background:#F97316" title="3 invoices 60–89d"></div><div class="ag-seg" style="width:53.8%;background:#EF4444" title="7 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>3 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>3 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>7 90+d</span></div>
   </div>
   <div class="section-card">
     <div class="section-title">Flagged Invoices — 30+ Days Past Due</div>
@@ -367,396 +401,226 @@
         <th>Days Past Due</th><th>Sub Status</th><th>Failure Reason</th><th>Status</th>
         <th>Invoice</th><th>Notes</th>
       </tr></thead>
-      <tbody><tr style="background:#161B2E">
-          <td class="td-name"></td>
-          <td class="td-email">corpsteindc@gmail.com</td>
-          <td class="td-amt">$397.00</td>
-          <td class="td-date">01/04/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">190d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SliYiJDpup464QrJ0JCLc4O" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SliYiJDpup464QrJ0JCLc4O</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SliYiJDpup464QrJ0JCLc4O" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+      <tbody><tr style="background:#F0F9FF">
           <td class="td-name">Gorman Chiropractic & Holistic Health Center</td>
           <td class="td-email">kim@gorman-health.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">01/15/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">179d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">183d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Lost Card</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SpqudJDpup464Qr0glW0GJe" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SpqudJDpup464Qr0glW0GJe</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1SpqudJDpup464Qr0glW0GJe" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1SpqudJDpup464Qr0glW0GJe</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SpqudJDpup464Qr0glW0GJe" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">The Ridge Chiropractic</td>
-          <td class="td-email">theridgechiropractic@gmail.com</td>
-          <td class="td-amt">$204.45</td>
-          <td class="td-date">01/19/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">174d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SrLT0JDpup464QroDHuf4MX" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SrLT0JDpup464QroDHuf4MX</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SrLT0JDpup464QroDHuf4MX" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">The Ridge Chiropractic</td>
-          <td class="td-email">theridgechiropractic@gmail.com</td>
-          <td class="td-amt">$204.45</td>
-          <td class="td-date">04/19/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">84d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TNyN5JDpup464Qr2D3V1dxt" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TNyN5JDpup464Qr2D3V1dxt</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TNyN5JDpup464Qr2D3V1dxt" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Universal Wellness Source of Omaha</td>
           <td class="td-email">drashlin@uwschiro.com</td>
           <td class="td-amt">$489.11</td>
           <td class="td-date">01/20/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">173d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">177d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SrkBOJDpup464Qr6QbxgiRg" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SrkBOJDpup464Qr6QbxgiRg</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1SrkBOJDpup464Qr6QbxgiRg" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1SrkBOJDpup464Qr6QbxgiRg</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SrkBOJDpup464Qr6QbxgiRg" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">Ballas Chiropractic</td>
           <td class="td-email">billing.ballaschiro@gmail.com</td>
           <td class="td-amt">$446.00</td>
           <td class="td-date">01/27/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">167d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">171d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SuCrfJDpup464QrMU6SwRc4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SuCrfJDpup464QrMU6SwRc4</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1SuCrfJDpup464QrMU6SwRc4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1SuCrfJDpup464QrMU6SwRc4</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SuCrfJDpup464QrMU6SwRc4" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Foundation Family Chiropractic</td>
           <td class="td-email">kheimerdc@gmail.com</td>
           <td class="td-amt">$397.00</td>
           <td class="td-date">01/26/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">167d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">171d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1StyLkJDpup464QrUDUiLfdu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1StyLkJDpup464QrUDUiLfdu</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1StyLkJDpup464QrUDUiLfdu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1StyLkJDpup464QrUDUiLfdu</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1StyLkJDpup464QrUDUiLfdu" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">Chicagoland WellMed Center</td>
           <td class="td-email">drfvaught+1@gmail.com</td>
           <td class="td-amt">$450.11</td>
           <td class="td-date">03/01/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">133d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">137d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T6G0nJDpup464Qr5EhdXYlc" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T6G0nJDpup464Qr5EhdXYlc</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1T6G0nJDpup464Qr5EhdXYlc" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1T6G0nJDpup464Qr5EhdXYlc</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T6G0nJDpup464Qr5EhdXYlc" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">Chicagoland WellMed Center</td>
           <td class="td-email">drfvaught+1@gmail.com</td>
           <td class="td-amt">$450.11</td>
           <td class="td-date">06/01/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">41d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Past Due</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">45d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TdbqfJDpup464QrQUsu1Zi7" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TdbqfJDpup464QrQUsu1Zi7</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TdbqfJDpup464QrQUsu1Zi7" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TdbqfJDpup464QrQUsu1Zi7</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TdbqfJDpup464QrQUsu1Zi7" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">TOR Wellness Center</td>
-          <td class="td-email">drbrea@torchiro.com</td>
-          <td class="td-amt">$272.44</td>
-          <td class="td-date">03/05/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">129d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T7ftoJDpup464QrO2vfXivd" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T7ftoJDpup464QrO2vfXivd</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T7ftoJDpup464QrO2vfXivd" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">TOR Wellness - Woodmen</td>
-          <td class="td-email">drbrea+1@torchiro.com</td>
-          <td class="td-amt">$272.11</td>
-          <td class="td-date">03/21/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">113d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TDXVvJDpup464QrBq8NeO3W" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TDXVvJDpup464QrBq8NeO3W</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TDXVvJDpup464QrBq8NeO3W" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Beaverton Family Chiropractic, PC</td>
           <td class="td-email">bfc@beavertonfamilychiropractic.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">04/09/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">94d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">98d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TKP50JDpup464QrosW4dxYW" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TKP50JDpup464QrosW4dxYW</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TKP50JDpup464QrosW4dxYW" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TKP50JDpup464QrosW4dxYW</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TKP50JDpup464QrosW4dxYW" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Beaverton Family Chiropractic, PC</td>
           <td class="td-email">bfc@beavertonfamilychiropractic.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">05/09/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">64d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">68d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TVHMzJDpup464QrBWB6tXWE" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TVHMzJDpup464QrBWB6tXWE</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TVHMzJDpup464QrBWB6tXWE" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TVHMzJDpup464QrBWB6tXWE</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TVHMzJDpup464QrBWB6tXWE" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Dorn Family Chiropractic, LLC. (dba Axis Chiropractic)</td>
-          <td class="td-email">robdorn26@gmail.com</td>
-          <td class="td-amt">$408.91</td>
-          <td class="td-date">04/10/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">93d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Invalid Card Number</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TKgbkJDpup464QrYFC6dJRQ" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TKgbkJDpup464QrYFC6dJRQ</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TKgbkJDpup464QrYFC6dJRQ" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Dorn Family Chiropractic, LLC. (dba Axis Chiropractic)</td>
-          <td class="td-email">robdorn26@gmail.com</td>
-          <td class="td-amt">$408.91</td>
-          <td class="td-date">05/10/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">63d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Invalid Card Number</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TVYvJJDpup464QrJC7lIkyG" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TVYvJJDpup464QrJC7lIkyG</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TVYvJJDpup464QrJC7lIkyG" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">Gardner Chiropractic: Family and Wellness Center</td>
           <td class="td-email">drgardner@drgardnerchiro.com</td>
           <td class="td-amt">$437.00</td>
           <td class="td-date">04/14/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">89d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">93d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TMD7yJDpup464QrtdYRr2Co" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TMD7yJDpup464QrtdYRr2Co</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TMD7yJDpup464QrtdYRr2Co" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TMD7yJDpup464QrtdYRr2Co</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TMD7yJDpup464QrtdYRr2Co" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Upward Shift Chiropractic- Naples Health Institute</td>
-          <td class="td-email">Info@upwardshiftchiropractic.com</td>
-          <td class="td-amt">$408.91</td>
-          <td class="td-date">04/17/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">86d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Transaction Not Allowed</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TNFo6JDpup464Qr7J4TWiGJ" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TNFo6JDpup464Qr7J4TWiGJ</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TNFo6JDpup464Qr7J4TWiGJ" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Upward Shift Chiropractic- Naples Health Institute</td>
-          <td class="td-email">Info@upwardshiftchiropractic.com</td>
-          <td class="td-amt">$408.91</td>
-          <td class="td-date">05/17/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">56d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Transaction Not Allowed</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TY86ZJDpup464QrK6opuUlb" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TY86ZJDpup464QrK6opuUlb</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TY86ZJDpup464QrK6opuUlb" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Pivotal Pain Solutions</td>
           <td class="td-email">info@pivotalpainsolutions.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">04/26/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">77d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Unpaid</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">81d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Unpaid</span></td>
           <td class="td-reason">Blocked by Bank</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TQV1QJDpup464QrgcOMahnA" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TQV1QJDpup464QrgcOMahnA</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TQV1QJDpup464QrgcOMahnA" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TQV1QJDpup464QrgcOMahnA</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TQV1QJDpup464QrgcOMahnA" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#fff">
           <td class="td-name">Pivotal Pain Solutions</td>
           <td class="td-email">info@pivotalpainsolutions.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">05/26/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">47d</span></td>
-          <td><span class="badge" style="color:#FB923C;background:#3D1500">Unpaid</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">51d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Unpaid</span></td>
           <td class="td-reason">Blocked by Bank</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TbNKDJDpup464QrRkIaV07a" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TbNKDJDpup464QrRkIaV07a</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TbNKDJDpup464QrRkIaV07a" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TbNKDJDpup464QrRkIaV07a</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TbNKDJDpup464QrRkIaV07a" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">West Chiropractic & Neuropathy Center</td>
           <td class="td-email">admin@westchiroclinic.com</td>
           <td class="td-amt">$408.91</td>
           <td class="td-date">05/13/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">60d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">64d</span></td>
+          <td><span class="badge" style="color:#EA580C;background:#FFEDD5">Past Due</span></td>
           <td class="td-reason">Insufficient Funds</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TWjJ1JDpup464QrWDVPhZzg" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TWjJ1JDpup464QrWDVPhZzg</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TWjJ1JDpup464QrWDVPhZzg" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TWjJ1JDpup464QrWDVPhZzg</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TWjJ1JDpup464QrWDVPhZzg" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">The Haven Chiropractic</td>
-          <td class="td-email">kyledenos@gmail.com</td>
-          <td class="td-amt">$408.91</td>
-          <td class="td-date">05/14/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">59d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TX4A4JDpup464QrqMgSueP4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TX4A4JDpup464QrqMgSueP4</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TX4A4JDpup464QrqMgSueP4" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#fff">
           <td class="td-name"></td>
           <td class="td-email">genesischiropractic@gmail.com</td>
           <td class="td-amt">$397.00</td>
           <td class="td-date">05/29/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">44d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">48d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TcRjvJDpup464QrGiApYQMY" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TcRjvJDpup464QrGiApYQMY</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TcRjvJDpup464QrGiApYQMY" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TcRjvJDpup464QrGiApYQMY</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TcRjvJDpup464QrGiApYQMY" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
         </tr></tbody>
     </table></div>
@@ -765,13 +629,13 @@
 <div class="account-panel" id="panel-spark-ytd">
   <div class="panel-header" style="background:linear-gradient(135deg,#C2410C,#FB923C)">
     <h2>SPARK</h2>
-    <span class="panel-sub">22 invoices outstanding</span>
+    <span class="panel-sub">5 invoices outstanding</span>
   </div>
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-label">Total Outstanding</div>
-      <div class="kpi-value">$1,350.00</div>
-      <div class="kpi-sub">22 invoices</div>
+      <div class="kpi-value">$350.00</div>
+      <div class="kpi-sub">5 invoices</div>
     </div>
     <div class="kpi-card green">
       <div class="kpi-label">Collected This Week</div>
@@ -780,18 +644,18 @@
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">Recovery Rate</div>
-      <div class="kpi-value">31.2%</div>
-      <div class="kpi-sub">33.8% by amount</div>
+      <div class="kpi-value">66.7%</div>
+      <div class="kpi-sub">66.3% by amount</div>
     </div>
     <div class="kpi-card red">
       <div class="kpi-label">Flagged 30+ Days</div>
-      <div class="kpi-value">22</div>
-      <div class="kpi-sub">60d: 4 &nbsp;·&nbsp; 90d+: 17</div>
+      <div class="kpi-value">5</div>
+      <div class="kpi-sub">60d: 2 &nbsp;·&nbsp; 90d+: 2</div>
     </div>
   </div>
   <div class="section-card">
     <div class="section-title">Aging Breakdown</div>
-    <div class="aging-bar"><div class="ag-seg" style="width:4.5%;background:#F59E0B" title="1 invoices 30–59d"></div><div class="ag-seg" style="width:18.2%;background:#F97316" title="4 invoices 60–89d"></div><div class="ag-seg" style="width:77.3%;background:#EF4444" title="17 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>1 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>4 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>17 90+d</span></div>
+    <div class="aging-bar"><div class="ag-seg" style="width:20.0%;background:#F59E0B" title="1 invoices 30–59d"></div><div class="ag-seg" style="width:40.0%;background:#F97316" title="2 invoices 60–89d"></div><div class="ag-seg" style="width:40.0%;background:#EF4444" title="2 invoices 90+d"></div></div><div class="aging-legend"><span class="ag-leg"><span class="ag-dot" style="background:#F59E0B"></span>1 30–59d</span><span class="ag-leg"><span class="ag-dot" style="background:#F97316"></span>2 60–89d</span><span class="ag-leg"><span class="ag-dot" style="background:#EF4444"></span>2 90+d</span></div>
   </div>
   <div class="section-card">
     <div class="section-title">Flagged Invoices — 30+ Days Past Due</div>
@@ -801,379 +665,90 @@
         <th>Days Past Due</th><th>Sub Status</th><th>Failure Reason</th><th>Status</th>
         <th>Invoice</th><th>Notes</th>
       </tr></thead>
-      <tbody><tr style="background:#161B2E">
-          <td class="td-name">Above and Beyond Holistic Wellness Center</td>
-          <td class="td-email">info@abhwellness.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/05/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">188d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SmIAvHw7XJ3BlVYeBWHrY8E" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SmIAvHw7XJ3BlVYeBWHrY8E</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SmIAvHw7XJ3BlVYeBWHrY8E" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Above and Beyond Holistic Wellness Center</td>
-          <td class="td-email">info@abhwellness.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/08/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">185d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SnNbHHw7XJ3BlVYdce4IH7n" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SnNbHHw7XJ3BlVYdce4IH7n</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SnNbHHw7XJ3BlVYdce4IH7n" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Above and Beyond Holistic Wellness Center</td>
-          <td class="td-email">info@abhwellness.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/13/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">180d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SpBz7Hw7XJ3BlVYGzfaVDI5" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SpBz7Hw7XJ3BlVYGzfaVDI5</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SpBz7Hw7XJ3BlVYGzfaVDI5" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Above and Beyond Holistic Wellness Center</td>
-          <td class="td-email">info@abhwellness.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/29/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">164d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SuzdsHw7XJ3BlVYHiO1zcWx" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SuzdsHw7XJ3BlVYHiO1zcWx</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SuzdsHw7XJ3BlVYHiO1zcWx" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
-          <td class="td-name">Above and Beyond Holistic Wellness Center</td>
-          <td class="td-email">info@abhwellness.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/30/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">163d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SvM5cHw7XJ3BlVYiaMIiKj4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SvM5cHw7XJ3BlVYiaMIiKj4</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SvM5cHw7XJ3BlVYiaMIiKj4" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+      <tbody><tr style="background:#F0F9FF">
           <td class="td-name">AlignLife of Pelham Falls</td>
           <td class="td-email">pelhamfalls@alignlife.com</td>
           <td class="td-amt">$50.00</td>
           <td class="td-date">01/14/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">179d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">183d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1Spc88Hw7XJ3BlVYTCj9SnWN" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1Spc88Hw7XJ3BlVYTCj9SnWN</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1Spc88Hw7XJ3BlVYTCj9SnWN" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1Spc88Hw7XJ3BlVYTCj9SnWN</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1Spc88Hw7XJ3BlVYTCj9SnWN" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/16/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">177d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SqL5LHw7XJ3BlVYQqkfIcFL" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SqL5LHw7XJ3BlVYQqkfIcFL</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SqL5LHw7XJ3BlVYQqkfIcFL" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">01/21/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">172d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1Ss9SQHw7XJ3BlVYDs5ttTyK" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1Ss9SQHw7XJ3BlVYDs5ttTyK</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1Ss9SQHw7XJ3BlVYDs5ttTyK" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$100.00</td>
-          <td class="td-date">02/04/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">158d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1SxE8mHw7XJ3BlVYagSAXzmq" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1SxE8mHw7XJ3BlVYagSAXzmq</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SxE8mHw7XJ3BlVYagSAXzmq" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$100.00</td>
-          <td class="td-date">02/18/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">144d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T2IoUHw7XJ3BlVYqSxMgz7G" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T2IoUHw7XJ3BlVYqSxMgz7G</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T2IoUHw7XJ3BlVYqSxMgz7G" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">02/19/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">143d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T2fHqHw7XJ3BlVYkPykwH4O" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T2fHqHw7XJ3BlVYkPykwH4O</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T2fHqHw7XJ3BlVYkPykwH4O" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">03/12/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">122d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TAHJHHw7XJ3BlVYGNQaoaqi" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TAHJHHw7XJ3BlVYGNQaoaqi</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TAHJHHw7XJ3BlVYGNQaoaqi" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$100.00</td>
-          <td class="td-date">03/23/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">111d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TEGXdHw7XJ3BlVYvwi5AXEK" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TEGXdHw7XJ3BlVYvwi5AXEK</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TEGXdHw7XJ3BlVYvwi5AXEK" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">04/03/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">100d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TIFmBHw7XJ3BlVYes6W1wxX" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TIFmBHw7XJ3BlVYes6W1wxX</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TIFmBHw7XJ3BlVYes6W1wxX" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">04/06/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">97d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TJLCgHw7XJ3BlVYTQ5awihH" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TJLCgHw7XJ3BlVYTQ5awihH</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TJLCgHw7XJ3BlVYTQ5awihH" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">04/09/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">94d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TKQdMHw7XJ3BlVYUEmZefel" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TKQdMHw7XJ3BlVYUEmZefel</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TKQdMHw7XJ3BlVYUEmZefel" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">04/29/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">74d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TRgAfHw7XJ3BlVYFH7RupC4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TRgAfHw7XJ3BlVYFH7RupC4</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TRgAfHw7XJ3BlVYFH7RupC4" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
-          <td class="td-name">AlignLife of Pelham Falls</td>
-          <td class="td-email">pelhamfalls@alignlife.com</td>
-          <td class="td-amt">$50.00</td>
-          <td class="td-date">05/04/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">69d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TTUYXHw7XJ3BlVYnvtNhWgf" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TTUYXHw7XJ3BlVYnvtNhWgf</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TTUYXHw7XJ3BlVYnvtNhWgf" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">AlignLife of Pelham Falls</td>
           <td class="td-email">pelhamfalls@alignlife.com</td>
           <td class="td-amt">$50.00</td>
           <td class="td-date">05/07/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">66d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">70d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TUZzEHw7XJ3BlVYmzNn5WjX" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TUZzEHw7XJ3BlVYmzNn5WjX</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TUZzEHw7XJ3BlVYmzNn5WjX" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TUZzEHw7XJ3BlVYmzNn5WjX</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TUZzEHw7XJ3BlVYmzNn5WjX" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">AlignLife of Pelham Falls</td>
           <td class="td-email">pelhamfalls@alignlife.com</td>
           <td class="td-amt">$50.00</td>
           <td class="td-date">05/11/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F97316;color:#FFF">62d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#EA580C;color:#FFF">66d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TW1tlHw7XJ3BlVYpMZIojvI" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TW1tlHw7XJ3BlVYpMZIojvI</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TW1tlHw7XJ3BlVYpMZIojvI" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TW1tlHw7XJ3BlVYpMZIojvI</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TW1tlHw7XJ3BlVYpMZIojvI" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#1A2038">
+        </tr><tr style="background:#F0F9FF">
           <td class="td-name">AlignLife of Pelham Falls</td>
           <td class="td-email">pelhamfalls@alignlife.com</td>
           <td class="td-amt">$50.00</td>
           <td class="td-date">05/18/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#F59E0B;color:#000">55d</span></td>
-          <td><span class="badge" style="color:#F87171;background:#3B0A0A">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#D97706;color:#FFF">59d</span></td>
+          <td><span class="badge" style="color:#DC2626;background:#FEE2E2">Cancelled</span></td>
           <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1TYZEUHw7XJ3BlVYW0AJleAu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1TYZEUHw7XJ3BlVYW0AJleAu</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1TYZEUHw7XJ3BlVYW0AJleAu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1TYZEUHw7XJ3BlVYW0AJleAu</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1TYZEUHw7XJ3BlVYW0AJleAu" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#161B2E">
+        </tr><tr style="background:#fff">
           <td class="td-name">TOR Wellness - Woodmen</td>
           <td class="td-email">drbrea+1@torchiro.com</td>
           <td class="td-amt">$150.00</td>
           <td class="td-date">03/10/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">124d</span></td>
-          <td><span class="badge" style="color:#34D399;background:#052E16">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">128d</span></td>
+          <td><span class="badge" style="color:#059669;background:#DCFCE7">Active</span></td>
           <td class="td-reason">Card Declined</td>
-          <td><span class="badge" style="color:#475569;background:#0F172A">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1T9YltHw7XJ3BlVY912Ot8Au" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#475569;text-decoration:none;border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:2px 7px;background:#0F172A;white-space:nowrap;transition:all .15s" onmouseover="this.style.color='#94A3B8'" onmouseout="this.style.color='#475569'">inv: in_1T9YltHw7XJ3BlVY912Ot8Au</a></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1T9YltHw7XJ3BlVY912Ot8Au" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#0369A1;text-decoration:none;border:1px solid #BAE6FD;border-radius:5px;padding:2px 7px;background:#EFF6FF;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#DBEAFE'" onmouseout="this.style.background='#EFF6FF'">inv: in_1T9YltHw7XJ3BlVY912Ot8Au</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1T9YltHw7XJ3BlVY912Ot8Au" placeholder="Notes…" rows="2"
-            style="width:100%;background:#0F172A;border:1px solid rgba(255,255,255,.06);border-radius:6px;
-            color:#94A3B8;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            style="width:100%;background:#F0F9FF;border:1px solid #BAE6FD;border-radius:6px;
+            color:#0F3A52;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
-            onfocus="this.style.borderColor='rgba(255,255,255,.18)';this.style.color='#E2E8F0'"
-            onblur="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#94A3B8';saveFPNote(this)"
+            onfocus="this.style.borderColor='#0EA5E9';this.style.background='#fff'"
+            onblur="this.style.borderColor='#BAE6FD';this.style.background='#F0F9FF';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
         </tr></tbody>
     </table></div>
@@ -1628,23 +1203,23 @@
 <div style="padding:0 32px 40px">
   <div class="section-card">
     <div class="section-title">All Uncollectible Invoices</div>
-    <div class="table-wrap"><table class="inv-table"><thead><tr><th>Account</th><th>Customer</th><th>Email</th><th>Amount</th><th>Date Due</th><th>Days Past Due</th><th>Sub Status</th><th>Failure Reason</th></tr></thead><tbody><tr style="background:#161B2E">
-          <td><span class="badge" style="color:#4361EE;background:#1E2A6B">CHD</span></td>
+    <div class="table-wrap"><table class="inv-table"><thead><tr><th>Account</th><th>Customer</th><th>Email</th><th>Amount</th><th>Date Due</th><th>Days Past Due</th><th>Sub Status</th><th>Failure Reason</th></tr></thead><tbody><tr style="background:#F0F9FF">
+          <td><span class="badge" style="color:#0369A1;background:#DBEAFE">CHD</span></td>
           <td class="td-name">Southeast Center For Rejuvenation</td>
           <td class="td-email">dr.taylor@youngeryouregenmed.com</td>
           <td class="td-amt">$314.11</td>
           <td class="td-date">02/02/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">160d</span></td>
-          <td><span class="badge" style="color:#94A3B8;background:#1E293B">Active</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">164d</span></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">Active</span></td>
           <td class="td-reason">Never Attempted</td>
-        </tr><tr style="background:#1A2038">
-          <td><span class="badge" style="color:#4361EE;background:#1E2A6B">CHD</span></td>
+        </tr><tr style="background:#fff">
+          <td><span class="badge" style="color:#0369A1;background:#DBEAFE">CHD</span></td>
           <td class="td-name">Sarai Camacho</td>
           <td class="td-email">drsaraichiro@gmail.com</td>
           <td class="td-amt">$10.00</td>
           <td class="td-date">02/06/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#EF4444;color:#FFF">156d</span></td>
-          <td><span class="badge" style="color:#94A3B8;background:#1E293B">Cancelled</span></td>
+          <td class="td-days"><span class="day-pill" style="background:#DC2626;color:#FFF">160d</span></td>
+          <td><span class="badge" style="color:#64748B;background:#F1F5F9">Cancelled</span></td>
           <td class="td-reason">Never Attempted</td>
         </tr></tbody></table></div>
   </div>
@@ -1656,24 +1231,24 @@
 
 <div style="padding:20px 32px 0;display:flex;align-items:center;justify-content:space-between">
   <div style="color:#64748B;font-size:13px">Month-over-month and quarter-over-quarter. Updates every Wednesday.</div>
-  <button onclick="exportHistoryCSV()" style="background:linear-gradient(135deg,#1E3A5F,#2D5A8E);border:none;border-radius:8px;color:#60A5FA;font-size:13px;font-weight:600;padding:9px 18px;cursor:pointer">&#11015; Export CSV</button>
+  <button onclick="exportHistoryCSV()" style="background:linear-gradient(135deg,#0369A1,#0EA5E9);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;cursor:pointer">&#11015; Export CSV</button>
 </div>
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 32px 0">
-  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#94A3B8;margin-bottom:6px">Carried Over</div>
-    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Your starting balance — what was still outstanding at end of the prior month.</div>
+  <div style="background:#EFF6FF;border:1px solid #BAE6FD;border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#64748B;margin-bottom:6px">Carried Over</div>
+    <div style="font-size:12px;color:#64748B;line-height:1.5">Your starting balance — what was still outstanding at end of the prior month.</div>
   </div>
-  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#F87171;margin-bottom:6px">+ New Failures</div>
-    <div style="font-size:12px;color:#94A3B8;line-height:1.5">New bad debt added — invoices due this period that failed to collect.</div>
+  <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#DC2626;margin-bottom:6px">+ New Failures</div>
+    <div style="font-size:12px;color:#64748B;line-height:1.5">New bad debt added — invoices due this period that failed to collect.</div>
   </div>
-  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#34D399;margin-bottom:6px">&#8722; Collected</div>
-    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Amount recovered from the outstanding balance during this period.</div>
+  <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#059669;margin-bottom:6px">&#8722; Collected</div>
+    <div style="font-size:12px;color:#64748B;line-height:1.5">Amount recovered from the outstanding balance during this period.</div>
   </div>
-  <div style="background:#141828;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#60A5FA;margin-bottom:6px">= Ending Outstanding</div>
-    <div style="font-size:12px;color:#94A3B8;line-height:1.5">Closing balance: Carried Over + New &#8722; Collected. Recovery Rate = Collected &#247; (Carried Over + New).</div>
+  <div style="background:#EFF6FF;border:1px solid #BAE6FD;border-radius:10px;padding:14px 18px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#0369A1;margin-bottom:6px">= Ending Outstanding</div>
+    <div style="font-size:12px;color:#64748B;line-height:1.5">Closing balance: Carried Over + New &#8722; Collected. Recovery Rate = Collected &#247; (Carried Over + New).</div>
   </div>
 </div>
 <hr class="divider">
@@ -1681,132 +1256,132 @@
 <button class="tab-btn" id="htbtn-SKED" data-color="#4A90D9" onclick="switchHistTab('SKED')">SKED</button>
 <button class="tab-btn" id="htbtn-SPARK" data-color="#F97316" onclick="switchHistTab('SPARK')">SPARK</button>
 </div>
-<div class="account-panel active" id="htpanel-CHD" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">July 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$7,648.86</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$32,171.90</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">420.6%</td>
+<div class="account-panel active" id="htpanel-CHD" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">July 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$6,773.12</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$32,171.90</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">475.0%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">June 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$8,097.07</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$13,538.12</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">167.2%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">May 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$8,921.74</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$13,526.61</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">151.6%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">June 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$8,097.07</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$13,538.12</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">167.2%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">May 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$8,921.74</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$13,526.61</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">151.6%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$7,648.86</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$32,171.90</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">420.6%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$17,018.81</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$27,064.73</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">159.0%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr></tbody></table></div></div></div>
-<div class="account-panel" id="htpanel-SKED" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">July 2026</td>
-              <td style="text-align:right;color:#94A3B8">$8,001.49</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$12,152.66</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$75,649.74</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">375.4%</td>
-              <td style="text-align:right"><span style="color:#34D399;font-weight:700">&#9660; 100.0%</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">June 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$25,011.52</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$17,010.03</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$8,001.49</td>
-              <td style="text-align:right;color:#A78BFA">68.0%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">May 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$21,318.46</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$21,415.96</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">100.5%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
-              <td style="text-align:right;color:#94A3B8">$8,001.49</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$12,152.66</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$75,649.74</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">375.4%</td>
-              <td style="text-align:right"><span style="color:#34D399;font-weight:700">&#9660; 100.0%</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$46,329.98</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$38,425.99</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$8,001.49</td>
-              <td style="text-align:right;color:#A78BFA">82.9%</td>
+            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$6,773.12</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$32,171.90</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">475.0%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$17,018.81</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$27,064.73</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">159.0%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
             </tr></tbody></table></div></div></div>
-<div class="account-panel" id="htpanel-SPARK" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">July 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$660.00</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$2,070.00</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">313.6%</td>
+<div class="account-panel" id="htpanel-SKED" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">July 2026</td>
+              <td style="text-align:right;color:#64748B">$8,001.49</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$7,627.08</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$75,649.74</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">484.0%</td>
+              <td style="text-align:right"><span style="color:#059669;font-weight:700">&#9660; 100.0%</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">June 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$25,011.52</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$17,010.03</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$8,001.49</td>
+              <td style="text-align:right;color:#7C3AED">68.0%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">May 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$21,318.46</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$21,415.96</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">100.5%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">June 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$510.00</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$690.00</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">135.3%</td>
+            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
+              <td style="text-align:right;color:#64748B">$8,001.49</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$7,627.08</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$75,649.74</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">484.0%</td>
+              <td style="text-align:right"><span style="color:#059669;font-weight:700">&#9660; 100.0%</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$46,329.98</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$38,425.99</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$8,001.49</td>
+              <td style="text-align:right;color:#7C3AED">82.9%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">May 2026</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$890.00</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$1,200.00</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">134.8%</td>
+            </tr></tbody></table></div></div></div>
+<div class="account-panel" id="htpanel-SPARK" style="padding:0 32px 40px"><div class="section-card"><div class="section-title">Monthly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Month</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">M/M &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">July 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$1,020.00</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$2,070.00</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">202.9%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">June 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$510.00</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$690.00</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">135.3%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">May 2026</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$890.00</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$1,200.00</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">134.8%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#94A3B8">Carried Over</th><th style="text-align:right;color:#F87171">+ New Failures</th><th style="text-align:right;color:#34D399">&#8722; Collected</th><th style="text-align:right;color:#60A5FA">= Ending Outstanding</th><th style="text-align:right;color:#A78BFA">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#161B2E">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$660.00</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$2,070.00</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">313.6%</td>
-              <td style="text-align:right"><span style="color:#475569">—</span></td>
-            </tr><tr style="background:#1A2038">
-              <td style="color:#E2E8F0;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
-              <td style="text-align:right;color:#94A3B8">$0.00</td>
-              <td style="text-align:right;color:#F87171">+&thinsp;$1,400.00</td>
-              <td style="text-align:right;color:#34D399">&#8722;&thinsp;$1,890.00</td>
-              <td style="text-align:right;color:#60A5FA;font-weight:700">=&thinsp;$0.00</td>
-              <td style="text-align:right;color:#A78BFA">135.0%</td>
+            </tr></tbody></table></div></div><div class="section-card"><div class="section-title">Quarterly Breakdown</div><div class="table-wrap"><table class="inv-table"><thead><tr><th>Quarter</th><th style="text-align:right;color:#64748B">Carried Over</th><th style="text-align:right;color:#DC2626">+ New Failures</th><th style="text-align:right;color:#059669">&#8722; Collected</th><th style="text-align:right;color:#0369A1">= Ending Outstanding</th><th style="text-align:right;color:#7C3AED">Recovery Rate</th><th style="text-align:right">Q/Q &#916;</th></tr></thead><tbody><tr style="background:#F0F9FF">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q3 2026  (Jul–Sep)</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$1,020.00</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$2,070.00</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">202.9%</td>
+              <td style="text-align:right"><span style="color:#64748B">—</span></td>
+            </tr><tr style="background:#fff">
+              <td style="color:#0F3A52;font-weight:600;white-space:nowrap">Q2 2026  (Apr–Jun)</td>
+              <td style="text-align:right;color:#64748B">$0.00</td>
+              <td style="text-align:right;color:#DC2626">+&thinsp;$1,400.00</td>
+              <td style="text-align:right;color:#059669">&#8722;&thinsp;$1,890.00</td>
+              <td style="text-align:right;color:#0369A1;font-weight:700">=&thinsp;$0.00</td>
+              <td style="text-align:right;color:#7C3AED">135.0%</td>
               <td style="text-align:right"><span style="color:#475569">—</span></td>
             </tr></tbody></table></div></div></div>
 
 <script>
-const HISTORY_JSON={"CHD": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 20, "new_failures_amount": 8921.74, "collected_count": 47, "collected_amount": 13526.61, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 23, "new_failures_amount": 8097.07, "collected_count": 32, "collected_amount": 13538.12, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 20, "new_failures_amount": 7648.86, "collected_count": 79, "collected_amount": 32171.9, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}, "SKED": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 54, "new_failures_amount": 21318.46, "collected_count": 37, "collected_amount": 21415.96, "ending_outstanding_count": 17, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 17, "carried_over_amount": 0.0, "new_failures_count": 44, "new_failures_amount": 25011.52, "collected_count": 51, "collected_amount": 17010.03, "ending_outstanding_count": 10, "ending_outstanding_amount": 8001.49, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 10, "carried_over_amount": 8001.49, "new_failures_count": 34, "new_failures_amount": 12152.66, "collected_count": 156, "collected_amount": 75649.74, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}, "SPARK": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 14, "new_failures_amount": 890.0, "collected_count": 11, "collected_amount": 1200.0, "ending_outstanding_count": 3, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 3, "carried_over_amount": 0.0, "new_failures_count": 9, "new_failures_amount": 510.0, "collected_count": 10, "collected_amount": 690.0, "ending_outstanding_count": 2, "ending_outstanding_amount": 0.0, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 2, "carried_over_amount": 0.0, "new_failures_count": 11, "new_failures_amount": 660.0, "collected_count": 30, "collected_amount": 2070.0, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}};
+const HISTORY_JSON={"CHD": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 20, "new_failures_amount": 8921.74, "collected_count": 47, "collected_amount": 13526.61, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 23, "new_failures_amount": 8097.07, "collected_count": 32, "collected_amount": 13538.12, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 19, "new_failures_amount": 6773.12, "collected_count": 79, "collected_amount": 32171.9, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}, "SKED": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 54, "new_failures_amount": 21318.46, "collected_count": 37, "collected_amount": 21415.96, "ending_outstanding_count": 17, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 17, "carried_over_amount": 0.0, "new_failures_count": 44, "new_failures_amount": 25011.52, "collected_count": 51, "collected_amount": 17010.03, "ending_outstanding_count": 10, "ending_outstanding_amount": 8001.49, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 10, "carried_over_amount": 8001.49, "new_failures_count": 24, "new_failures_amount": 7627.08, "collected_count": 156, "collected_amount": 75649.74, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}, "SPARK": {"2026-05": {"carried_over_count": 0, "carried_over_amount": 0.0, "new_failures_count": 14, "new_failures_amount": 890.0, "collected_count": 11, "collected_amount": 1200.0, "ending_outstanding_count": 3, "ending_outstanding_amount": 0.0, "last_week": "2026-W21"}, "2026-06": {"carried_over_count": 3, "carried_over_amount": 0.0, "new_failures_count": 9, "new_failures_amount": 510.0, "collected_count": 10, "collected_amount": 690.0, "ending_outstanding_count": 2, "ending_outstanding_amount": 0.0, "last_week": "2026-W26"}, "2026-07": {"carried_over_count": 2, "carried_over_amount": 0.0, "new_failures_count": 12, "new_failures_amount": 1020.0, "collected_count": 30, "collected_amount": 2070.0, "ending_outstanding_count": 0, "ending_outstanding_amount": 0.0, "last_week": "2026-W28"}}};
 function switchHistTab(acc){
   document.querySelectorAll('[id^="htbtn-"]').forEach(b=>{b.classList.remove('active');b.style.background='';b.style.borderColor='';});
   document.querySelectorAll('[id^="htpanel-"]').forEach(p=>p.classList.remove('active'));
