@@ -1422,8 +1422,8 @@ function renderHistory() {
       + 'border:1px solid ' + (isPaid ? '#BBF7D0' : '#FFD6DF') + ';'
       + 'border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;'
       + 'color:' + (isPaid ? '#059669' : '#FF8FAB') + ';white-space:nowrap;transition:all .2s">'
-      + '<input type="checkbox" ' + (isPaid ? 'checked' : '') + ' '
-      + 'onchange="toggleHistPaid(this,'' + h.invoice_id + '')" '
+      + '<input type="checkbox" data-id="' + h.invoice_id + '" ' + (isPaid ? 'checked' : '') + ' '
+      + 'onchange="toggleHistPaid(this)" '
       + 'style="accent-color:#059669;cursor:pointer"> Paid</label>';
     return '<tr>'
       + '<td><div class="hist-date">' + dateStr + '</div><div class="hist-time">' + timeStr + '</div></td>'
@@ -1443,7 +1443,8 @@ function renderHistory() {
     + '</tr></thead><tbody>' + rows + '</tbody></table>';
 }
 
-function toggleHistPaid(checkbox, invoiceId) {
+function toggleHistPaid(checkbox) {
+  const invoiceId = checkbox.dataset.id;
   const history = getHistory();
   const idx = history.findIndex(h => h.invoice_id === invoiceId);
   if (idx < 0) return;
