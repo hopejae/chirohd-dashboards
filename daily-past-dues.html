@@ -6,29 +6,29 @@
 <title>Revenue Protection & Recovery Platform</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:#FFF5F7;color:#3D1A24;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+  body{background:#FAF3F4;color:#3A2028;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
 
   /* HEADER */
-  header{background:linear-gradient(135deg,#FFB6C1 0%,#FF8FAB 100%);border-bottom:1px solid rgba(255,143,171,.3);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
-  .hdr-title{font-size:22px;font-weight:700;letter-spacing:-.3px;color:#7D1128}
+  header{background:linear-gradient(135deg,#B08090 0%,#9A6878 100%);border-bottom:1px solid rgba(176,128,144,.3);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+  .hdr-title{font-size:22px;font-weight:700;letter-spacing:-.3px;color:#6B3040}
   .hdr-sub{font-size:12px;color:rgba(255,255,255,.85);margin-top:3px;letter-spacing:.3px}
-  .hdr-meta{font-size:12px;color:#C06080;margin-top:5px}
-  .hdr-meta strong{color:#7D1128}
-  .hdr-right{font-size:12px;color:#C06080;text-align:right}
+  .hdr-meta{font-size:12px;color:#9E6870;margin-top:5px}
+  .hdr-meta strong{color:#6B3040}
+  .hdr-right{font-size:12px;color:#9E6870;text-align:right}
 
   /* SEARCH */
   .search-wrap{padding:16px 32px 0;display:flex;align-items:center;gap:10px;max-width:440px}
   .search-wrap svg{flex-shrink:0;opacity:.5}
-  .search-input{flex:1;background:#fff;border:1.5px solid #FFB6C1;border-radius:8px;color:#3D1A24;font-size:13px;padding:9px 14px;outline:none;font-family:inherit;transition:border-color .2s}
-  .search-input:focus{border-color:#FF8FAB;box-shadow:0 0 0 3px rgba(255,143,171,.15)}
+  .search-input{flex:1;background:#fff;border:1.5px solid #D4A8B0;border-radius:8px;color:#3A2028;font-size:13px;padding:9px 14px;outline:none;font-family:inherit;transition:border-color .2s}
+  .search-input:focus{border-color:#C4909A;box-shadow:0 0 0 3px rgba(255,143,171,.15)}
   .search-input::placeholder{color:#C9A0AC}
 
   /* TABS */
-  .tabs-bar{display:flex;gap:8px;padding:14px 32px 0;border-bottom:2px solid #FFD6DF}
-  .tab-btn{background:#FFE8EE;border:1px solid #FFB6C1;border-bottom:none;color:#C06080;font-size:13px;font-weight:700;padding:10px 22px 12px;border-radius:8px 8px 0 0;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px;letter-spacing:.3px}
-  .tab-btn:hover{color:#7D1128;background:#FFD6DF}
-  .tab-btn.active{color:#7D1128;background:#fff}
-  .tab-count{border-radius:20px;padding:2px 8px;font-size:11px;font-weight:800;background:rgba(255,143,171,.2);color:#7D1128}
+  .tabs-bar{display:flex;gap:8px;padding:14px 32px 0;border-bottom:2px solid #E0C4C8}
+  .tab-btn{background:#EDD8DB;border:1px solid #D4A8B0;border-bottom:none;color:#9E6870;font-size:13px;font-weight:700;padding:10px 22px 12px;border-radius:8px 8px 0 0;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px;letter-spacing:.3px}
+  .tab-btn:hover{color:#6B3040;background:#E0C4C8}
+  .tab-btn.active{color:#6B3040;background:#fff}
+  .tab-count{border-radius:20px;padding:2px 8px;font-size:11px;font-weight:800;background:rgba(255,143,171,.2);color:#6B3040}
 
   /* PANELS */
   .account-panel{display:none;padding:0 32px 40px}
@@ -38,88 +38,88 @@
   .panel-count-badge{font-size:13px;color:rgba(255,255,255,.9);background:rgba(0,0,0,.15);padding:4px 14px;border-radius:20px}
 
   /* INVOICE CARDS */
-  .inv-card{background:#fff;border:1px solid #FFD6DF;border-radius:12px;padding:18px 20px;margin-bottom:10px;transition:border-color .2s;box-shadow:0 1px 4px rgba(255,143,171,.1)}
-  .inv-card:hover{border-color:#FF8FAB;box-shadow:0 2px 8px rgba(255,143,171,.2)}
+  .inv-card{background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 20px;margin-bottom:10px;transition:border-color .2s;box-shadow:0 1px 4px rgba(255,143,171,.1)}
+  .inv-card:hover{border-color:#C4909A;box-shadow:0 2px 8px rgba(255,143,171,.2)}
 
   .card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:9px;gap:12px}
-  .card-name{font-size:16px;font-weight:700;color:#3D1A24;flex:1}
+  .card-name{font-size:16px;font-weight:700;color:#3A2028;flex:1}
   .card-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
   .card-amount{font-size:15px;font-weight:700;color:#0D9060}
   .card-date{font-size:13px;color:#9A6070}
-  .card-days{background:#FFE8EE;color:#C06080;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .card-days{background:#EDD8DB;color:#9E6870;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
 
   .card-contact{display:flex;align-items:center;gap:16px;margin-bottom:8px;flex-wrap:wrap}
   .card-email{font-size:13px;color:#9A6070}
   .phone-wrap{display:flex;align-items:center;gap:5px}
-  .phone-input{background:#FFF5F7;border:1px solid #FFD6DF;border-radius:6px;color:#3D1A24;font-size:12px;padding:4px 10px;width:160px;outline:none;transition:border-color .2s}
-  .phone-input:focus{border-color:#FF8FAB;color:#3D1A24}
+  .phone-input{background:#FAF3F4;border:1px solid #E0C4C8;border-radius:6px;color:#3A2028;font-size:12px;padding:4px 10px;width:160px;outline:none;transition:border-color .2s}
+  .phone-input:focus{border-color:#C4909A;color:#3A2028}
   .phone-input::placeholder{color:#C9A0AC}
 
   .card-ids{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-  .id-pill{background:#FFF5F7;border:1px solid #FFD6DF;border-radius:6px;color:#C06080;font-size:11px;font-family:ui-monospace,monospace;padding:3px 8px;text-decoration:none}
+  .id-pill{background:#FAF3F4;border:1px solid #E0C4C8;border-radius:6px;color:#9E6870;font-size:11px;font-family:ui-monospace,monospace;padding:3px 8px;text-decoration:none}
   .id-link{transition:all .15s}
-  .id-link:hover{background:#FFE8EE;color:#7D1128;border-color:#FFB6C1}
-  .at-risk-badge{background:#FFF0F0;border:1px solid rgba(239,68,68,.3);border-radius:6px;color:#DC2626;font-size:11px;font-weight:700;padding:3px 8px;letter-spacing:.3px}
+  .id-link:hover{background:#EDD8DB;color:#6B3040;border-color:#D4A8B0}
+  .at-risk-badge{background:#F5ECEC;border:1px solid rgba(239,68,68,.3);border-radius:6px;color:#DC2626;font-size:11px;font-weight:700;padding:3px 8px;letter-spacing:.3px}
   .reason-pill{background:#F5F0FF;border:1px solid rgba(139,92,246,.25);border-radius:6px;color:#7C3AED;font-size:11px;padding:3px 8px}
   .na-pill{background:#F8F8F8;border:1px solid #E2E8F0;border-radius:6px;color:#94A3B8;font-size:11px;padding:3px 8px}
   .status-pill{background:#F0FFF8;border:1px solid rgba(16,185,129,.2);border-radius:6px;color:#059669;font-size:11px;padding:3px 8px}
 
-  .card-checks{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;padding:12px;background:#FFF8FA;border-radius:8px;border:1px solid #FFE8EE}
-  .cb-label{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;color:#9A6070;padding:5px 11px;border-radius:6px;border:1px solid #FFD6DF;background:#fff;transition:all .15s;user-select:none}
-  .cb-label:hover{background:#FFE8EE;color:#7D1128}
-  .cb-input{accent-color:#FF8FAB;width:14px;height:14px;cursor:pointer;flex-shrink:0}
-  .cb-label.checked{background:#FFE8EE;border-color:#FFB6C1;color:#7D1128;font-weight:600}
+  .card-checks{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;padding:12px;background:#F8F2F3;border-radius:8px;border:1px solid #EDD8DB}
+  .cb-label{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;color:#9A6070;padding:5px 11px;border-radius:6px;border:1px solid #E0C4C8;background:#fff;transition:all .15s;user-select:none}
+  .cb-label:hover{background:#EDD8DB;color:#6B3040}
+  .cb-input{accent-color:#C4909A;width:14px;height:14px;cursor:pointer;flex-shrink:0}
+  .cb-label.checked{background:#EDD8DB;border-color:#D4A8B0;color:#6B3040;font-weight:600}
 
   .card-metadata{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
-  .meta-item{display:inline-flex;align-items:stretch;background:#FFF5F7;border:1px solid #FFD6DF;border-radius:6px;overflow:hidden;font-size:11px;font-family:ui-monospace,monospace}
-  .meta-key{padding:3px 7px;color:#C06080;border-right:1px solid #FFD6DF;background:#FFE8EE}
-  .meta-val{padding:3px 7px;color:#7D1128}
+  .meta-item{display:inline-flex;align-items:stretch;background:#FAF3F4;border:1px solid #E0C4C8;border-radius:6px;overflow:hidden;font-size:11px;font-family:ui-monospace,monospace}
+  .meta-key{padding:3px 7px;color:#9E6870;border-right:1px solid #E0C4C8;background:#EDD8DB}
+  .meta-val{padding:3px 7px;color:#6B3040}
 
   .card-bottom{display:flex;gap:10px;align-items:flex-start}
-  .notes-input{flex:1;background:#FFF5F7;border:1px solid #FFD6DF;border-radius:8px;color:#3D1A24;font-size:13px;padding:8px 12px;resize:vertical;outline:none;font-family:inherit;transition:border-color .2s}
-  .notes-input:focus{border-color:#FF8FAB;color:#3D1A24}
+  .notes-input{flex:1;background:#FAF3F4;border:1px solid #E0C4C8;border-radius:8px;color:#3A2028;font-size:13px;padding:8px 12px;resize:vertical;outline:none;font-family:inherit;transition:border-color .2s}
+  .notes-input:focus{border-color:#C4909A;color:#3A2028}
   .notes-input::placeholder{color:#C9A0AC}
   .btn-group{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
   .resolve-btn{background:linear-gradient(135deg,#34D399,#059669);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;cursor:pointer;white-space:nowrap;transition:opacity .15s;letter-spacing:.2px}
   .resolve-btn:hover{opacity:.85}
-  .unresolve-btn{display:none;background:#FFE8EE;border:1px solid #FFB6C1;border-radius:8px;color:#C06080;font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;white-space:nowrap;transition:all .15s;letter-spacing:.2px}
-  .unresolve-btn:hover{background:#FFD6DF;color:#7D1128}
+  .unresolve-btn{display:none;background:#EDD8DB;border:1px solid #D4A8B0;border-radius:8px;color:#9E6870;font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;white-space:nowrap;transition:all .15s;letter-spacing:.2px}
+  .unresolve-btn:hover{background:#E0C4C8;color:#6B3040}
   .resolved-list .resolve-btn{display:none}
   .resolved-list .unresolve-btn{display:block}
 
   /* RESOLVED SECTION */
   .resolved-section{margin-top:6px;margin-bottom:16px}
-  .resolved-toggle{background:transparent;border:1px solid #FFD6DF;border-radius:8px;color:#C9A0AC;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;width:100%;text-align:left}
-  .resolved-toggle:hover{color:#C06080;border-color:#FFB6C1}
-  .resolved-count{background:#FFE8EE;border-radius:20px;padding:2px 8px;font-size:11px;color:#C06080}
+  .resolved-toggle{background:transparent;border:1px solid #E0C4C8;border-radius:8px;color:#C9A0AC;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;width:100%;text-align:left}
+  .resolved-toggle:hover{color:#9E6870;border-color:#D4A8B0}
+  .resolved-count{background:#EDD8DB;border-radius:20px;padding:2px 8px;font-size:11px;color:#9E6870}
   .toggle-arrow{margin-left:auto;color:#C9A0AC;font-size:11px}
   .resolved-list{margin-top:8px}
   .resolved-list .inv-card{opacity:.55;border-style:dashed}
   .resolved-list .inv-card:hover{opacity:.8}
   .resolved-list .resolve-btn{display:none}
 
-  .no-data{color:#C9A0AC;font-size:14px;text-align:center;padding:32px;background:#fff;border-radius:12px;border:1px dashed #FFD6DF}
+  .no-data{color:#C9A0AC;font-size:14px;text-align:center;padding:32px;background:#fff;border-radius:12px;border:1px dashed #E0C4C8}
 
   /* HISTORY TAB */
-  .export-btn{background:rgba(255,143,171,.15);border:1px solid #FFB6C1;border-radius:8px;color:#7D1128;font-size:13px;font-weight:600;padding:8px 18px;cursor:pointer;transition:all .15s;letter-spacing:.2px}
+  .export-btn{background:rgba(255,143,171,.15);border:1px solid #D4A8B0;border-radius:8px;color:#6B3040;font-size:13px;font-weight:600;padding:8px 18px;cursor:pointer;transition:all .15s;letter-spacing:.2px}
   .export-btn:hover{background:rgba(255,143,171,.28)}
   .history-list{padding:4px 0 24px;overflow-x:auto}
   .hist-table{width:100%;border-collapse:collapse;font-size:13px;min-width:700px}
-  .hist-table th{text-align:left;padding:10px 12px;color:#C06080;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border-bottom:2px solid #FFD6DF;white-space:nowrap;background:#FFF0F4}
-  .hist-table td{padding:10px 12px;border-bottom:1px solid #FFE8EE;vertical-align:top}
-  .hist-table tr:hover td{background:#FFF8FA}
-  .hist-date{color:#3D1A24;font-weight:600;font-size:12px;white-space:nowrap}
+  .hist-table th{text-align:left;padding:10px 12px;color:#9E6870;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border-bottom:2px solid #E0C4C8;white-space:nowrap;background:#F5ECEE}
+  .hist-table td{padding:10px 12px;border-bottom:1px solid #EDD8DB;vertical-align:top}
+  .hist-table tr:hover td{background:#F8F2F3}
+  .hist-date{color:#3A2028;font-weight:600;font-size:12px;white-space:nowrap}
   .hist-time{color:#9A6070;font-size:11px;white-space:nowrap}
-  .hist-name{color:#3D1A24;font-weight:600}
+  .hist-name{color:#3A2028;font-weight:600}
   .hist-amount{color:#059669;font-weight:700;white-space:nowrap}
   .hist-notes{color:#9A6070;font-size:12px;max-width:200px;word-break:break-word}
   .acct-badge{border-radius:5px;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
   .acct-CHD{background:#EDE9FE;color:#6D28D9}
   .acct-SKED{background:#E0F2FE;color:#0369A1}
   .disp-pills{display:flex;flex-wrap:wrap;gap:4px;min-width:100px}
-  .disp-pill{background:#FFE8EE;border:1px solid #FFD6DF;border-radius:4px;color:#C06080;font-size:10px;padding:2px 6px;white-space:nowrap}
+  .disp-pill{background:#EDD8DB;border:1px solid #E0C4C8;border-radius:4px;color:#9E6870;font-size:10px;padding:2px 6px;white-space:nowrap}
 
-  footer{text-align:center;padding:24px;color:#C9A0AC;font-size:12px;border-top:1px solid #FFD6DF;margin-top:8px}
+  footer{text-align:center;padding:24px;color:#C9A0AC;font-size:12px;border-top:1px solid #E0C4C8;margin-top:8px}
 </style>
 </head>
 <body>
@@ -139,15 +139,15 @@
 </div>
 
 <div class="tabs-bar">
-<button class="tab-btn active" id="tbtn-CHD" data-color="#FF8FAB" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">15</span></button>
-<button class="tab-btn " id="tbtn-SKED" data-color="#F9A8C9" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">5</span></button>
+<button class="tab-btn active" id="tbtn-CHD" data-color="#C4909A" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">15</span></button>
+<button class="tab-btn " id="tbtn-SKED" data-color="#D4A0AD" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">5</span></button>
 <button class="tab-btn" id="tbtn-Paused" data-color="#A855F7" onclick="switchTab('Paused')">⏸ Paused <span class="tab-count" id="tcount-Paused">1</span></button>
-<button class="tab-btn" id="tbtn-AtRisk" data-color="#FF6B8A" onclick="switchTab('AtRisk')">⚠ At-Risk <span class="tab-count" id="tcount-AtRisk">9</span></button>
+<button class="tab-btn" id="tbtn-AtRisk" data-color="#A96878" onclick="switchTab('AtRisk')">⚠ At-Risk <span class="tab-count" id="tcount-AtRisk">9</span></button>
 <button class="tab-btn" id="tbtn-History" data-color="#6366F1" onclick="switchTab('History')">History <span class="tab-count" id="tcount-History">0</span></button>
 </div>
 
 <div class="account-panel active" id="panel-CHD">
-  <div class="panel-header" style="background:linear-gradient(135deg,#FF6B8A,#FF8FAB)">
+  <div class="panel-header" style="background:linear-gradient(135deg,#A96878,#C4909A)">
     <h2>CHD</h2>
     <span class="panel-count-badge" id="pbadge-CHD">15 need attention · 0 resolved</span>
   </div>
@@ -779,7 +779,7 @@
     </div>
   </div>
 </div><div class="account-panel " id="panel-SKED">
-  <div class="panel-header" style="background:linear-gradient(135deg,#E879A0,#F9A8C9)">
+  <div class="panel-header" style="background:linear-gradient(135deg,#B06070,#D4A0AD)">
     <h2>SKED</h2>
     <span class="panel-count-badge" id="pbadge-SKED">5 need attention · 0 resolved</span>
   </div>
@@ -1007,28 +1007,28 @@
   </div>
 
 <div style="padding:20px 32px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-  <div style="background:#FFF0F4;border:1px solid #FFB6C1;border-radius:10px;padding:14px 20px;min-width:150px">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C06080;margin-bottom:4px">Collection Paused</div>
-    <div style="font-size:28px;font-weight:800;color:#7D1128">1</div>
+  <div style="background:#F5ECEE;border:1px solid #D4A8B0;border-radius:10px;padding:14px 20px;min-width:150px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#9E6870;margin-bottom:4px">Collection Paused</div>
+    <div style="font-size:28px;font-weight:800;color:#6B3040">1</div>
     <div style="font-size:11px;color:#C9A0AC;margin-top:2px">Stripe auto-collection disabled</div>
   </div>
-  <div style="background:#fff;border:1px solid #FFD6DF;border-radius:10px;padding:14px 20px;min-width:150px">
+  <div style="background:#fff;border:1px solid #E0C4C8;border-radius:10px;padding:14px 20px;min-width:150px">
     <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#9A6070;margin-bottom:4px">Outstanding</div>
-    <div style="font-size:28px;font-weight:800;color:#3D1A24">$397.00</div>
+    <div style="font-size:28px;font-weight:800;color:#3A2028">$397.00</div>
   </div>
   <div style="font-size:12px;color:#9A6070;max-width:340px;line-height:1.6;margin-left:4px">
     These invoices are past due but Stripe will not attempt collection automatically.
     Handle separately — confirm a payment plan is in place or resume collection if appropriate.
   </div>
 </div>
-<hr style="margin:16px 32px 0;border:none;border-top:1px solid #FFD6DF">
+<hr style="margin:16px 32px 0;border:none;border-top:1px solid #E0C4C8">
 <div style="overflow-x:auto;padding:0 32px 40px">
 <table class="hist-table" style="min-width:800px">
 <thead><tr>
   <th>Office &amp; Notes</th><th>Account</th><th>Amount</th><th>Due Date</th>
   <th>Days Past Due</th><th>Sub Status</th><th>Resumes</th><th>Invoice ID</th>
 </tr></thead>
-<tbody><tr style="background:#FFF8FA">
+<tbody><tr style="background:#F8F2F3">
               <td>
                 <div class="hist-name">Utley Chiropractic</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">utleychiro@gmail.com</div>
@@ -1037,7 +1037,7 @@
               <td><span class="acct-badge" style="color:#6D28D9;background:#EDE9FE">CHD</span></td>
               <td class="hist-amount">$397.00</td>
               <td style="color:#9A6070;white-space:nowrap">Jul 3, 2026</td>
-              <td style="color:#C06080;white-space:nowrap">20d</td>
+              <td style="color:#9E6870;white-space:nowrap">20d</td>
               <td style="color:#9A6070;font-size:12px">Active</td>
               <td style="color:#C9A0AC;font-size:12px;white-space:nowrap;font-weight:400">—</td>
               <td><span class="id-pill" style="font-size:10px">in_1TpDkPLDZiNpvJNRXS90F5vJ</span></td>
@@ -1055,28 +1055,28 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
 });
 </script>
 </div><div class="account-panel" id="panel-AtRisk">
-  <div class="panel-header" style="background:linear-gradient(135deg,#FF6B8A,#FF8FAB)">
+  <div class="panel-header" style="background:linear-gradient(135deg,#A96878,#C4909A)">
     <h2>⚠ At-Risk Customers</h2>
     <span class="panel-count-badge">9 flagged · 3+ consecutive failures</span>
   </div>
 
 <div style="padding:20px 32px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
   <div style="display:flex;gap:12px;flex-wrap:wrap">
-    <div style="background:#FFF0F4;border:1px solid rgba(220,38,38,.2);border-radius:10px;padding:14px 20px;min-width:150px">
+    <div style="background:#F5ECEE;border:1px solid rgba(220,38,38,.2);border-radius:10px;padding:14px 20px;min-width:150px">
       <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#DC2626;margin-bottom:4px">At-Risk</div>
       <div style="font-size:28px;font-weight:800;color:#DC2626">9</div>
       <div style="font-size:11px;color:#C9A0AC;margin-top:2px">3+ consecutive · 90 days</div>
     </div>
-    <div style="background:#fff;border:1px solid #FFD6DF;border-radius:10px;padding:14px 20px;min-width:150px">
+    <div style="background:#fff;border:1px solid #E0C4C8;border-radius:10px;padding:14px 20px;min-width:150px">
       <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#9A6070;margin-bottom:4px">Total $ At Risk</div>
-      <div style="font-size:28px;font-weight:800;color:#3D1A24">$31,256.95</div>
+      <div style="font-size:28px;font-weight:800;color:#3A2028">$31,256.95</div>
     </div>
   </div>
-  <button onclick="exportAtRisk()" style="background:linear-gradient(135deg,#FF6B8A,#FF8FAB);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:10px 20px;cursor:pointer;white-space:nowrap">&#11015; Export for Strike Force</button>
+  <button onclick="exportAtRisk()" style="background:linear-gradient(135deg,#A96878,#C4909A);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:10px 20px;cursor:pointer;white-space:nowrap">&#11015; Export for Strike Force</button>
 </div>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 32px 0">
-  <div style="background:#FFF0F4;border:1px solid rgba(220,38,38,.15);border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start">
-    <span style="background:#FFF0F4;border:1px solid rgba(220,38,38,.3);border-radius:5px;color:#DC2626;font-size:10px;font-weight:700;padding:2px 7px;white-space:nowrap;flex-shrink:0">⚠ At-Risk</span>
+  <div style="background:#F5ECEE;border:1px solid rgba(220,38,38,.15);border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start">
+    <span style="background:#F5ECEE;border:1px solid rgba(220,38,38,.3);border-radius:5px;color:#DC2626;font-size:10px;font-weight:700;padding:2px 7px;white-space:nowrap;flex-shrink:0">⚠ At-Risk</span>
     <span style="font-size:12px;color:#9A6070;line-height:1.5">3 or more consecutive failed payments within the last 90 days. Active subscription only.</span>
   </div>
   <div style="background:#FFF7ED;border:1px solid rgba(251,146,60,.2);border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start">
@@ -1088,7 +1088,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
     <span style="font-size:12px;color:#9A6070;line-height:1.5">Cancelled subscriptions are not included — already churned and handled separately.</span>
   </div>
 </div>
-<hr style="margin:16px 32px 0;border:none;border-top:1px solid #FFD6DF">
+<hr style="margin:16px 32px 0;border:none;border-top:1px solid #E0C4C8">
 <div style="overflow-x:auto;padding:0 32px 40px">
 <table class="hist-table" style="min-width:960px">
 <thead><tr>
@@ -1096,7 +1096,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
   <th>Sub Status</th><th>Status</th><th>$ At Risk</th>
   <th>Failed Months</th><th>Details</th><th>Customer ID</th>
 </tr></thead>
-<tbody><tr style="background:#FFF8FA">
+<tbody><tr style="background:#F8F2F3">
               <td style="min-width:200px">
                 <div class="hist-name">100% Chiropractic INC</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">100percentinc@bill.com</div>
@@ -1106,7 +1106,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#9A6070;background:#FFF5F7;font-size:10px">Current</span></td>
+              <td><span class="badge" style="color:#9A6070;background:#FAF3F4;font-size:10px">Current</span></td>
               <td class="hist-amount">$24,150.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026 → Aug 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0">—</div></td>
@@ -1121,12 +1121,12 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$1,832.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">SKED ID</span><span class="meta-val">2351</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41423862404</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeId</span><span class="meta-val">2351</span></span></div></td>
               <td><span class="id-pill" style="font-size:10px">cus_U6ExKDcNAFIjd5</span></td>
-            </tr><tr style="background:#FFF8FA">
+            </tr><tr style="background:#F8F2F3">
               <td style="min-width:200px">
                 <div class="hist-name">Pivotal Pain Solutions</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">info@pivotalpainsolutions.com</div>
@@ -1136,7 +1136,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-SKED">SKED</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Unpaid</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$1,226.73</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Apr 2026 → May 2026 → Jun 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41406772324</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_905</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeId</span><span class="meta-val">2201</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeName</span><span class="meta-val">Pivotal Pain Solutions</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span></div></td>
@@ -1151,12 +1151,12 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-SKED">SKED</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$900.22</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">ehrSystem</span><span class="meta-val">PlatinumApi</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">54041287054</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeId</span><span class="meta-val">2437</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeName</span><span class="meta-val">Chicagoland WellMed Center</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">plan</span><span class="meta-val">SkedStandard</span></span></div></td>
               <td><span class="id-pill" style="font-size:10px">cus_TWbyJgt5CA0EPW</span></td>
-            </tr><tr style="background:#FFF8FA">
+            </tr><tr style="background:#F8F2F3">
               <td style="min-width:200px">
                 <div class="hist-name">Vitality Family Chiropractic</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">drkatherynecastro@lifetimeofvitality.com</div>
@@ -1166,7 +1166,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#9A6070;background:#FFF5F7;font-size:10px">Current</span></td>
+              <td><span class="badge" style="color:#9A6070;background:#FAF3F4;font-size:10px">Current</span></td>
               <td class="hist-amount">$897.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026 → Aug 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">23841164071</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_925</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">officeId</span><span class="meta-val">2212</span></span></div></td>
@@ -1181,12 +1181,12 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$718.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">44952819315</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_1138</span></span></div></td>
               <td><span class="id-pill" style="font-size:10px">cus_SZouBHiyWS866Z</span></td>
-            </tr><tr style="background:#FFF8FA">
+            </tr><tr style="background:#F8F2F3">
               <td style="min-width:200px">
                 <div class="hist-name"><span style="background:#FFF7ED;border:1px solid rgba(251,146,60,.4);border-radius:6px;color:#EA580C;font-size:10px;font-weight:700;padding:3px 8px;letter-spacing:.3px">⚠ Potential</span> Our Light Chiropractic</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">ourlightchiropractic@gmail.com</div>
@@ -1196,7 +1196,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$620.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">51680346539</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_452</span></span></div></td>
@@ -1211,12 +1211,12 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#DC2626;background:#FFF0F0;font-size:10px">Currently Past Due</span></td>
+              <td><span class="badge" style="color:#DC2626;background:#F5ECEC;font-size:10px">Currently Past Due</span></td>
               <td class="hist-amount">$618.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">42249610605</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_826</span></span></div></td>
               <td><span class="id-pill" style="font-size:10px">cus_Qx5BZaDZbBAf3J</span></td>
-            </tr><tr style="background:#FFF8FA">
+            </tr><tr style="background:#F8F2F3">
               <td style="min-width:200px">
                 <div class="hist-name">Genesis Back and Neck - Sherman</div>
                 <div style="font-size:11px;color:#9A6070;margin-top:2px">sherman@genesisback.com</div>
@@ -1226,7 +1226,7 @@ document.querySelectorAll('.ar-notes[data-cid]').forEach(el=>{
               <td><span class="acct-badge acct-CHD">CHD</span></td>
               <td style="color:#9A6070;font-size:12px;max-width:160px">—</td>
               <td style="color:#9A6070;font-size:12px">Past_Due</td>
-              <td><span class="badge" style="color:#9A6070;background:#FFF5F7;font-size:10px">Current</span></td>
+              <td><span class="badge" style="color:#9A6070;background:#FAF3F4;font-size:10px">Current</span></td>
               <td class="hist-amount">$295.00</td>
               <td style="color:#DC2626;font-size:12px;white-space:nowrap">Jun 2026 → Jul 2026 → Aug 2026</td>
               <td style="max-width:200px"><div class="card-metadata" style="margin:0"><span class="meta-item" style="font-size:10px"><span class="meta-key">hubspot_company_id</span><span class="meta-val">56112451140</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">location_id</span><span class="meta-val">4</span></span><span class="meta-item" style="font-size:10px"><span class="meta-key">network_string</span><span class="meta-val">network_1483</span></span></div></td>
@@ -1390,19 +1390,19 @@ function renderHistory() {
   const recRate       = totalResolved > 0 ? Math.round(recoveredCnt / totalResolved * 100) : 0;
   const fmtAmt = n => '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
   const statsHtml = '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px">'
-    + '<div style="background:#fff;border:1px solid #FFD6DF;border-radius:12px;padding:18px 22px">'
-    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#FF8FAB;margin-bottom:6px">Recovered Revenue</div>'
+    + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
+    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C4909A;margin-bottom:6px">Recovered Revenue</div>'
     +   '<div style="font-size:26px;font-weight:800;color:#0D9060;letter-spacing:-1px">' + fmtAmt(recoveredAmt) + '</div>'
     +   '<div style="font-size:12px;color:#64748B;margin-top:4px">' + recoveredCnt + ' invoice' + (recoveredCnt !== 1 ? 's' : '') + ' marked Paid</div>'
     + '</div>'
-    + '<div style="background:#fff;border:1px solid #FFD6DF;border-radius:12px;padding:18px 22px">'
-    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#FF8FAB;margin-bottom:6px">Total Resolved</div>'
-    +   '<div style="font-size:26px;font-weight:800;color:#3D1A24;letter-spacing:-1px">' + totalResolved + '</div>'
+    + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
+    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C4909A;margin-bottom:6px">Total Resolved</div>'
+    +   '<div style="font-size:26px;font-weight:800;color:#3A2028;letter-spacing:-1px">' + totalResolved + '</div>'
     +   '<div style="font-size:12px;color:#64748B;margin-top:4px">All dispositions combined</div>'
     + '</div>'
-    + '<div style="background:#fff;border:1px solid #FFD6DF;border-radius:12px;padding:18px 22px">'
-    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#FF8FAB;margin-bottom:6px">Recovery Rate</div>'
-    +   '<div style="font-size:26px;font-weight:800;color:#3D1A24;letter-spacing:-1px">' + recRate + '%</div>'
+    + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
+    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C4909A;margin-bottom:6px">Recovery Rate</div>'
+    +   '<div style="font-size:26px;font-weight:800;color:#3A2028;letter-spacing:-1px">' + recRate + '%</div>'
     +   '<div style="font-size:12px;color:#64748B;margin-top:4px">Paid ÷ total resolved</div>'
     + '</div>'
     + '</div>';
@@ -1420,10 +1420,10 @@ function renderHistory() {
     const invUrl    = 'https://dashboard.stripe.com/invoices/' + h.invoice_id;
     const amt       = fmtAmt(h.amount||0);
     const paidToggle = '<label style="display:inline-flex;align-items:center;gap:5px;cursor:pointer;'
-      + 'background:' + (isPaid ? '#DCFCE7' : '#FFF5F7') + ';'
-      + 'border:1px solid ' + (isPaid ? '#BBF7D0' : '#FFD6DF') + ';'
+      + 'background:' + (isPaid ? '#DCFCE7' : '#FAF3F4') + ';'
+      + 'border:1px solid ' + (isPaid ? '#BBF7D0' : '#E0C4C8') + ';'
       + 'border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;'
-      + 'color:' + (isPaid ? '#059669' : '#FF8FAB') + ';white-space:nowrap;transition:all .2s">'
+      + 'color:' + (isPaid ? '#059669' : '#C4909A') + ';white-space:nowrap;transition:all .2s">'
       + '<input type="checkbox" data-id="' + h.invoice_id + '" ' + (isPaid ? 'checked' : '') + ' '
       + 'onchange="toggleHistPaid(this)" '
       + 'style="accent-color:#059669;cursor:pointer"> Paid</label>';
