@@ -101,8 +101,8 @@
   .no-data{color:#C9A0AC;font-size:14px;text-align:center;padding:32px;background:#fff;border-radius:12px;border:1px dashed #E0C4C8}
 
   /* HISTORY TAB */
-  .export-btn{background:rgba(255,143,171,.15);border:1px solid #EDCDD2;border-radius:8px;color:#8B5868;font-size:13px;font-weight:600;padding:8px 18px;cursor:pointer;transition:all .15s;letter-spacing:.2px}
-  .export-btn:hover{background:rgba(255,143,171,.28)}
+  .export-btn{background:rgba(90,40,48,.12);border:1px solid rgba(90,40,48,.25);border-radius:8px;color:#5A2830;font-size:13px;font-weight:600;padding:8px 18px;cursor:pointer;transition:all .15s;letter-spacing:.2px}
+  .export-btn:hover{background:rgba(90,40,48,.2)}
   .history-list{padding:4px 0 24px;overflow-x:auto}
   .hist-table{width:100%;border-collapse:collapse;font-size:13px;min-width:700px}
   .hist-table th{text-align:left;padding:10px 12px;color:#B08088;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border-bottom:2px solid #E0C4C8;white-space:nowrap;background:#FAF2F3}
@@ -141,7 +141,7 @@
 <div class="tabs-bar">
 <button class="tab-btn active" id="tbtn-CHD" data-color="#C89098" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">15</span></button>
 <button class="tab-btn " id="tbtn-SKED" data-color="#E8BEC4" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">5</span></button>
-<button class="tab-btn" id="tbtn-Paused" data-color="#A855F7" onclick="switchTab('Paused')">⏸ Paused <span class="tab-count" id="tcount-Paused">1</span></button>
+<button class="tab-btn" id="tbtn-Paused" data-color="#C89098" onclick="switchTab('Paused')">⏸ Paused <span class="tab-count" id="tcount-Paused">1</span></button>
 <button class="tab-btn" id="tbtn-AtRisk" data-color="#C08088" onclick="switchTab('AtRisk')">⚠ At-Risk <span class="tab-count" id="tcount-AtRisk">9</span></button>
 <button class="tab-btn" id="tbtn-History" data-color="#6366F1" onclick="switchTab('History')">History <span class="tab-count" id="tcount-History">0</span></button>
 </div>
@@ -1001,8 +1001,8 @@
     </div>
   </div>
 </div><div class="account-panel" id="panel-Paused">
-  <div class="panel-header" style="background:linear-gradient(135deg,#C084FC,#A855F7)">
-    <h2>⏸ Collection Paused</h2>
+  <div class="panel-header" style="background:linear-gradient(135deg,#E8BEC4,#D4A0A8)">
+    <h2 style="color:#5A2830">⏸ Collection Paused</h2>
     <span class="panel-count-badge">1 invoice(s) — Stripe auto-collection disabled</span>
   </div>
 
@@ -1294,8 +1294,8 @@ function exportAtRisk(){
 }
 </script>
 </div><div class="account-panel" id="panel-History">
-  <div class="panel-header" style="background:linear-gradient(135deg,#1E1B4B,#3730A3)">
-    <h2>Resolved History</h2>
+  <div class="panel-header" style="background:linear-gradient(135deg,#E8BEC4,#D4A0A8)">
+    <h2 style="color:#5A2830">Resolved History</h2>
     <button class="export-btn" onclick="exportHistory()">⬇ Export CSV</button>
   </div>
   <div id="history-list" class="history-list"></div>
