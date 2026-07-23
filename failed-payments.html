@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Failed Payments Dashboard</title>
+<title>Revenue Recovery Performance Dashboard</title>
 <style>
       *{box-sizing:border-box;margin:0;padding:0}
       body{background:#FAFAF8;color:#1A3028;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
@@ -102,7 +102,8 @@
 <body>
 <header>
   <div>
-    <div class="hdr-title">Failed Payments Dashboard</div>
+    <div class="hdr-title">Revenue Recovery Performance Dashboard</div>
+    <div class="hdr-meta" style="margin-top:3px;font-size:13px;font-weight:600;letter-spacing:.3px">Recovery Analytics &bull; Portfolio Health &bull; Aging Performance &bull; Executive Reporting</div>
     <div class="hdr-meta">Last updated: <strong>07/23/2026</strong> &nbsp;|&nbsp; Next run: <strong>July 29, 2026 at 9:00 AM EST</strong></div>
   </div>
 </header>
@@ -521,6 +522,23 @@
             onblur="this.style.borderColor='#C4D4CC';this.style.background='#FAFAF8';saveFPNote(this)"
             oninput="saveFPNote(this)"></textarea></td>
         </tr><tr style="background:#fff">
+          <td class="td-name">Foundation Family Chiropractic</td>
+          <td class="td-email">kheimerdc@gmail.com</td>
+          <td class="td-amt">$397.00</td>
+          <td class="td-date">01/26/2026</td>
+          <td class="td-days"><span class="day-pill" style="background:#8A3828;color:#FFF">178d</span></td>
+          <td><span class="badge" style="color:#2D7A58;background:#EBF2EE">Active</span></td>
+          <td class="td-reason">Unknown</td>
+          <td><span class="badge" style="color:#4A7A68;background:#F4F8F6;opacity:.7">—</span></td>
+          <td><a href="https://dashboard.stripe.com/invoices/in_1StyLkJDpup464QrUDUiLfdu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#2D5244;text-decoration:none;border:1px solid #C4D4CC;border-radius:5px;padding:2px 7px;background:#F4F8F6;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#EBF2EE'" onmouseout="this.style.background='#F4F8F6'">inv: in_1StyLkJDpup464QrUDUiLfdu</a></td>
+          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1StyLkJDpup464QrUDUiLfdu" placeholder="Notes…" rows="2"
+            style="width:100%;background:#FAFAF8;border:1px solid #C4D4CC;border-radius:6px;
+            color:#1A3028;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
+            transition:border-color .2s"
+            onfocus="this.style.borderColor='#4A7A68';this.style.background='#fff'"
+            onblur="this.style.borderColor='#C4D4CC';this.style.background='#FAFAF8';saveFPNote(this)"
+            oninput="saveFPNote(this)"></textarea></td>
+        </tr><tr style="background:#FAFAF8">
           <td class="td-name">Ballas Chiropractic</td>
           <td class="td-email">billing.ballaschiro@gmail.com</td>
           <td class="td-amt">$446.00</td>
@@ -531,23 +549,6 @@
           <td><span class="badge" style="color:#4A7A68;background:#F4F8F6;opacity:.7">—</span></td>
           <td><a href="https://dashboard.stripe.com/invoices/in_1SuCrfJDpup464QrMU6SwRc4" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#2D5244;text-decoration:none;border:1px solid #C4D4CC;border-radius:5px;padding:2px 7px;background:#F4F8F6;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#EBF2EE'" onmouseout="this.style.background='#F4F8F6'">inv: in_1SuCrfJDpup464QrMU6SwRc4</a></td>
           <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1SuCrfJDpup464QrMU6SwRc4" placeholder="Notes…" rows="2"
-            style="width:100%;background:#FAFAF8;border:1px solid #C4D4CC;border-radius:6px;
-            color:#1A3028;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
-            transition:border-color .2s"
-            onfocus="this.style.borderColor='#4A7A68';this.style.background='#fff'"
-            onblur="this.style.borderColor='#C4D4CC';this.style.background='#FAFAF8';saveFPNote(this)"
-            oninput="saveFPNote(this)"></textarea></td>
-        </tr><tr style="background:#FAFAF8">
-          <td class="td-name">Foundation Family Chiropractic</td>
-          <td class="td-email">kheimerdc@gmail.com</td>
-          <td class="td-amt">$397.00</td>
-          <td class="td-date">01/26/2026</td>
-          <td class="td-days"><span class="day-pill" style="background:#8A3828;color:#FFF">177d</span></td>
-          <td><span class="badge" style="color:#2D7A58;background:#EBF2EE">Active</span></td>
-          <td class="td-reason">Unknown</td>
-          <td><span class="badge" style="color:#4A7A68;background:#F4F8F6;opacity:.7">—</span></td>
-          <td><a href="https://dashboard.stripe.com/invoices/in_1StyLkJDpup464QrUDUiLfdu" target="_blank" style="font-family:ui-monospace,monospace;font-size:10px;color:#2D5244;text-decoration:none;border:1px solid #C4D4CC;border-radius:5px;padding:2px 7px;background:#F4F8F6;white-space:nowrap;transition:all .15s" onmouseover="this.style.background='#EBF2EE'" onmouseout="this.style.background='#F4F8F6'">inv: in_1StyLkJDpup464QrUDUiLfdu</a></td>
-          <td style="min-width:180px"><textarea class="fp-notes" data-inv="in_1StyLkJDpup464QrUDUiLfdu" placeholder="Notes…" rows="2"
             style="width:100%;background:#FAFAF8;border:1px solid #C4D4CC;border-radius:6px;
             color:#1A3028;font-size:12px;padding:6px 9px;resize:vertical;outline:none;font-family:inherit;
             transition:border-color .2s"
