@@ -80,8 +80,10 @@
   .notes-input:focus{border-color:#C89098;color:#2D1820}
   .notes-input::placeholder{color:#C9A0AC}
   .btn-group{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
-  .resolve-btn{background:linear-gradient(135deg,#7AAE90,#4A8068);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;cursor:pointer;white-space:nowrap;transition:opacity .15s;letter-spacing:.2px}
+  .resolve-btn{border:none;border-radius:8px;color:#fff;font-size:12px;font-weight:600;padding:8px 14px;cursor:pointer;white-space:nowrap;transition:opacity .15s;letter-spacing:.2px}
   .resolve-btn:hover{opacity:.85}
+  .resolve-paid{background:linear-gradient(135deg,#7AAE90,#4A8068)}
+  .resolve-uncollectible{background:linear-gradient(135deg,#C08088,#A06050)}
   .unresolve-btn{display:none;background:#F5E8EB;border:1px solid #EDCDD2;border-radius:8px;color:#B08088;font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;white-space:nowrap;transition:all .15s;letter-spacing:.2px}
   .unresolve-btn:hover{background:#E0C4C8;color:#8B5868}
   .resolved-list .resolve-btn{display:none}
@@ -140,7 +142,7 @@
 </div>
 
 <div class="tabs-bar">
-<button class="tab-btn active" id="tbtn-CHD" data-color="#C89098" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">15</span></button>
+<button class="tab-btn active" id="tbtn-CHD" data-color="#C89098" onclick="switchTab('CHD')">CHD <span class="tab-count" id="tcount-CHD">12</span></button>
 <button class="tab-btn " id="tbtn-SKED" data-color="#E8BEC4" onclick="switchTab('SKED')">SKED <span class="tab-count" id="tcount-SKED">5</span></button>
 <button class="tab-btn" id="tbtn-Paused" data-color="#C89098" onclick="switchTab('Paused')">⏸ Paused <span class="tab-count" id="tcount-Paused">1</span></button>
 <button class="tab-btn" id="tbtn-AtRisk" data-color="#C08088" onclick="switchTab('AtRisk')">⚠ At-Risk <span class="tab-count" id="tcount-AtRisk">9</span></button>
@@ -150,170 +152,45 @@
 <div class="account-panel active" id="panel-CHD">
   <div class="panel-header" style="background:linear-gradient(135deg,#C08088,#C89098)">
     <h2>CHD</h2>
-    <span class="panel-count-badge" id="pbadge-CHD">15 need attention · 0 resolved</span>
+    <span class="panel-count-badge" id="pbadge-CHD">12 need attention · 4 resolved</span>
   </div>
   <div class="inv-list" id="list-CHD">
-<div class="inv-card" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW">
+<div class="inv-card" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp">
   <div class="card-top">
-    <div class="card-name">Vital Roots</div>
+    <div class="card-name">100% Chiropractic - Gainesville</div>
     <div class="card-right">
-      <span class="card-amount">$316.19</span>
-      <span class="card-date">Jul 22, 2026</span>
+      <span class="card-amount">$366.24</span>
+      <span class="card-date">Jul 23, 2026</span>
       <span class="card-days">1d ago</span>
     </div>
   </div>
   <div class="card-contact">
-    <span class="card-email">almeida.casso@gmail.com</span>
+    <span class="card-email">gainesvillega@100percentdoc.com</span>
     <div class="phone-wrap">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" />
+      <input class="phone-input" placeholder="Phone number" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" />
     </div>
   </div>
   <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Omsgc0sGLTB29P" target="_blank" title="Open customer in Stripe">cus: cus_Omsgc0sGLTB29P</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tw5ycLDZiNpvJNR7pNH6ZsW" target="_blank" title="Open invoice in Stripe">inv: in_1Tw5ycLDZiNpvJNR7pNH6ZsW</a>
-    <span class="reason-pill">Card Declined</span>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_LvhKlPaOqr9cA0" target="_blank" title="Open customer in Stripe">cus: cus_LvhKlPaOqr9cA0</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TwMYuLDZiNpvJNRbkvsMUXp" target="_blank" title="Open invoice in Stripe">inv: in_1TwMYuLDZiNpvJNRbkvsMUXp</a>
+    <span class="reason-pill">Invalid Card Number</span>
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="text-macro" /><span>Text Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" data-cb="macro" /><span>Emailed</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" data-cb="payment-plan" /><span>Payment Plan</span></label>
   </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">53119686440</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_544</span></span></div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">55590574631</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">97</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">1527</span></span></div>
   <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" rows="2"></textarea>
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TwMYuLDZiNpvJNRbkvsMUXp" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tw5ycLDZiNpvJNR7pNH6ZsW')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1Tw5ycLDZiNpvJNR7pNH6ZsW')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs">
-  <div class="card-top">
-    <div class="card-name">Tanner Hays</div>
-    <div class="card-right">
-      <span class="card-amount">$598.00</span>
-      <span class="card-date">Jul 22, 2026</span>
-      <span class="card-days">1d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">drtanner@therefinerychiropractic.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T6kBTmbBnb23hA" target="_blank" title="Open customer in Stripe">cus: cus_T6kBTmbBnb23hA</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tw0gbLDZiNpvJNR6nlk3Rgs" target="_blank" title="Open invoice in Stripe">inv: in_1Tw0gbLDZiNpvJNR6nlk3Rgs</a>
-    <span class="reason-pill">Insufficient Funds</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="text-macro" /><span>Text Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">39895809050</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1239</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2439</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tw0gbLDZiNpvJNR6nlk3Rgs')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1Tw0gbLDZiNpvJNR6nlk3Rgs')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e">
-  <div class="card-top">
-    <div class="card-name">Reform Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$309.00</span>
-      <span class="card-date">Jul 22, 2026</span>
-      <span class="card-days">1d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">Danika88@bell.net</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Rhv3KNWiTo66W2" target="_blank" title="Open customer in Stripe">cus: cus_Rhv3KNWiTo66W2</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TuBljLDZiNpvJNRxgjO0D9e" target="_blank" title="Open invoice in Stripe">inv: in_1TuBljLDZiNpvJNRxgjO0D9e</a>
-    <span class="na-pill">Never Attempted</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="text-macro" /><span>Text Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">53021443943</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_951</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2249</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TuBljLDZiNpvJNRxgjO0D9e')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TuBljLDZiNpvJNRxgjO0D9e')">↩ Active</button>
-    </div>
-  </div>
-</div>
-<div class="inv-card" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2">
-  <div class="card-top">
-    <div class="card-name">The Connection Chiropractic</div>
-    <div class="card-right">
-      <span class="card-amount">$340.06</span>
-      <span class="card-date">Jul 22, 2026</span>
-      <span class="card-days">1d ago</span>
-    </div>
-  </div>
-  <div class="card-contact">
-    <span class="card-email">drjacobcrumpler@gmail.com</span>
-    <div class="phone-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <input class="phone-input" placeholder="Phone number" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" />
-    </div>
-  </div>
-  <div class="card-ids">
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RdiVvvEyie3cvs" target="_blank" title="Open customer in Stripe">cus: cus_RdiVvvEyie3cvs</a>
-    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TuBb2LDZiNpvJNRNKpQW3b2" target="_blank" title="Open invoice in Stripe">inv: in_1TuBb2LDZiNpvJNRNKpQW3b2</a>
-    <span class="na-pill">Never Attempted</span>
-    <span class="status-pill">Past_Due</span>
-  </div>
-  <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="text-macro" /><span>Text Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="paid" /><span>Paid</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
-  </div>
-  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">49775367727</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_934</span></span></div>
-  <div class="card-bottom">
-    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" rows="2"></textarea>
-    <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TuBb2LDZiNpvJNRNKpQW3b2')">✓ Resolved</button>
-      <button class="unresolve-btn" onclick="markActive('in_1TuBb2LDZiNpvJNRNKpQW3b2')">↩ Active</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TwMYuLDZiNpvJNRbkvsMUXp')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TwMYuLDZiNpvJNRbkvsMUXp')">✗ Uncollectible</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TwMYuLDZiNpvJNRbkvsMUXp')">↩ Active</button>
     </div>
   </div>
 </div>
@@ -340,20 +217,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41423708032</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_822</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2111</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TvoXULDZiNpvJNRZBELoJG7" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TvoXULDZiNpvJNRZBELoJG7')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TvoXULDZiNpvJNRZBELoJG7')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TvoXULDZiNpvJNRZBELoJG7')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TvoXULDZiNpvJNRZBELoJG7')">↩ Active</button>
     </div>
   </div>
@@ -381,20 +256,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">42249610605</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_826</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TvlcDLDZiNpvJNRYYWyyTsQ" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TvlcDLDZiNpvJNRYYWyyTsQ')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TvlcDLDZiNpvJNRYYWyyTsQ')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TvlcDLDZiNpvJNRYYWyyTsQ')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TvlcDLDZiNpvJNRYYWyyTsQ')">↩ Active</button>
     </div>
   </div>
@@ -422,20 +295,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">17378842912</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">5</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_552</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TvfDmLDZiNpvJNRFBg7Ht0h" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TvfDmLDZiNpvJNRFBg7Ht0h')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TvfDmLDZiNpvJNRFBg7Ht0h')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TvfDmLDZiNpvJNRFBg7Ht0h')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TvfDmLDZiNpvJNRFBg7Ht0h')">↩ Active</button>
     </div>
   </div>
@@ -463,20 +334,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">52079835062</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">4</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1372</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2610</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuPR8LDZiNpvJNRH7Wr9MDb" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TuPR8LDZiNpvJNRH7Wr9MDb')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TuPR8LDZiNpvJNRH7Wr9MDb')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TuPR8LDZiNpvJNRH7Wr9MDb')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TuPR8LDZiNpvJNRH7Wr9MDb')">↩ Active</button>
     </div>
   </div>
@@ -504,20 +373,18 @@
     
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">6</span></span><span class="meta-item"><span class="meta-key">network_id</span><span class="meta-val">network_1483</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuDvYLDZiNpvJNRA1sJ3a8M" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TuDvYLDZiNpvJNRA1sJ3a8M')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TuDvYLDZiNpvJNRA1sJ3a8M')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TuDvYLDZiNpvJNRA1sJ3a8M')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TuDvYLDZiNpvJNRA1sJ3a8M')">↩ Active</button>
     </div>
   </div>
@@ -545,20 +412,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">53546382386</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1051</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2825</span></span><span class="meta-item"><span class="meta-key">office_id</span><span class="meta-val">2825</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TtZ06LDZiNpvJNRtVJlHcmt" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TtZ06LDZiNpvJNRtVJlHcmt')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TtZ06LDZiNpvJNRtVJlHcmt')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TtZ06LDZiNpvJNRtVJlHcmt')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TtZ06LDZiNpvJNRtVJlHcmt')">↩ Active</button>
     </div>
   </div>
@@ -586,20 +451,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41496107658</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_147</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">1967</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TtYoBLDZiNpvJNRTSbfnSC7" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TtYoBLDZiNpvJNRTSbfnSC7')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TtYoBLDZiNpvJNRTSbfnSC7')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TtYoBLDZiNpvJNRTSbfnSC7')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TtYoBLDZiNpvJNRTSbfnSC7')">↩ Active</button>
     </div>
   </div>
@@ -627,20 +490,18 @@
     
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">SKED ID</span><span class="meta-val">cus_JGAHQDrgIB6Nk7</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">51934554137</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1310</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TnoUHLDZiNpvJNRsi8U1vD7" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TnoUHLDZiNpvJNRsi8U1vD7')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TnoUHLDZiNpvJNRsi8U1vD7')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TnoUHLDZiNpvJNRsi8U1vD7')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TnoUHLDZiNpvJNRsi8U1vD7')">↩ Active</button>
     </div>
   </div>
@@ -668,20 +529,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">51680346539</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_452</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Toox3LDZiNpvJNRtUVSKnIk" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Toox3LDZiNpvJNRtUVSKnIk')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Toox3LDZiNpvJNRtUVSKnIk')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Toox3LDZiNpvJNRtUVSKnIk')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Toox3LDZiNpvJNRtUVSKnIk')">↩ Active</button>
     </div>
   </div>
@@ -709,20 +568,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">44952819315</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1138</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Ts7PaLDZiNpvJNRT5lI6FjF" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Ts7PaLDZiNpvJNRT5lI6FjF')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Ts7PaLDZiNpvJNRT5lI6FjF')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Ts7PaLDZiNpvJNRT5lI6FjF')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Ts7PaLDZiNpvJNRT5lI6FjF')">↩ Active</button>
     </div>
   </div>
@@ -750,20 +607,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">SKED ID</span><span class="meta-val">2351</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41423862404</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2351</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1TrIZ2LDZiNpvJNRrWMqPXf4" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1TrIZ2LDZiNpvJNRrWMqPXf4')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TrIZ2LDZiNpvJNRrWMqPXf4')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TrIZ2LDZiNpvJNRrWMqPXf4')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1TrIZ2LDZiNpvJNRrWMqPXf4')">↩ Active</button>
     </div>
   </div>
@@ -772,11 +627,166 @@
   <div class="resolved-section">
     <button class="resolved-toggle" onclick="toggleResolved('CHD')">
       <span>✓ Resolved</span>
-      <span class="resolved-count" id="rcount-CHD">0</span>
-      <span class="toggle-arrow" id="rarrow-CHD">▾</span>
+      <span class="resolved-count" id="rcount-CHD">4</span>
+      <span class="toggle-arrow" id="rarrow-CHD">▴</span>
     </button>
-    <div class="resolved-list" id="rlist-CHD" style="display:none">
-
+    <div class="resolved-list" id="rlist-CHD" style="display:block">
+<div class="inv-card" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">Vital Roots</div>
+    <div class="card-right">
+      <span class="card-amount">$316.19</span>
+      <span class="card-date">Jul 22, 2026</span>
+      <span class="card-days">1d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">almeida.casso@gmail.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Omsgc0sGLTB29P" target="_blank" title="Open customer in Stripe">cus: cus_Omsgc0sGLTB29P</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tw5ycLDZiNpvJNR7pNH6ZsW" target="_blank" title="Open invoice in Stripe">inv: in_1Tw5ycLDZiNpvJNR7pNH6ZsW</a>
+    <span class="reason-pill">Card Declined</span>
+    <span class="status-pill">Past_Due</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="macro" /><span>Emailed</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" data-cb="payment-plan" /><span>Payment Plan</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">53119686440</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_544</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tw5ycLDZiNpvJNR7pNH6ZsW" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Tw5ycLDZiNpvJNR7pNH6ZsW')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Tw5ycLDZiNpvJNR7pNH6ZsW')">✗ Uncollectible</button>
+      <button class="unresolve-btn" onclick="markActive('in_1Tw5ycLDZiNpvJNR7pNH6ZsW')">↩ Active</button>
+    </div>
+  </div>
+</div>
+<div class="inv-card" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">Tanner Hays</div>
+    <div class="card-right">
+      <span class="card-amount">$598.00</span>
+      <span class="card-date">Jul 22, 2026</span>
+      <span class="card-days">1d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">drtanner@therefinerychiropractic.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_T6kBTmbBnb23hA" target="_blank" title="Open customer in Stripe">cus: cus_T6kBTmbBnb23hA</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1Tw0gbLDZiNpvJNR6nlk3Rgs" target="_blank" title="Open invoice in Stripe">inv: in_1Tw0gbLDZiNpvJNR6nlk3Rgs</a>
+    <span class="reason-pill">Insufficient Funds</span>
+    <span class="status-pill">Past_Due</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="macro" /><span>Emailed</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" data-cb="payment-plan" /><span>Payment Plan</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">39895809050</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_1239</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2439</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tw0gbLDZiNpvJNR6nlk3Rgs" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Tw0gbLDZiNpvJNR6nlk3Rgs')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Tw0gbLDZiNpvJNR6nlk3Rgs')">✗ Uncollectible</button>
+      <button class="unresolve-btn" onclick="markActive('in_1Tw0gbLDZiNpvJNR6nlk3Rgs')">↩ Active</button>
+    </div>
+  </div>
+</div>
+<div class="inv-card" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">Reform Chiropractic</div>
+    <div class="card-right">
+      <span class="card-amount">$309.00</span>
+      <span class="card-date">Jul 22, 2026</span>
+      <span class="card-days">2d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">Danika88@bell.net</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_Rhv3KNWiTo66W2" target="_blank" title="Open customer in Stripe">cus: cus_Rhv3KNWiTo66W2</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TuBljLDZiNpvJNRxgjO0D9e" target="_blank" title="Open invoice in Stripe">inv: in_1TuBljLDZiNpvJNRxgjO0D9e</a>
+    <span class="na-pill">Never Attempted</span>
+    <span class="status-pill">Past_Due</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="macro" /><span>Emailed</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" data-cb="payment-plan" /><span>Payment Plan</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">53021443943</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_951</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2249</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuBljLDZiNpvJNRxgjO0D9e" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TuBljLDZiNpvJNRxgjO0D9e')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TuBljLDZiNpvJNRxgjO0D9e')">✗ Uncollectible</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TuBljLDZiNpvJNRxgjO0D9e')">↩ Active</button>
+    </div>
+  </div>
+</div>
+<div class="inv-card" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-auto-resolved="true">
+  <div class="card-top">
+    <div class="card-name">The Connection Chiropractic</div>
+    <div class="card-right">
+      <span class="card-amount">$340.06</span>
+      <span class="card-date">Jul 22, 2026</span>
+      <span class="card-days">2d ago</span>
+    </div>
+  </div>
+  <div class="card-contact">
+    <span class="card-email">drjacobcrumpler@gmail.com</span>
+    <div class="phone-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <input class="phone-input" placeholder="Phone number" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" />
+    </div>
+  </div>
+  <div class="card-ids">
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/customers/cus_RdiVvvEyie3cvs" target="_blank" title="Open customer in Stripe">cus: cus_RdiVvvEyie3cvs</a>
+    <a class="id-pill id-link" href="https://dashboard.stripe.com/invoices/in_1TuBb2LDZiNpvJNRNKpQW3b2" target="_blank" title="Open invoice in Stripe">inv: in_1TuBb2LDZiNpvJNRNKpQW3b2</a>
+    <span class="na-pill">Never Attempted</span>
+    <span class="status-pill">Past_Due</span>
+  </div>
+  <div class="card-checks">
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="macro" /><span>Emailed</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="called" /><span>Called Office</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" data-cb="payment-plan" /><span>Payment Plan</span></label>
+  </div>
+  <div class="card-metadata"><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">49775367727</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_934</span></span></div>
+  <div class="card-bottom">
+    <textarea class="notes-input" placeholder="Notes…" data-id="in_1TuBb2LDZiNpvJNRNKpQW3b2" rows="2"></textarea>
+    <div class="btn-group">
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1TuBb2LDZiNpvJNRNKpQW3b2')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1TuBb2LDZiNpvJNRNKpQW3b2')">✗ Uncollectible</button>
+      <button class="unresolve-btn" onclick="markActive('in_1TuBb2LDZiNpvJNRNKpQW3b2')">↩ Active</button>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </div><div class="account-panel " id="panel-SKED">
@@ -791,7 +801,7 @@
     <div class="card-right">
       <span class="card-amount">$450.11</span>
       <span class="card-date">Jul 16, 2026</span>
-      <span class="card-days">7d ago</span>
+      <span class="card-days">8d ago</span>
     </div>
   </div>
   <div class="card-contact">
@@ -808,20 +818,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ttp1CJDpup464QrajeHTPZY" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">RevShare</span><span class="meta-val">Reach</span></span><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">PlatinumApi</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41496107692</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">1954</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Vincennes Chiropractic</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span><span class="meta-item"><span class="meta-key">referrer</span><span class="meta-val">Platinum Reach</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Ttp1CJDpup464QrajeHTPZY" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Ttp1CJDpup464QrajeHTPZY')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Ttp1CJDpup464QrajeHTPZY')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Ttp1CJDpup464QrajeHTPZY')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Ttp1CJDpup464QrajeHTPZY')">↩ Active</button>
     </div>
   </div>
@@ -849,20 +857,18 @@
     <span class="status-pill">Unpaid</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">PlatinumApi</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">43907426136</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2386</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Alessi Functional Health</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedBestest</span></span><span class="meta-item"><span class="meta-key">referrer</span><span class="meta-val">Dr. Samuel Rhinehart</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Ts6QzJDpup464Qrjpg6Rweu" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Ts6QzJDpup464Qrjpg6Rweu')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Ts6QzJDpup464Qrjpg6Rweu')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Ts6QzJDpup464Qrjpg6Rweu')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Ts6QzJDpup464Qrjpg6Rweu')">↩ Active</button>
     </div>
   </div>
@@ -890,20 +896,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tp5lVJDpup464QrloBEYkCx" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroTouch</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">47281116530</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">1193</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Hands on Family Chiropractic</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedBasic</span></span><span class="meta-item"><span class="meta-key">referrer</span><span class="meta-val">Google</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tp5lVJDpup464QrloBEYkCx" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tp5lVJDpup464QrloBEYkCx')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Tp5lVJDpup464QrloBEYkCx')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Tp5lVJDpup464QrloBEYkCx')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Tp5lVJDpup464QrloBEYkCx')">↩ Active</button>
     </div>
   </div>
@@ -931,20 +935,18 @@
     <span class="status-pill">Past_Due</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1ToU9MJDpup464QrKa6Qjkup" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">PlatinumApi</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">54041287054</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2437</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Chicagoland WellMed Center</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedStandard</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1ToU9MJDpup464QrKa6Qjkup" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1ToU9MJDpup464QrKa6Qjkup')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1ToU9MJDpup464QrKa6Qjkup')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1ToU9MJDpup464QrKa6Qjkup')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1ToU9MJDpup464QrKa6Qjkup')">↩ Active</button>
     </div>
   </div>
@@ -972,20 +974,18 @@
     <span class="status-pill">Unpaid</span>
   </div>
   <div class="card-checks">
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="macro" /><span>Past Due Macro sent</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="text-macro" /><span>Text Macro sent</span></label>
+    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="macro" /><span>Emailed</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="called" /><span>Called Office</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="paid" /><span>Paid</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="offboarding-inactive" /><span>Offboard – Inactive</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="offboarding-ghosted" /><span>Offboard – Ghosted</span></label>
     <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="payment-plan" /><span>Payment Plan</span></label>
-    <label class="cb-label"><input type="checkbox" class="cb-input" data-id="in_1Tmc6MJDpup464QrVJf06H7t" data-cb="uncollectible" /><span>Marked Uncollectible</span></label>
   </div>
   <div class="card-metadata"><span class="meta-item"><span class="meta-key">ehrSystem</span><span class="meta-val">ChiroHD</span></span><span class="meta-item"><span class="meta-key">hubspot_company_id</span><span class="meta-val">41406772324</span></span><span class="meta-item"><span class="meta-key">location_id</span><span class="meta-val">1</span></span><span class="meta-item"><span class="meta-key">network_string</span><span class="meta-val">network_905</span></span><span class="meta-item"><span class="meta-key">officeId</span><span class="meta-val">2201</span></span><span class="meta-item"><span class="meta-key">officeName</span><span class="meta-val">Pivotal Pain Solutions</span></span><span class="meta-item"><span class="meta-key">plan</span><span class="meta-val">SkedPro</span></span></div>
   <div class="card-bottom">
     <textarea class="notes-input" placeholder="Notes…" data-id="in_1Tmc6MJDpup464QrVJf06H7t" rows="2"></textarea>
     <div class="btn-group">
-      <button class="resolve-btn" onclick="markResolved('in_1Tmc6MJDpup464QrVJf06H7t')">✓ Resolved</button>
+      <button class="resolve-btn resolve-paid" onclick="markPaid('in_1Tmc6MJDpup464QrVJf06H7t')">✓ Paid</button>
+      <button class="resolve-btn resolve-uncollectible" onclick="markUncollectible('in_1Tmc6MJDpup464QrVJf06H7t')">✗ Uncollectible</button>
       <button class="unresolve-btn" onclick="markActive('in_1Tmc6MJDpup464QrVJf06H7t')">↩ Active</button>
     </div>
   </div>
@@ -1305,9 +1305,9 @@ function exportAtRisk(){
 <footer>Updated daily at 7:00 AM EST &nbsp;·&nbsp; Data sourced from Stripe &nbsp;·&nbsp; Progress saved in your browser</footer>
 
 <script>
-const PRELOADED    = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}};
+const PRELOADED    = {"in_1TVHMzJDpup464QrBWB6tXWE": {"notes": "Current Intercom ticket with this office for CHD"}, "in_1TUvonJDpup464QreHFupS7G": {"notes": "Does not appear to be using"}, "in_1TZf8jLDZiNpvJNRdsfGPP4D": {"notes": "Need to address this on a widespread level"}, "in_1TYoMCLDZiNpvJNR0EBJVm9u": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TVigLLDZiNpvJNRMUKf81W5": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TXYDFLDZiNpvJNRK9bZehxv": {"notes": "New Office - Invoice resent"}, "in_1TVcRSLDZiNpvJNRs6AipvqW": {"notes": "New Office - Invoice resent"}, "in_1TUp1DLDZiNpvJNRMcbas63N": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TUVZvLDZiNpvJNR0W0VlepM": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TTSl7LDZiNpvJNRfKhBrSI9": {"notes": "$10 Texting Fee"}, "in_1TShtqLDZiNpvJNRXHah5zVT": {"checkboxes": ["payment-plan"]}, "in_1TSK0iLDZiNpvJNRJQTUhKzj": {"checkboxes": ["offboarding-inactive"], "notes": "Cancelled - Offboard - Uncollectible"}, "in_1TbM11LDZiNpvJNRqOvzGWzr": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1TbUmkLDZiNpvJNR3ew2fB3R": {"checkboxes": ["offboarding-ghosted"], "notes": "Ghosted - reach out to onboarding and offboard"}, "in_1Tw5ycLDZiNpvJNR7pNH6ZsW": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jul 24, 2026"}, "in_1Tw0gbLDZiNpvJNR6nlk3Rgs": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jul 24, 2026"}, "in_1TuBljLDZiNpvJNRxgjO0D9e": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jul 24, 2026"}, "in_1TuBb2LDZiNpvJNRNKpQW3b2": {"resolved": true, "notes": "Paid \u2014 dropped off automatically on Jul 24, 2026"}};
 const ACCOUNTS     = ["CHD", "SKED"];
-const INVOICE_DATA = {"in_1Tw5ycLDZiNpvJNR7pNH6ZsW": {"account": "CHD", "name": "Vital Roots", "email": "almeida.casso@gmail.com", "customer_id": "cus_Omsgc0sGLTB29P", "amount": 316.19, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Tw0gbLDZiNpvJNR6nlk3Rgs": {"account": "CHD", "name": "Tanner Hays", "email": "drtanner@therefinerychiropractic.com", "customer_id": "cus_T6kBTmbBnb23hA", "amount": 598.0, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TuBljLDZiNpvJNRxgjO0D9e": {"account": "CHD", "name": "Reform Chiropractic", "email": "Danika88@bell.net", "customer_id": "cus_Rhv3KNWiTo66W2", "amount": 309.0, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TuBb2LDZiNpvJNRNKpQW3b2": {"account": "CHD", "name": "The Connection Chiropractic", "email": "drjacobcrumpler@gmail.com", "customer_id": "cus_RdiVvvEyie3cvs", "amount": 340.06, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TvoXULDZiNpvJNRZBELoJG7": {"account": "CHD", "name": "Haven Health Chiropractic", "email": "drschiltz@havenhealthchiropractic.com", "customer_id": "cus_QukUhVMw7Orptx", "amount": 369.36, "date_str": "Jul 22, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TvlcDLDZiNpvJNRYYWyyTsQ": {"account": "CHD", "name": "Strive chiropractic and injury", "email": "Sergio_g12@yahoo.com", "customer_id": "cus_Qx5BZaDZbBAf3J", "amount": 309.0, "date_str": "Jul 21, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TvfDmLDZiNpvJNRFBg7Ht0h": {"account": "CHD", "name": "Oak Hills Back and Neck Care Center", "email": "mhouchin@live.com", "customer_id": "cus_OxkzKAIEMNRvyx", "amount": 393.68, "date_str": "Jul 21, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TuPR8LDZiNpvJNRH7Wr9MDb": {"account": "CHD", "name": "Radiant Results - Location 4", "email": "Zacharypricedc@gmail.com", "customer_id": "cus_U0GkcfVMOXPdCb", "amount": 498.0, "date_str": "Jul 18, 2026", "days": 6, "failure_reason": "The payment failed.", "sub_status": "Past_Due"}, "in_1TuDvYLDZiNpvJNRA1sJ3a8M": {"account": "CHD", "name": "Genesis Back and Neck - West LA", "email": "roxana@genesisback.com", "customer_id": "cus_Uu1zLumQXZPwbe", "amount": 99.0, "date_str": "Jul 18, 2026", "days": 6, "failure_reason": "The payment failed.", "sub_status": ""}, "in_1TtZ06LDZiNpvJNRtVJlHcmt": {"account": "CHD", "name": "Momentum Healthcare", "email": "drjvhall@gmail.com", "customer_id": "cus_S8PvjPB0VOrsdR", "amount": 558.0, "date_str": "Jul 15, 2026", "days": 8, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TtYoBLDZiNpvJNRTSbfnSC7": {"account": "CHD", "name": "Nervana Holistic Health", "email": "dcaldwell.nwd@gmail.com", "customer_id": "cus_L6quyUOMdRtrRU", "amount": 390.33, "date_str": "Jul 15, 2026", "days": 8, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TnoUHLDZiNpvJNRsi8U1vD7": {"account": "CHD", "name": "John Davis", "email": "docdavis.1975@gmail.com", "customer_id": "cus_TRs6KSI4uBAoRS", "amount": 408.91, "date_str": "Jul 13, 2026", "days": 10, "failure_reason": "Insufficient Funds", "sub_status": ""}, "in_1Toox3LDZiNpvJNRtUVSKnIk": {"account": "CHD", "name": "Our Light Chiropractic", "email": "ourlightchiropractic@gmail.com", "customer_id": "cus_NpKOWxvmQLq4cl", "amount": 310.0, "date_str": "Jul 12, 2026", "days": 11, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Ts7PaLDZiNpvJNRT5lI6FjF": {"account": "CHD", "name": "Back to Health of Anthem", "email": "kaylene@myanthemhealth.com", "customer_id": "cus_SZouBHiyWS866Z", "amount": 359.0, "date_str": "Jul 11, 2026", "days": 12, "failure_reason": "The connection to the user's Link account has been closed.", "sub_status": "Past_Due"}, "in_1TrIZ2LDZiNpvJNRrWMqPXf4": {"account": "CHD", "name": "University Chiropractic", "email": "patriciakiser365@gmail.com", "customer_id": "cus_U6ExKDcNAFIjd5", "amount": 916.0, "date_str": "Jul 9, 2026", "days": 14, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TpDkPLDZiNpvJNRXS90F5vJ": {"account": "CHD", "name": "Utley Chiropractic", "email": "utleychiro@gmail.com", "customer_id": "cus_TuILYxYqwqMAPy", "amount": 397.0, "date_str": "Jul 3, 2026", "days": 20, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1Ttp1CJDpup464QrajeHTPZY": {"account": "SKED", "name": "Vincennes Chiropractic", "email": "drtomandjess@gmail.com", "customer_id": "cus_Q5AzML36wxe5d9", "amount": 450.11, "date_str": "Jul 16, 2026", "days": 7, "failure_reason": "Temporary Issue \u2013 Try Again", "sub_status": "Past_Due"}, "in_1Ts6QzJDpup464Qrjpg6Rweu": {"account": "SKED", "name": "Alessi Functional Health", "email": "info@alessifxhealth.com", "customer_id": "cus_TNH0Yf5Zp5nrhW", "amount": 546.0, "date_str": "Jul 11, 2026", "days": 12, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tp5lVJDpup464QrloBEYkCx": {"account": "SKED", "name": "Hands on Family Chiropractic", "email": "danielle.hofc@gmail.com", "customer_id": "cus_K43JbiVz8n8sv4", "amount": 101.97, "date_str": "Jul 3, 2026", "days": 21, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1ToU9MJDpup464QrKa6Qjkup": {"account": "SKED", "name": "Chicagoland WellMed Center", "email": "drfvaught@gmail.com", "customer_id": "cus_TWbyJgt5CA0EPW", "amount": 450.11, "date_str": "Jul 1, 2026", "days": 22, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1Tmc6MJDpup464QrVJf06H7t": {"account": "SKED", "name": "Pivotal Pain Solutions", "email": "info@pivotalpainsolutions.com", "customer_id": "cus_RrDiSrbg2ENIhH", "amount": 408.91, "date_str": "Jun 26, 2026", "days": 27, "failure_reason": "Blocked by Bank", "sub_status": "Unpaid"}};
+const INVOICE_DATA = {"in_1TwMYuLDZiNpvJNRbkvsMUXp": {"account": "CHD", "name": "100% Chiropractic - Gainesville", "email": "gainesvillega@100percentdoc.com", "customer_id": "cus_LvhKlPaOqr9cA0", "amount": 366.24, "date_str": "Jul 23, 2026", "days": 1, "failure_reason": "Invalid Card Number", "sub_status": "Past_Due"}, "in_1TvoXULDZiNpvJNRZBELoJG7": {"account": "CHD", "name": "Haven Health Chiropractic", "email": "drschiltz@havenhealthchiropractic.com", "customer_id": "cus_QukUhVMw7Orptx", "amount": 369.36, "date_str": "Jul 22, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TvlcDLDZiNpvJNRYYWyyTsQ": {"account": "CHD", "name": "Strive chiropractic and injury", "email": "Sergio_g12@yahoo.com", "customer_id": "cus_Qx5BZaDZbBAf3J", "amount": 309.0, "date_str": "Jul 21, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TvfDmLDZiNpvJNRFBg7Ht0h": {"account": "CHD", "name": "Oak Hills Back and Neck Care Center", "email": "mhouchin@live.com", "customer_id": "cus_OxkzKAIEMNRvyx", "amount": 393.68, "date_str": "Jul 21, 2026", "days": 2, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TuPR8LDZiNpvJNRH7Wr9MDb": {"account": "CHD", "name": "Radiant Results - Location 4", "email": "Zacharypricedc@gmail.com", "customer_id": "cus_U0GkcfVMOXPdCb", "amount": 498.0, "date_str": "Jul 18, 2026", "days": 6, "failure_reason": "The payment failed.", "sub_status": "Past_Due"}, "in_1TuDvYLDZiNpvJNRA1sJ3a8M": {"account": "CHD", "name": "Genesis Back and Neck - West LA", "email": "roxana@genesisback.com", "customer_id": "cus_Uu1zLumQXZPwbe", "amount": 99.0, "date_str": "Jul 18, 2026", "days": 6, "failure_reason": "The payment failed.", "sub_status": ""}, "in_1TtZ06LDZiNpvJNRtVJlHcmt": {"account": "CHD", "name": "Momentum Healthcare", "email": "drjvhall@gmail.com", "customer_id": "cus_S8PvjPB0VOrsdR", "amount": 558.0, "date_str": "Jul 15, 2026", "days": 8, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TtYoBLDZiNpvJNRTSbfnSC7": {"account": "CHD", "name": "Nervana Holistic Health", "email": "dcaldwell.nwd@gmail.com", "customer_id": "cus_L6quyUOMdRtrRU", "amount": 390.33, "date_str": "Jul 15, 2026", "days": 8, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1TnoUHLDZiNpvJNRsi8U1vD7": {"account": "CHD", "name": "John Davis", "email": "docdavis.1975@gmail.com", "customer_id": "cus_TRs6KSI4uBAoRS", "amount": 408.91, "date_str": "Jul 13, 2026", "days": 10, "failure_reason": "Insufficient Funds", "sub_status": ""}, "in_1Toox3LDZiNpvJNRtUVSKnIk": {"account": "CHD", "name": "Our Light Chiropractic", "email": "ourlightchiropractic@gmail.com", "customer_id": "cus_NpKOWxvmQLq4cl", "amount": 310.0, "date_str": "Jul 12, 2026", "days": 11, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Ts7PaLDZiNpvJNRT5lI6FjF": {"account": "CHD", "name": "Back to Health of Anthem", "email": "kaylene@myanthemhealth.com", "customer_id": "cus_SZouBHiyWS866Z", "amount": 359.0, "date_str": "Jul 11, 2026", "days": 12, "failure_reason": "The connection to the user's Link account has been closed.", "sub_status": "Past_Due"}, "in_1TrIZ2LDZiNpvJNRrWMqPXf4": {"account": "CHD", "name": "University Chiropractic", "email": "patriciakiser365@gmail.com", "customer_id": "cus_U6ExKDcNAFIjd5", "amount": 916.0, "date_str": "Jul 9, 2026", "days": 14, "failure_reason": "", "sub_status": "Past_Due"}, "in_1TpDkPLDZiNpvJNRXS90F5vJ": {"account": "CHD", "name": "Utley Chiropractic", "email": "utleychiro@gmail.com", "customer_id": "cus_TuILYxYqwqMAPy", "amount": 397.0, "date_str": "Jul 3, 2026", "days": 20, "failure_reason": "Never Attempted", "sub_status": "Active"}, "in_1Tw5ycLDZiNpvJNR7pNH6ZsW": {"account": "CHD", "name": "Vital Roots", "email": "almeida.casso@gmail.com", "customer_id": "cus_Omsgc0sGLTB29P", "amount": 316.19, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1Tw0gbLDZiNpvJNR6nlk3Rgs": {"account": "CHD", "name": "Tanner Hays", "email": "drtanner@therefinerychiropractic.com", "customer_id": "cus_T6kBTmbBnb23hA", "amount": 598.0, "date_str": "Jul 22, 2026", "days": 1, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1TuBljLDZiNpvJNRxgjO0D9e": {"account": "CHD", "name": "Reform Chiropractic", "email": "Danika88@bell.net", "customer_id": "cus_Rhv3KNWiTo66W2", "amount": 309.0, "date_str": "Jul 22, 2026", "days": 2, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1TuBb2LDZiNpvJNRNKpQW3b2": {"account": "CHD", "name": "The Connection Chiropractic", "email": "drjacobcrumpler@gmail.com", "customer_id": "cus_RdiVvvEyie3cvs", "amount": 340.06, "date_str": "Jul 22, 2026", "days": 2, "failure_reason": "Never Attempted", "sub_status": "Past_Due"}, "in_1Ttp1CJDpup464QrajeHTPZY": {"account": "SKED", "name": "Vincennes Chiropractic", "email": "drtomandjess@gmail.com", "customer_id": "cus_Q5AzML36wxe5d9", "amount": 450.11, "date_str": "Jul 16, 2026", "days": 8, "failure_reason": "Temporary Issue \u2013 Try Again", "sub_status": "Past_Due"}, "in_1Ts6QzJDpup464Qrjpg6Rweu": {"account": "SKED", "name": "Alessi Functional Health", "email": "info@alessifxhealth.com", "customer_id": "cus_TNH0Yf5Zp5nrhW", "amount": 546.0, "date_str": "Jul 11, 2026", "days": 12, "failure_reason": "Never Attempted", "sub_status": "Unpaid"}, "in_1Tp5lVJDpup464QrloBEYkCx": {"account": "SKED", "name": "Hands on Family Chiropractic", "email": "danielle.hofc@gmail.com", "customer_id": "cus_K43JbiVz8n8sv4", "amount": 101.97, "date_str": "Jul 3, 2026", "days": 21, "failure_reason": "Card Declined", "sub_status": "Past_Due"}, "in_1ToU9MJDpup464QrKa6Qjkup": {"account": "SKED", "name": "Chicagoland WellMed Center", "email": "drfvaught@gmail.com", "customer_id": "cus_TWbyJgt5CA0EPW", "amount": 450.11, "date_str": "Jul 1, 2026", "days": 22, "failure_reason": "Insufficient Funds", "sub_status": "Past_Due"}, "in_1Tmc6MJDpup464QrVJf06H7t": {"account": "SKED", "name": "Pivotal Pain Solutions", "email": "info@pivotalpainsolutions.com", "customer_id": "cus_RrDiSrbg2ENIhH", "amount": 408.91, "date_str": "Jun 26, 2026", "days": 27, "failure_reason": "Blocked by Bank", "sub_status": "Unpaid"}};
 
 // ── State helpers ──────────────────────────────────────────────────────────
 function getState(id) {
@@ -1337,23 +1337,24 @@ function getHistory() {
   try { return JSON.parse(localStorage.getItem('dpd_history') || '[]'); } catch(e) { return []; }
 }
 
-function logToHistory(id, acc, state) {
+function logToHistory(id, acc, state, resolutionType) {
   const data  = INVOICE_DATA[id] || {};
   const entry = {
-    resolved_at:    new Date().toISOString(),
-    invoice_id:     id,
-    account:        acc,
-    name:           data.name           || '',
-    email:          data.email          || '',
-    customer_id:    data.customer_id    || '',
-    amount:         data.amount         || 0,
-    date_str:       data.date_str       || '',
-    days:           data.days           || 0,
-    failure_reason: data.failure_reason || '',
-    sub_status:     data.sub_status     || '',
-    checkboxes:     state.checkboxes    || [],
-    notes:          state.notes         || '',
-    phone:          state.phone         || '',
+    resolved_at:     new Date().toISOString(),
+    invoice_id:      id,
+    account:         acc,
+    name:            data.name           || '',
+    email:           data.email          || '',
+    customer_id:     data.customer_id    || '',
+    amount:          data.amount         || 0,
+    date_str:        data.date_str       || '',
+    days:            data.days           || 0,
+    failure_reason:  data.failure_reason || '',
+    sub_status:      data.sub_status     || '',
+    checkboxes:      state.checkboxes    || [],
+    notes:           state.notes         || '',
+    phone:           state.phone         || '',
+    resolution_type: resolutionType      || '',
   };
   let history = getHistory();
   const idx   = history.findIndex(h => h.invoice_id === id);
@@ -1362,14 +1363,11 @@ function logToHistory(id, acc, state) {
 }
 
 const CB_LABELS = {
-  'macro':                'Macro Sent',
-  'text-macro':           'Text Macro Sent',
+  'macro':                'Emailed',
   'called':               'Called',
-  'paid':                 'Paid',
   'offboarding-inactive': 'Offboard–Inactive',
   'offboarding-ghosted':  'Offboard–Ghosted',
   'payment-plan':         'Payment Plan',
-  'uncollectible':        'Uncollectible',
 };
 
 function renderHistory() {
@@ -1379,27 +1377,34 @@ function renderHistory() {
   const tc = document.getElementById('tcount-History');
   if (tc) tc.textContent = history.length;
   if (history.length === 0) {
-    list.innerHTML = '<p class="no-data">No resolved invoices yet — mark something resolved to start tracking.</p>';
+    list.innerHTML = '<p class="no-data">No resolved invoices yet — use the Paid or Uncollectible buttons to track resolutions.</p>';
     return;
   }
 
-  // ── Summary stats ──────────────────────────────────────────────────────────
+  const paidEntries   = history.filter(h => h.resolution_type === 'paid');
+  const uncollEntries = history.filter(h => h.resolution_type === 'uncollectible');
+  const otherEntries  = history.filter(h => !h.resolution_type);
   const totalResolved = history.length;
-  const paidEntries   = history.filter(h => (h.checkboxes||[]).includes('paid'));
   const recoveredAmt  = paidEntries.reduce((s, h) => s + (h.amount || 0), 0);
-  const recoveredCnt  = paidEntries.length;
-  const recRate       = totalResolved > 0 ? Math.round(recoveredCnt / totalResolved * 100) : 0;
+  const uncollAmt     = uncollEntries.reduce((s, h) => s + (h.amount || 0), 0);
+  const recRate       = totalResolved > 0 ? Math.round(paidEntries.length / totalResolved * 100) : 0;
   const fmtAmt = n => '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
-  const statsHtml = '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px">'
-    + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
-    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C89098;margin-bottom:6px">Recovered Revenue</div>'
-    +   '<div style="font-size:26px;font-weight:800;color:#0D9060;letter-spacing:-1px">' + fmtAmt(recoveredAmt) + '</div>'
-    +   '<div style="font-size:12px;color:#64748B;margin-top:4px">' + recoveredCnt + ' invoice' + (recoveredCnt !== 1 ? 's' : '') + ' marked Paid</div>'
+
+  const statsHtml = '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px">'
+    + '<div style="background:#fff;border:1px solid #BBF7D0;border-radius:12px;padding:18px 22px">'
+    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#059669;margin-bottom:6px">Recovered Revenue</div>'
+    +   '<div style="font-size:26px;font-weight:800;color:#059669;letter-spacing:-1px">' + fmtAmt(recoveredAmt) + '</div>'
+    +   '<div style="font-size:12px;color:#64748B;margin-top:4px">' + paidEntries.length + ' paid invoice' + (paidEntries.length !== 1 ? 's' : '') + '</div>'
+    + '</div>'
+    + '<div style="background:#fff;border:1px solid #FECACA;border-radius:12px;padding:18px 22px">'
+    +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#A06050;margin-bottom:6px">Written Off</div>'
+    +   '<div style="font-size:26px;font-weight:800;color:#A06050;letter-spacing:-1px">' + fmtAmt(uncollAmt) + '</div>'
+    +   '<div style="font-size:12px;color:#64748B;margin-top:4px">' + uncollEntries.length + ' uncollectible invoice' + (uncollEntries.length !== 1 ? 's' : '') + '</div>'
     + '</div>'
     + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
     +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C89098;margin-bottom:6px">Total Resolved</div>'
     +   '<div style="font-size:26px;font-weight:800;color:#2D1820;letter-spacing:-1px">' + totalResolved + '</div>'
-    +   '<div style="font-size:12px;color:#64748B;margin-top:4px">All dispositions combined</div>'
+    +   '<div style="font-size:12px;color:#64748B;margin-top:4px">All dispositions</div>'
     + '</div>'
     + '<div style="background:#fff;border:1px solid #E0C4C8;border-radius:12px;padding:18px 22px">'
     +   '<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#C89098;margin-bottom:6px">Recovery Rate</div>'
@@ -1408,65 +1413,59 @@ function renderHistory() {
     + '</div>'
     + '</div>';
 
-  const rows = history.map(h => {
-    const dt      = new Date(h.resolved_at);
-    const dateStr = dt.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-    const timeStr = dt.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
-    const isPaid  = (h.checkboxes||[]).includes('paid');
-    const disps   = (h.checkboxes||[]).filter(cb => cb !== 'paid').map(cb =>
-      '<span class="disp-pill">' + (CB_LABELS[cb]||cb) + '</span>'
-    ).join('');
-    const safeName  = (h.name ||'—').replace(/</g,'&lt;');
-    const safeNotes = (h.notes||'—').replace(/</g,'&lt;');
-    const invUrl    = 'https://dashboard.stripe.com/invoices/' + h.invoice_id;
-    const amt       = fmtAmt(h.amount||0);
-    const paidToggle = '<label style="display:inline-flex;align-items:center;gap:5px;cursor:pointer;'
-      + 'background:' + (isPaid ? '#DCFCE7' : '#FDF8F8') + ';'
-      + 'border:1px solid ' + (isPaid ? '#BBF7D0' : '#E0C4C8') + ';'
-      + 'border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;'
-      + 'color:' + (isPaid ? '#059669' : '#C89098') + ';white-space:nowrap;transition:all .2s">'
-      + '<input type="checkbox" data-id="' + h.invoice_id + '" ' + (isPaid ? 'checked' : '') + ' '
-      + 'onchange="toggleHistPaid(this)" '
-      + 'style="accent-color:#4A8068;cursor:pointer"> Paid</label>';
-    return '<tr>'
-      + '<td><div class="hist-date">' + dateStr + '</div><div class="hist-time">' + timeStr + '</div></td>'
-      + '<td><span class="acct-badge acct-' + (h.account||'') + '">' + (h.account||'') + '</span></td>'
-      + '<td class="hist-name">' + safeName + '</td>'
-      + '<td class="hist-amount">' + amt + '</td>'
-      + '<td style="color:#64748B;white-space:nowrap">' + (h.days||0) + 'd</td>'
-      + '<td>' + paidToggle + (disps ? '<div class="disp-pills" style="margin-top:4px">' + disps + '</div>' : '') + '</td>'
-      + '<td class="hist-notes">' + safeNotes + '</td>'
-      + '<td><a class="id-pill id-link" href="' + invUrl + '" target="_blank" style="font-size:10px">' + h.invoice_id + '</a></td>'
-      + '</tr>';
-  }).join('');
-  list.innerHTML = statsHtml
-    + '<table class="hist-table"><thead><tr>'
+  const tableHead = '<table class="hist-table"><thead><tr>'
     + '<th>Resolved</th><th>Acct</th><th>Office</th><th>Amount</th><th>Days</th>'
-    + '<th>Paid / Disposition</th><th>Notes</th><th>Invoice</th>'
-    + '</tr></thead><tbody>' + rows + '</tbody></table>';
-}
+    + '<th>Actions Taken</th><th>Notes</th><th>Invoice</th>'
+    + '</tr></thead><tbody>';
 
-function toggleHistPaid(checkbox) {
-  const invoiceId = checkbox.dataset.id;
-  const history = getHistory();
-  const idx = history.findIndex(h => h.invoice_id === invoiceId);
-  if (idx < 0) return;
-  const entry = history[idx];
-  let cbs = (entry.checkboxes || []).filter(c => c !== 'paid');
-  if (checkbox.checked) cbs = ['paid', ...cbs];
-  entry.checkboxes = cbs;
-  history[idx] = entry;
-  localStorage.setItem('dpd_history', JSON.stringify(history));
-  renderHistory();
+  function buildRows(entries) {
+    return entries.map(h => {
+      const dt      = new Date(h.resolved_at);
+      const dateStr = dt.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+      const timeStr = dt.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
+      const disps   = (h.checkboxes||[]).filter(cb => cb !== 'paid' && cb !== 'uncollectible').map(cb =>
+        '<span class="disp-pill">' + (CB_LABELS[cb]||cb) + '</span>'
+      ).join('');
+      const safeName  = (h.name ||'—').replace(/</g,'&lt;');
+      const safeNotes = (h.notes||'').replace(/</g,'&lt;') || '—';
+      const invUrl    = 'https://dashboard.stripe.com/invoices/' + h.invoice_id;
+      const amt       = fmtAmt(h.amount||0);
+      return '<tr>'
+        + '<td><div class="hist-date">' + dateStr + '</div><div class="hist-time">' + timeStr + '</div></td>'
+        + '<td><span class="acct-badge acct-' + (h.account||'') + '">' + (h.account||'') + '</span></td>'
+        + '<td class="hist-name">' + safeName + '</td>'
+        + '<td class="hist-amount">' + amt + '</td>'
+        + '<td style="color:#64748B;white-space:nowrap">' + (h.days||0) + 'd</td>'
+        + '<td><div class="disp-pills">' + (disps || '—') + '</div></td>'
+        + '<td class="hist-notes">' + safeNotes + '</td>'
+        + '<td><a class="id-pill id-link" href="' + invUrl + '" target="_blank" style="font-size:10px">' + h.invoice_id + '</a></td>'
+        + '</tr>';
+    }).join('');
+  }
+
+  function sectionHtml(label, entries, accentColor, bgColor) {
+    if (!entries.length) return '';
+    return '<div style="margin-bottom:28px">'
+      + '<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:' + accentColor + ';'
+      + 'background:' + bgColor + ';padding:8px 16px;border-radius:8px 8px 0 0;border:1px solid ' + accentColor + '40;border-bottom:none">'
+      + label + ' &nbsp;<span style="font-size:11px;opacity:.7">(' + entries.length + ')</span></div>'
+      + tableHead + buildRows(entries) + '</tbody></table>'
+      + '</div>';
+  }
+
+  list.innerHTML = statsHtml
+    + sectionHtml('✓ Paid', paidEntries, '#059669', '#F0FFF4')
+    + sectionHtml('✗ Uncollectible', uncollEntries, '#A06050', '#FFF5F5')
+    + (otherEntries.length ? sectionHtml('Untagged / Legacy', otherEntries, '#9A6070', '#FDF8F8') : '');
 }
 
 function exportHistory() {
   const history = getHistory();
   if (!history.length) { alert('No history to export yet.'); return; }
-  const CB_KEYS  = ['macro','text-macro','called','paid','offboarding-inactive','offboarding-ghosted','payment-plan','uncollectible'];
-  const CB_HEADS = ['Macro Sent','Text Macro Sent','Called','Paid','Offboard-Inactive','Offboard-Ghosted','Payment Plan','Uncollectible'];
+  const CB_KEYS  = ['macro','called','offboarding-inactive','offboarding-ghosted','payment-plan'];
+  const CB_HEADS = ['Emailed','Called','Offboard-Inactive','Offboard-Ghosted','Payment Plan'];
   const headers  = ['Date Resolved','Time','Account','Office','Email','Phone','Customer ID','Invoice ID',
-                    'Amount','Days Past Due',...CB_HEADS,'Notes','Failure Reason','Sub Status'];
+                    'Amount','Days Past Due','Resolution',...CB_HEADS,'Notes','Failure Reason','Sub Status'];
   const q = v => '"' + String(v).replace(/"/g,'""') + '"';
   const rows = history.map(h => {
     const dt  = new Date(h.resolved_at);
@@ -1477,6 +1476,7 @@ function exportHistory() {
       h.account||'', h.name||'', h.email||'', h.phone||'',
       h.customer_id||'', h.invoice_id||'',
       '$' + (h.amount||0).toFixed(2), h.days||0,
+      h.resolution_type||'',
       ...cbs,
       (h.notes||'').replace(/\n/g,' '),
       h.failure_reason||'', h.sub_status||'',
@@ -1493,18 +1493,17 @@ function exportHistory() {
 }
 
 // ── Card interactions ──────────────────────────────────────────────────────
-function markResolved(id) {
+function _doResolve(id, resolutionType) {
   const card = document.querySelector('.inv-card[data-id="' + id + '"]');
   if (!card) return;
   const panel = card.closest('.account-panel');
   const acc   = panel.id.replace('panel-', '');
   const rlist = document.getElementById('rlist-' + acc);
-  // Capture state before moving
   const checkboxes = Array.from(card.querySelectorAll('.cb-input:checked')).map(el => el.dataset.cb);
   const notes      = (card.querySelector('.notes-input') || {}).value || '';
   const phone      = (card.querySelector('.phone-input') || {}).value || '';
   const state      = {checkboxes, notes, phone, resolved: true};
-  logToHistory(id, acc, state);
+  logToHistory(id, acc, state, resolutionType);
   rlist.appendChild(card);
   if (rlist.style.display === 'none') {
     rlist.style.display = 'block';
@@ -1514,6 +1513,9 @@ function markResolved(id) {
   setState(id, state);
   renderHistory();
 }
+
+function markPaid(id) { _doResolve(id, 'paid'); }
+function markUncollectible(id) { _doResolve(id, 'uncollectible'); }
 
 function markActive(id) {
   const card  = document.querySelector('.inv-card[data-id="' + id + '"]');
