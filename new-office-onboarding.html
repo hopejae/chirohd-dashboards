@@ -286,7 +286,7 @@ const OFFICES = [
   {name:"Soul Source Chiropractic",network:"1509",loc:"1",cid:"cus_UQ8M7zKkgu9U5f",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"The Well",network:"1540",loc:"1",cid:"cus_UaZHLzCBg1Kpfg",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Wells Spine and Sport",network:"1501",loc:"1",cid:"cus_UNr2fSDdjYqY7E",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
-  {name:"Pascal Health Institute",network:"1358",loc:"1",cid:"cus_ThC7eUyG6Q826L",paid:"",offboarded:"",newgrad:"",other:"Auto Stripe 1/28/26 — GLD moved to 7/20",paymentType:"manual"},
+  {name:"Pascal Health Institute",network:"1358",loc:"1",cid:"cus_ThC7eUyG6Q826L",paid:"",offboarded:"",newgrad:"",other:"Auto Stripe 1/28/26 — GLD moved to 8/1",paymentType:"manual"},
   {name:"Foundations Spine & Well-necessities",network:"1535",loc:"1",cid:"cus_UY1Xt72NCrk653",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
   {name:"Ability Chiropractic - Canal Winchester",network:"600",loc:"22",cid:"cus_UYddYS1I2Cm4R5",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
   {name:"Leading Edge Chiropractic",network:"1465",loc:"1",cid:"cus_UFIZoy8rdSZfOJ",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
@@ -316,6 +316,12 @@ const OFFICES = [
   {name:"Refined Health Center",network:"1601",loc:"1",cid:"",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"OneSpine Chiropractic",network:"1549",loc:"1",cid:"cus_UbNfO7NjI980y4",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
   {name:"Ascend Chiropractic",network:"1548",loc:"1",cid:"cus_Ubj8LJntbeHS7J",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Ability Chiropractic - Pickerington",network:"600",loc:"24",cid:"cus_UbjToA6O7EOMs1",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Restore Family Chiropractic",network:"1485",loc:"1",cid:"cus_UIx7BdSIFWD0mo",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Sunset Chiropractic",network:"1591",loc:"1",cid:"cus_UnfBGeV095GPwd",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Dudum Chiropractic",network:"1558",loc:"1",cid:"cus_UdarnNewP9I3DL",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Sexton Chiropractic and Wellness",network:"1595",loc:"1",cid:"cus_UnhXiIy0Vt6jJP",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Burien Wellness",network:"1588",loc:"1",cid:"cus_UmDz41w4LYeGY1",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1268,6 +1274,42 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-07-22",
+    "cidCertain": true
+  },
+  "cus_UbjToA6O7EOMs1": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UIx7BdSIFWD0mo": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UnfBGeV095GPwd": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UdarnNewP9I3DL": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UnhXiIy0Vt6jJP": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UmDz41w4LYeGY1": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-27",
     "cidCertain": true
   }
 };
