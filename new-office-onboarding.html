@@ -322,6 +322,7 @@ const OFFICES = [
   {name:"Dudum Chiropractic",network:"1558",loc:"1",cid:"cus_UdarnNewP9I3DL",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Sexton Chiropractic and Wellness",network:"1595",loc:"1",cid:"cus_UnhXiIy0Vt6jJP",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Burien Wellness",network:"1588",loc:"1",cid:"cus_UmDz41w4LYeGY1",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Blue Ridge Health Chiropractic",network:"1462",loc:"1",cid:"cus_UCXVEnsEswIIpC",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1310,6 +1311,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-07-27",
+    "cidCertain": true
+  },
+  "cus_UCXVEnsEswIIpC": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-07-28",
     "cidCertain": true
   }
 };
