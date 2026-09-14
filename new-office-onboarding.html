@@ -395,6 +395,7 @@ const OFFICES = [
   {name:"Full Send Chiropractic",network:"1660",loc:"1",cid:"cus_UzO1oM86ubwxaL",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Summit Family Chiropractic",network:"1689",loc:"1",cid:"cus_V7WuWmClL7aCkb",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Advanced Nerve and Health",network:"1702",loc:"1",cid:"cus_V97EiBkjCubzJS",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Prime Family Chiropractic Centers",network:"1672",loc:"1",cid:"cus_V49UBworpwgMkW",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1808,6 +1809,12 @@ const STRIPE_DATA = {
   "cus_V97EiBkjCubzJS": {
     "paymentType": "manual",
     "stripePaid": false,
+    "lastChecked": "2026-09-14",
+    "cidCertain": true
+  },
+  "cus_V49UBworpwgMkW": {
+    "paymentType": "manual",
+    "stripePaid": true,
     "lastChecked": "2026-09-14",
     "cidCertain": true
   }
