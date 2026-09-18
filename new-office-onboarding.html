@@ -399,6 +399,7 @@ const OFFICES = [
   {name:"Discover Wellness Chiropractic Center",network:"1667",loc:"1",cid:"cus_V1aRzsITzOXYWl",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Ormond Spine & Nerve Center",network:"1668",loc:"1",cid:"cus_V1uOscl1oV8tuE",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
   {name:"Optimal Spine & Sport",network:"90",loc:"3",cid:"cus_VGuJjzbaKWnA7n",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"The Mauldin Clinic of Chiropractic",network:"1631",loc:"1",cid:"cus_UwJF28VQeVgIo0",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1837,6 +1838,12 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": false,
     "lastChecked": "2026-09-16",
+    "cidCertain": true
+  },
+  "cus_UwJF28VQeVgIo0": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-18",
     "cidCertain": true
   }
 };
