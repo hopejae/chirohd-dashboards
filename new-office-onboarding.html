@@ -420,6 +420,31 @@ const OFFICES = [
   {name:"Genesis Back and Neck",network:"1483",loc:"36",cid:"cus_V9AZNL1MKfUQo7",paid:"",offboarded:"",newgrad:"",other:"Elmhurst",paymentType:"manual"},
   {name:"Genesis Back and Neck",network:"1483",loc:"38",cid:"cus_V9Aarwa28su8B8",paid:"",offboarded:"",newgrad:"",other:"Grand Rapids",paymentType:"manual"},
   {name:"Genesis Back and Neck",network:"1483",loc:"37",cid:"cus_V9AZyrWid4MtPc",paid:"",offboarded:"",newgrad:"",other:"Bartlett",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"9",cid:"cus_V6oMmRxbk2nEKA",paid:"",offboarded:"",newgrad:"",other:"Louisville",paymentType:"manual"},
+  {name:"RS Chiropractic",network:"1526",loc:"1",cid:"cus_UVhsRmllrlMf87",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Rise Chiropractic",network:"1633",loc:"1",cid:"cus_UwfPGiK3pfqmY9",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Upper Cervical Health Centers",network:"1647",loc:"1",cid:"cus_UywOuPfiF2589R",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Ryder Chiropractic and Longevity",network:"1648",loc:"1",cid:"cus_Uz3gWm47RyZsvl",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Mill Creek Chiropractic",network:"1676",loc:"1",cid:"cus_V4soYlDO25IYUe",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Music City Health",network:"1681",loc:"1",cid:"cus_V6Q0fwPN5ayde3",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Texoma Wellness",network:"1711",loc:"1",cid:"cus_VAyHbgi7J0rh0S",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Amor Family Chiropractic",network:"1726",loc:"1",cid:"cus_VEJI4JyjOAtokO",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"auto"},
+  {name:"Shoreline Spine",network:"1692",loc:"1",cid:"cus_V7ERJBfOHCYCzQ",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Stock Chiropractic and Wellness Center",network:"1712",loc:"1",cid:"cus_VAzZs2AUKH0rbj",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"43",cid:"cus_V9AaK3hsnLNkjd",paid:"",offboarded:"",newgrad:"",other:"Fargo",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"41",cid:"cus_V9Aash0cGwQAAB",paid:"",offboarded:"",newgrad:"",other:"West Bend",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"42",cid:"cus_V9AaDpK73xw9oA",paid:"",offboarded:"",newgrad:"",other:"Minneapolis",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"39",cid:"cus_V9Aa0eerH7VZ1d",paid:"",offboarded:"",newgrad:"",other:"Gaylord",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"40",cid:"cus_V9Aam6F9sNmiL8",paid:"",offboarded:"",newgrad:"",other:"Milwaukee West",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"47",cid:"cus_V9AaDJT45TvHVk",paid:"",offboarded:"",newgrad:"",other:"Stillwater",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"46",cid:"cus_V9AatnVoHJNM1w",paid:"",offboarded:"",newgrad:"",other:"Shawnee",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"45",cid:"cus_V9AaQlUQrtLJF1",paid:"",offboarded:"",newgrad:"",other:"Springdale",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"44",cid:"cus_V9Aac3HA1F7ZHQ",paid:"",offboarded:"",newgrad:"",other:"Little Rock",paymentType:"manual"},
+  {name:"NuPower",network:"1703",loc:"1",cid:"cus_V9POLF8jMDKsAb",paid:"",offboarded:"",newgrad:"",other:"",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"51",cid:"cus_V9AaJqUtmSztqQ",paid:"",offboarded:"",newgrad:"",other:"Chino Hills",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"50",cid:"cus_V9AaGA8XvEfVAf",paid:"",offboarded:"",newgrad:"",other:"Denver",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"49",cid:"cus_V9AaivHBswBYj8",paid:"",offboarded:"",newgrad:"",other:"OKC North",paymentType:"manual"},
+  {name:"Genesis Back and Neck",network:"1483",loc:"48",cid:"cus_V9Aa17bcjhOOdM",paid:"",offboarded:"",newgrad:"",other:"OKC South",paymentType:"manual"},
 ];
 
 // Stripe live data — updated every Friday at 12pm by onboarding_check.py
@@ -1984,6 +2009,156 @@ const STRIPE_DATA = {
     "paymentType": "manual",
     "stripePaid": true,
     "lastChecked": "2026-09-23",
+    "cidCertain": true
+  },
+  "cus_V6oMmRxbk2nEKA": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_UVhsRmllrlMf87": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_UwfPGiK3pfqmY9": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_UywOuPfiF2589R": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_Uz3gWm47RyZsvl": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V4soYlDO25IYUe": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V6Q0fwPN5ayde3": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_VAyHbgi7J0rh0S": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_VEJI4JyjOAtokO": {
+    "paymentType": "auto",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V7ERJBfOHCYCzQ": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_VAzZs2AUKH0rbj": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaK3hsnLNkjd": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9Aash0cGwQAAB": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaDpK73xw9oA": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9Aa0eerH7VZ1d": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9Aam6F9sNmiL8": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaDJT45TvHVk": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AatnVoHJNM1w": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaQlUQrtLJF1": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9Aac3HA1F7ZHQ": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9POLF8jMDKsAb": {
+    "paymentType": "manual",
+    "stripePaid": true,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaJqUtmSztqQ": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaGA8XvEfVAf": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9AaivHBswBYj8": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
+    "cidCertain": true
+  },
+  "cus_V9Aa17bcjhOOdM": {
+    "paymentType": "manual",
+    "stripePaid": false,
+    "lastChecked": "2026-09-29",
     "cidCertain": true
   }
 };
